@@ -38,13 +38,14 @@ Example of  set up
 
 Source the file ./bin/setup.sh to set $PYTHONPATH environment variable.
 
+
    user@host: /path/to/summonmonsterfouroneone$ echo $PYTHONPATH
-   
+       
    user@host: /path/to/summonmonsterfouroneone$ . ./bin/setup.sh
    user@host: /path/to/summonmonsterfouroneone$ echo $PYTHONPATH
    :/path/to/summonmonsterfouroneone/sm411
    user@host: /path/to/summonmonsterfouroneone$ 
-
+   
 
 
 Example of use
