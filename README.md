@@ -96,6 +96,7 @@ Licence
 The files in the OGL directory provide Open Gaming Content that is licenced under the Open Gaming Licence.  See the file OGL/licence.txt for more information. 
 
 The file /static/js/jquery-latest.js is Copyright 2010, John Resig and distributed under the GNU General Public Licence.
+
 The file /static/js/jquery.tablesorter.js is Copyright (c) 2007 Christian Bach and distributed under the GNU General Public Licence.
 
 
