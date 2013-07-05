@@ -17,10 +17,10 @@ that might be called
 with various Summon Monster spells.
 
 
-Why is this needed?  Suppose you are playing a character with access to the spell *Summon Monster V*.   This lets you summon one single monster from the fifth level monster list, between one and three monsters from the fourth level monster list, or between two and five monsters from any lower level list.   One of the options on the fourth level list is "mephit," which is actually a choice of one mephit out of the eight different types of mephit that may be summoned.  A different option is to summon an elemental, which is actually a choice out of four different elements.  One of those mephits can cast *Glitterdust* as a Spell Like Ability.  Can you remember which one?  I cannot.   That's one reason I built this tool.
+Why is this needed?  Suppose you are playing a character with access to the spell *Summon Monster V*.   This lets you summon one single monster from the fifth level monster list, between one and three monsters from the fourth level monster list, or between two and five monsters from any lower level list.   One of the options on the fourth level list is "mephit," which is actually a choice of one mephit out of the eight different types of mephit that may be summoned.  A different option is to summon an elemental, which is actually a choice out of four different elements.  One of those mephits can cast *Glitterdust* as a Spell Like Ability.  Can you remember which one?  I cannot.   That's one reason I built this tool.  Put *Glitterdust* in the search field, and it will come back with 'Mephit,Salt'. 
 
 
-A second reason I built this tool has to do with Feats and Templates.   A spell caster with a Good alignment summons creatures with the  Celestial template.  A spell caster with an Evil alignment summons creatures with the  Infernal template.  A Neutral spell caster has another choice between Celestial and Infernal.  Can you remember all the abilities the template provides?  I cannot.   The "Augment Summoning" feat adds still more benefits to summoned creatures, notably a +4 CON bonus, so +2hp/HD.   This tool applies that bonus automatically.
+A second reason I built this tool has to do with Feats and Templates.   A spell caster with a Good alignment summons creatures with the  Celestial template.  A spell caster with an Evil alignment summons creatures with the  Infernal template.  A Neutral spell caster has another choice between Celestial and Infernal.  Can you remember all the abilities the template provides?  I cannot.   The "Augment Summoning" feat adds still more benefits to summoned creatures, notably a +4 CON bonus, so +2hp/HD.   This tool can apply that bonus.  If you search first for 'eagle' you will get base stats.  Search for 'eagle "+augment summoning"'  (or "eagle +a") and you will notice the Hit Points of the eagle have been modified by the Augment Summoning feat.
 
 
 The reference to 4-1-1 is meant as a pun on Directory Assistance.
@@ -87,6 +87,7 @@ Design Notes
 
 1.  XML is case sensitive.  Searching XML is case sensitive.  The monster names are in lower case to avoid using two xpath functions at once.   So are most other elements with text that would be searched.  The translate() xpath function is not used to convert XML content to lower case.  Instead, this application uses only the contains() xpath function to search partial term input provided by the user.   All input terms are converted to lower case to make searching easier.
 2.  The online PRD differs from the PFRPG book.  The online PRD has been corrected (or so it seems to me), so where there are differences from the book, I go with the online PRD.
+3.  Not all the monsters available to the Summon Monster spells are in the xml data file at present.  
 
 Licence
 =======
