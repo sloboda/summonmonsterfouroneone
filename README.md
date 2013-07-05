@@ -10,17 +10,17 @@ Description
 
 This application "summonmonsterfouroneone" is a tool to assist players with finding the right monster to summon using the various Summon Monster spells available in the PFRPG.
 
-This application "summonmonsterfouroneone" or (sm411) 
+This application "summonmonsterfouroneone" (or sm411) 
 will help players of the PFRPG with "Directory Assistance" 
 searching  all possible monsters
 that might be called
 with various Summon Monster spells.
 
 
-Why is this needed?  Suppose you are playing a character with access to the spell *Summon Monster V*.   This lets you summon one single monster from the fifth level monster list, between one and three monsters from the fourth level monster list, or between two and five monsters from any lower level list.   One of the options on the fourth level list is "mephit," which is actually a choice of one mephit out of the eight different types of mephit that may be summoned.  A different option is to summon an elemental, which is actually a choice out of four different elements.  One of those mephits can cast *Glitterdust* as a Spell Like Ability.  Can you remember which one?  I cannot.   That's one reason I built this tool.  Put *Glitterdust* in the search field, and it will come back with 'Mephit,Salt'. 
+Why is this needed?  Suppose you are playing a character with access to the spell *Summon Monster V*.   This lets you summon one single monster from the fifth level monster list, between one and three monsters from the fourth level monster list, or between two and five monsters from any lower level list.   One of the options on the fourth level list is "mephit," which is actually a choice of one mephit out of the eight different types of mephit that may be summoned.  A different option is to summon an elemental, which is actually a choice out of four different elements.  One of those mephits can cast *Glitterdust* as a Spell Like Ability.  Can you remember which one?  I cannot.   That's one reason I built this tool.  Put *Glitterdust* in the search field, and it will come back with 'mephit, salt'. 
 
 
-A second reason I built this tool has to do with Feats and Templates.   A spell caster with a Good alignment summons creatures with the  Celestial template.  A spell caster with an Evil alignment summons creatures with the  Infernal template.  A Neutral spell caster has another choice between Celestial and Infernal.  Can you remember all the abilities the template provides?  I cannot.   The "Augment Summoning" feat adds still more benefits to summoned creatures, notably a +4 CON bonus, so +2hp/HD.   This tool can apply that bonus.  If you search first for 'eagle' you will get base stats.  Search for 'eagle "+augment summoning"'  (or "eagle +a") and you will notice the Hit Points of the eagle have been modified by the Augment Summoning feat.
+A second reason I built this tool has to do with Feats and Templates.   A spell caster with a Good alignment summons creatures with the  Celestial template.  A spell caster with an Evil alignment summons creatures with the  Infernal template.  A Neutral spell caster has another choice between Celestial and Infernal.  Can you remember all the abilities the template provides?  I cannot.   The "Augment Summoning" feat adds still more benefits to summoned creatures, notably a +4 CON bonus, so +2hp/HD.   This tool can apply that bonus.  If you search first for 'eagle' you will get base stats.  Search for 'eagle "+augment summoning"  '  (or "eagle +a") and you will notice the Hit Points of the eagle have been modified by the Augment Summoning feat.
 
 
 The reference to 4-1-1 is meant as a pun on Directory Assistance.
