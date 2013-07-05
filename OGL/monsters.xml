@@ -1,0 +1,619 @@
+﻿<?xml version="1.0"?>
+<all_monsters>
+  <monster id="100">
+    <name>dog, riding</name>
+    <summon_monster_integer_list>1</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/dog.html#_dog-riding</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>1d8+2</hit_dice>
+    <hit_points>6</hit_points>
+  </monster>
+  <monster id="101">
+    <name>eagle</name>
+    <summon_monster_integer_list>1</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/eagle.html#_eagle</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>1d8+1</hit_dice>
+    <hit_points>5</hit_points>
+  </monster>
+  <monster id="102">
+    <name>poisonous frog</name>
+    <summon_monster_integer_list>1</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/frog.html#_frog-poison</prd>
+    <alignment>N</alignment>
+    <size>T</size>
+    <hit_dice>1d8</hit_dice>
+    <hit_points>4</hit_points>
+  </monster>
+  <monster id="103">
+    <name>viper (snake)</name>
+    <summon_monster_integer_list>1</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/familiar.html#_viper</prd>
+    <alignment>N</alignment>
+    <size>T</size>
+    <hit_dice>1d8-1</hit_dice>
+    <hit_points>3</hit_points>
+  </monster>
+  <monster id="104">
+    <name>fire beetle</name>
+    <summon_monster_integer_list>1</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/beetle.html#_beetle-fire</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>1d8</hit_dice>
+    <hit_points>4</hit_points>
+  </monster>
+  <monster id="105">
+    <name>rat, dire</name>
+    <summon_monster_integer_list>1</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/rat.html#_rat-dire</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>1d8+1</hit_dice>
+    <hit_points>5</hit_points>
+  </monster>
+  <monster id="106">
+    <name>dolphin</name>
+    <summon_monster_integer_list>1</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/dolphin.html#_dolphin</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>2d8+2</hit_dice>
+    <hit_points>11</hit_points>
+  </monster>
+  <monster id="107">
+    <name>pony (horse)</name>
+    <summon_monster_integer_list>1</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/horse.html#_horse-pony</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>2d8+4</hit_dice>
+    <hit_points>13</hit_points>
+  </monster>
+  <monster id="200">
+    <name>ant, giant (worker)</name>
+    <summon_monster_integer_list>2</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/ant.html#_ant-giant</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>2d8+9</hit_dice>
+    <hit_points>18</hit_points>
+  </monster>
+  <monster id="201">
+    <name>elemental, small, air</name>
+    <summon_monster_integer_list>2</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-air</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>2d10+2</hit_dice>
+    <hit_points>13</hit_points>
+  </monster>
+  <monster id="202">
+    <name>elemental, small, earth</name>
+    <summon_monster_integer_list>2</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-earth</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>2d10+2</hit_dice>
+    <hit_points>13</hit_points>
+  </monster>
+  <monster id="203">
+    <name>elemental, small, fire</name>
+    <summon_monster_integer_list>2</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-fire</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>2d10</hit_dice>
+    <hit_points>11</hit_points>
+  </monster>
+  <monster id="204">
+    <name>elemental, small, water</name>
+    <summon_monster_integer_list>2</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-water</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>2d10+2</hit_dice>
+    <hit_points>13</hit_points>
+  </monster>
+  <monster id="205">
+    <name>giant centipede</name>
+    <summon_monster_integer_list>2</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/centipede.html#_centipede-giant</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>1d8+1</hit_dice>
+    <hit_points>5</hit_points>
+  </monster>
+  <monster id="206">
+    <name>giant frog</name>
+    <summon_monster_integer_list>2</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/frog.html#_frog-giant</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>2d8+6</hit_dice>
+    <hit_points>15</hit_points>
+  </monster>
+  <monster id="207">
+    <name>giant spider</name>
+    <summon_monster_integer_list>2</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/spider.html#_spider-giant</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>3d8+3</hit_dice>
+    <hit_points>16</hit_points>
+  </monster>
+  <monster id="208">
+    <name>goblin dog</name>
+    <summon_monster_integer_list>2</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/goblinDog.html#_goblin-dog</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>1d8+5</hit_dice>
+    <hit_points>9</hit_points>
+  </monster>
+  <monster id="209">
+    <name>horse</name>
+    <summon_monster_integer_list>2</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/horse.html#_horse</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>2d8+6</hit_dice>
+    <hit_points>15</hit_points>
+  </monster>
+  <monster id="210">
+    <name>hyena</name>
+    <summon_monster_integer_list>2</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/hyena.html#_hyena</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>2d8+4</hit_dice>
+    <hit_points>13</hit_points>
+  </monster>
+  <monster id="211">
+    <name>lemure (devil)</name>
+    <summon_monster_integer_list>2</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/devil.html#_devil-lemure</prd>
+    <alignment>LE</alignment>
+    <size>M</size>
+    <hit_dice>2d10+2</hit_dice>
+    <hit_points>13</hit_points>
+  </monster>
+  <monster id="212">
+    <name>octopus</name>
+    <summon_monster_integer_list>2</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/octopus.html#_octopus</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>2d8+4</hit_dice>
+    <hit_points>13</hit_points>
+  </monster>
+  <monster id="213">
+    <name>squid</name>
+    <summon_monster_integer_list>2</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/squid.html#_squid</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>3d8</hit_dice>
+    <hit_points>13</hit_points>
+  </monster>
+  <monster id="214">
+    <name>wolf</name>
+    <summon_monster_integer_list>2</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/wolf.html#_wolf</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>2d8+4</hit_dice>
+    <hit_points>13</hit_points>
+  </monster>
+  <monster id="300">
+    <name>ant, giant (soldier)</name>
+    <summon_monster_integer_list>3</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/ant.html#_ant-giant</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>2d8+9</hit_dice>
+    <hit_points>18</hit_points>
+  </monster>
+  <monster id="301">
+    <name>ape</name>
+    <summon_monster_integer_list>3</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/ape.html</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>3d8+6</hit_dice>
+    <hit_points>19</hit_points>
+  </monster>
+  <monster id="302">
+    <name>aurochs (herd animal)</name>
+    <summon_monster_integer_list>3</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/herdAnimal.html#_herd-animal-aurochs</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>3d8+9</hit_dice>
+    <hit_points>22</hit_points>
+  </monster>
+  <monster id="303">
+    <name>boar</name>
+    <summon_monster_integer_list>3</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/boar.html#_boar</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>2d8+9</hit_dice>
+    <hit_points>18</hit_points>
+  </monster>
+  <monster id="304">
+    <name>cheetah</name>
+    <summon_monster_integer_list>3</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/cat.html#_cat-cheetah</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>3d8+6</hit_dice>
+    <hit_points>19</hit_points>
+  </monster>
+  <monster id="305">
+    <name>constrictor snake</name>
+    <summon_monster_integer_list>3</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/snake.html#_snake-constrictor</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>3d8+6</hit_dice>
+    <hit_points>19</hit_points>
+  </monster>
+  <monster id="306">
+    <name>crocodile</name>
+    <summon_monster_integer_list>3</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/crocodile.html#_crocodile</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>3d8+9</hit_dice>
+    <hit_points>22</hit_points>
+  </monster>
+  <monster id="307">
+    <name>dire bat</name>
+    <summon_monster_integer_list>3</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/bat.html#_bat-dire</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>4d8+4</hit_dice>
+    <hit_points>22</hit_points>
+    <special_qualities>
+        <sq>blindsense</sq>
+    </special_qualities>
+  </monster>
+  <monster id="308">
+    <name>dretch (demon)</name>
+    <summon_monster_integer_list>3</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/demon.html#_demon-dretch</prd>
+    <alignment>CE</alignment>
+    <size>S</size>
+    <hit_dice>2d10+7</hit_dice>
+    <hit_points>18</hit_points>
+    <special_qualities>
+        <sq>DR 5/cold iron or good</sq>
+        <sq>resist fire 10</sq>
+        <sq>resist acid 10</sq>
+        <sq>resist cold 10</sq>
+        <sq>immune poison</sq>
+        <sq>immune electricity</sq>
+        <sq>stinking cloud (DC13) 1/day</sq>
+        <sq>cause fear (DC11) 1/day</sq>
+    </special_qualities>
+  </monster>
+  <monster id="309">
+    <name>electric eel</name>
+    <summon_monster_integer_list>3</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/eel.html#_ell-electric</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>2d8+8</hit_dice>
+    <hit_points>17</hit_points>
+  </monster>
+  <monster id="310">
+    <name>lantern archon</name>
+    <summon_monster_integer_list>3</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/archon.html#_archon-lantern</prd>
+    <alignment>LG</alignment>
+    <size>S</size>
+    <hit_dice>2d10+2</hit_dice>
+    <hit_points>13</hit_points>
+  </monster>
+  <monster id="311">
+    <name>leopard (cat)</name>
+    <summon_monster_integer_list>3</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/cat.html#_cat-leopard</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>3d8+6</hit_dice>
+    <hit_points>19</hit_points>
+  </monster>
+  <monster id="312">
+    <name>monitor lizard</name>
+    <summon_monster_integer_list>3</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/lizard.html#_lizard-giant</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>3d8+9</hit_dice>
+    <hit_points>22</hit_points>
+  </monster>
+  <monster id="313">
+    <name>shark</name>
+    <summon_monster_integer_list>3</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/shark.html#_shark</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>4d8+4</hit_dice>
+    <hit_points>22</hit_points>
+  </monster>
+  <monster id="314">
+    <name>wolverine</name>
+    <summon_monster_integer_list>3</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/wolverine.html#_wolverine</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>3d8+9</hit_dice>
+    <hit_points>22</hit_points>
+  </monster>
+  <monster id="400">
+    <name>ant, giant (drone)</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/ant.html#_ant-giant</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>2d8+13</hit_dice>
+    <hit_points>22</hit_points>
+  </monster>
+  <monster id="401">
+    <name>bison (herd animal)</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/herdAnimal.html#_herd-animal-bison</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>5d8+20</hit_dice>
+    <hit_points>42</hit_points>
+  </monster>
+  <monster id="402">
+    <name>deinonychus (dinosaur)</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/dinosaur.html#_dinosaur-deinonychus</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>4d8+16</hit_dice>
+    <hit_points>34</hit_points>
+  </monster>
+  <monster id="403">
+    <name>dire ape</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/ape.html#_ape-dire</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>4d8+12</hit_dice>
+    <hit_points>30</hit_points>
+  </monster>
+  <monster id="404">
+    <name>dire boar</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/boar.html#_boar-dire</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>5d8+20</hit_dice>
+    <hit_points>42</hit_points>
+  </monster>
+  <monster id="405">
+    <name>dire wolf</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/wolf.html#_wolf-dire</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>5d8+15</hit_dice>
+    <hit_points>37</hit_points>
+  </monster>
+  <monster id="406">
+    <name>elemental, medium, air</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-air</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>4d10+8</hit_dice>
+    <hit_points>30</hit_points>
+  </monster>
+  <monster id="407">
+    <name>elemental, medium, earth</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-earth</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>4d10+12</hit_dice>
+    <hit_points>34</hit_points>
+  </monster>
+  <monster id="408">
+    <name>elemental, medium, fire</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-fire</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>4d10+8</hit_dice>
+    <hit_points>30</hit_points>
+  </monster>
+  <monster id="409">
+    <name>elemental, medium, water</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-water</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>4d10+8</hit_dice>
+    <hit_points>30</hit_points>
+  </monster>
+  <monster id="410">
+    <name>giant scorpion</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/scorpion.html#_scorpion-giant</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>5d8+15</hit_dice>
+    <hit_points>37</hit_points>
+  </monster>
+  <monster id="411">
+    <name>giant wasp</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/wasp.html#_wasp-giant</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>4d8+16</hit_dice>
+    <hit_points>34</hit_points>
+  </monster> 
+  <monster id="412">
+    <name>grizzly bear</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/bear.html#_bear-grizzly</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>5d8+20</hit_dice>
+    <hit_points>42</hit_points>
+  </monster> 
+  <monster id="413">
+    <name>hell hound</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/hellHound.html#_hell-hound</prd>
+    <alignment>LE</alignment>
+    <size>M</size>
+    <hit_dice>4d10+8</hit_dice>
+    <hit_points>30</hit_points>
+  </monster> 
+  <monster id="414">
+    <name>hound archon</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/archon.html#_archon-hound</prd>
+    <alignment>LG</alignment>
+    <size>L</size>
+    <hit_dice>6d10+6</hit_dice>
+    <hit_points>39</hit_points>
+  </monster> 
+  <monster id="415">
+    <name>lion</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/lion.html#_lion</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>5d8+10</hit_dice>
+    <hit_points>32</hit_points>
+  </monster> 
+  <monster id="416">
+    <name>mephit, air</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/mephit.html</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>3d10+3</hit_dice>
+    <hit_points>19</hit_points>
+  </monster>
+  <monster id="417">
+    <name>mephit, dust</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/mephit.html</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>3d10+3</hit_dice>
+    <hit_points>19</hit_points>
+  </monster>
+  <monster id="418">
+    <name>mephit, earth</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/mephit.html</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>3d10+3</hit_dice>
+    <hit_points>19</hit_points>
+  </monster>
+  <monster id="419">
+    <name>mephit, fire</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/mephit.html</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>3d10+3</hit_dice>
+    <hit_points>19</hit_points>
+  </monster>
+  <monster id="420">
+    <name>mephit, ice</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/mephit.html</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>3d10+3</hit_dice>
+    <hit_points>19</hit_points>
+  </monster>
+  <monster id="421">
+    <name>mephit, magma</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/mephit.html</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>3d10+3</hit_dice>
+    <hit_points>19</hit_points>
+  </monster>
+  <monster id="422">
+    <name>mephit, ooze</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/mephit.html</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>3d10+3</hit_dice>
+    <hit_points>19</hit_points>
+  </monster>
+  <monster id="423">
+    <name>mephit, salt</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/mephit.html</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>3d10+3</hit_dice>
+    <hit_points>19</hit_points>
+  </monster>
+  <monster id="424">
+    <name>mephit, steam</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/mephit.html</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>3d10+3</hit_dice>
+    <hit_points>19</hit_points>
+  </monster>
+  <monster id="425">
+    <name>mephit, water</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/mephit.html</prd>
+    <alignment>N</alignment>
+    <size>S</size>
+    <hit_dice>3d10+3</hit_dice>
+    <hit_points>19</hit_points>
+  </monster>
+  <monster id="426">
+    <name>pteranodon (dinosaur)</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/dinosaur.html#_dinosaur-pteranodon</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>5d8+10</hit_dice>
+    <hit_points>32</hit_points>
+  </monster> 
+  <monster id="427">
+    <name>rhinoceros</name>
+    <summon_monster_integer_list>4</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/rhinoceros.html#_rhinoceros</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>5d8+20</hit_dice>
+    <hit_points>42</hit_points>
+  </monster> 
+  <monster id="600">
+    <name>succubus (demon)</name>
+    <summon_monster_integer_list>6</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/demon.html#demon-succubus</prd>
+    <alignment>CE</alignment>
+    <size>M</size>
+    <hit_dice>8d10+40</hit_dice>
+    <hit_points>84</hit_points>
+  </monster>
+</all_monsters>
