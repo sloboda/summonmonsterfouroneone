@@ -610,6 +610,15 @@
     <hit_dice>5d8+20</hit_dice>
     <hit_points>42</hit_points>
   </monster> 
+  <monster id="500">
+    <name>ankylosaurus (dinosaur)</name>
+    <summon_monster_integer_list>5</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/dinosaur.html#_dinosaur-ankylosaurus</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>10d8+30</hit_dice>
+    <hit_points>75</hit_points>
+  </monster> 
   <monster id="600">
     <name>succubus (demon)</name>
     <summon_monster_integer_list>6</summon_monster_integer_list>
@@ -618,5 +627,40 @@
     <size>M</size>
     <hit_dice>8d10+40</hit_dice>
     <hit_points>84</hit_points>
+    <special_qualities>
+        <sq>energy drain</sq>
+        <sq>profane gift</sq>
+        <sq>detect good</sq>
+        <sq>tongues</sq>
+        <sq>charm monster (DC 22)</sq>
+        <sq>detect thoughts (DC 20)</sq>
+        <sq>ethereal jaunt</sq>
+        <sq>suggestion (DC 21)</sq>
+        <sq>greater teleport</sq>
+        <sq>vampiric touch</sq>
+        <sq>1/day dominate person (DC 23)</sq>
+        <sq>1/day summon (level 3, 1 babau 50%)</sq>
+    </special_qualities>
   </monster>
+  <monster id="700">
+    <name>brachiosaurus (dinosaur)</name>
+    <summon_monster_integer_list>7</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/dinosaur.html#_dinosaur-brachiosaurus</prd>
+    <alignment>N</alignment>
+    <size>G</size>
+    <hit_dice>18d8+90</hit_dice>
+    <hit_points>171</hit_points>
+  </monster> 
+  <monster id="701">
+    <name>tyrannosaurus (dinosaur)</name>
+    <summon_monster_integer_list>7</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/dinosaur.html#_dinosaur-tyrannosaurus</prd>
+    <alignment>N</alignment>
+    <size>G</size>
+    <hit_dice>18d8+72</hit_dice>
+    <hit_points>153</hit_points>
+    <special_qualities>
+        <sq>powerful bite</sq>
+    </special_qualities>
+  </monster> 
 </all_monsters>
