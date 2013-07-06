@@ -12,11 +12,11 @@ from lxml import etree
 """next import breaks out XML search routines into a separate file
    for ease in unit testing.
 """
-from sm411 import smxml   
+from summonfouroneone import smxml   
 
 
 ### routines to check user input for sanity (sane characters only)
-from sm411 import handle_form_input
+from summonfouroneone import handle_form_input
 
 ### treat the monsters as objects with methods and attributes
 from summonfouroneone import smfoo
