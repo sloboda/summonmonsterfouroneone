@@ -570,6 +570,9 @@
     <size>S</size>
     <hit_dice>3d10+3</hit_dice>
     <hit_points>19</hit_points>
+    <special_qualities>
+        <sq>glitterdust 1/hr</sq>
+    </special_qualities>
   </monster>
   <monster id="424">
     <name>mephit, steam</name>
