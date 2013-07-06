@@ -486,7 +486,7 @@
     <summon_monster_integer_list>4</summon_monster_integer_list>
     <prd>http://paizo.com/pathfinderRPG/prd/monsters/archon.html#_archon-hound</prd>
     <alignment>LG</alignment>
-    <size>L</size>
+    <size>M</size>
     <hit_dice>6d10+6</hit_dice>
     <hit_points>39</hit_points>
   </monster> 
@@ -661,6 +661,74 @@
     <hit_points>153</hit_points>
     <special_qualities>
         <sq>powerful bite</sq>
+    </special_qualities>
+  </monster> 
+  <monster id="800">
+    <name>hezrou (demon)</name>
+    <summon_monster_integer_list>8</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/demon.html#demon-hezrou</prd>
+    <alignment>CE</alignment>
+    <size>L</size>
+    <hit_dice>10d10+90</hit_dice>
+    <hit_points>145</hit_points>
+    <special_qualities>
+        <sq>nausea</sq>
+        <sq>amphibious</sq>
+        <sq>greater teleport</sq>
+        <sq>chaos hammer (DC 18)</sq>
+        <sq>unholy blight (DC 18)</sq>
+        <sq>3/day gaseous form</sq>
+        <sq>1/day blasphemy (DC 21)</sq>
+        <sq>1/day summon (level 4, 1 hezrou 35%)</sq>
+        <sq>telepathy 100 ft.</sq>
+    </special_qualities>
+  </monster>
+  <monster id="900">
+    <name>trumpet archon</name>
+    <summon_monster_integer_list>9</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/archon.html#_archon-trumpet</prd>
+    <alignment>LG</alignment>
+    <size>M</size>
+    <hit_dice>14d10+98</hit_dice>
+    <hit_points>175</hit_points>
+    <special_qualities>
+        <sq>greater teleport</sq>
+        <sq>trumpet</sq>
+        <sq>magic circle against evil (constant) (CL 14th)</sq>
+        <sq>aid </sq>
+        <sq>continual flame</sq>
+        <sq>detect evil</sq>
+        <sq>message</sq>
+        <sq>mass cure serious wounds (2)</sq>
+        <sq>banishment (DC 21)</sq>
+        <sq>heal (2)</sq>
+        <sq>dispel evil (DC 20)</sq>
+        <sq>mass cure light wounds</sq>
+        <sq>plane shift (DC 20)</sq>
+        <sq>raise dead</sq>
+        <sq>dismissal (DC 19)</sq>
+        <sq>divine power</sq>
+        <sq>neutralize poison (DC 19)</sq>
+        <sq>spell immunity</sq>
+        <sq>cure serious wounds</sq>
+        <sq>daylight</sq>
+        <sq>invisibility purge</sq>
+        <sq>magic vestment</sq>
+        <sq>protection from energy</sq>
+        <sq>bull's strength</sq>
+        <sq>consecrate</sq>
+        <sq>cure moderate wounds (2)</sq>
+        <sq>lesser restoration (2)</sq>
+        <sq>owl's wisdom</sq>
+        <sq>bless</sq>
+        <sq>cure light wounds (3)</sq>
+        <sq>divine favor</sq>
+        <sq>sanctuary (DC 16)</sq>
+        <sq>shield of faith</sq>
+        <sq>detect magic</sq>
+        <sq>purify food and drink</sq>
+        <sq>stabilize</sq>
+        <sq>virtue</sq>
     </special_qualities>
   </monster> 
 </all_monsters>
