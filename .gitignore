@@ -34,9 +34,9 @@ nosetests.xml
 .project
 .pydevproject
 
-# vim backups
-*.*~
+# (g)vi(m) backups
+*~
 .*~
 
-# vim swap files
+# (g)vi(m) swap files
 *.swp

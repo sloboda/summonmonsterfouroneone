@@ -1,0 +1,64 @@
+= TO DO =
+
+A list of milestones to be done for summonmonsterfouroneone.
+
+== Sooner ==
+
+2.  Finish base stats for all monsters in first five levels
+
+
+== Later ==
+
+1.  Display  Melee Attacks, CMB, CMD of monsters
+2.  Show text of Celestial template, Infernal template
+3.  Finish base stats for all monsters in all nine levels
+6.  Apply "Augment Summoning" feat to Melee Attack bonus, CMB, CMD
+7.  Apply Celestial template
+9.  Filter by Caster Level, Caster Alignment (good= celestial),
+10.  Filter by Monster AC > 20
+11.  Filter by Monster Speed > 50
+13.  build the xmlns to validate the XML against.
+14.  Filter by "monster has a fly speed"
+15.  Filter by "monster has a swim speed"
+16.  Apply Infernal template
+17.  Redo the project in Python 3
+18.  Redo in wxPython
+19.  Redo in C++
+20.  Check out python2javascript pyjamas
+23.  python command line interface to modules
+
+
+== Done ==
+
+1.  Standardize on Summon Monster (not ms nor Monster Summoning)
+2.  Create README file
+3.  Unit tests
+4.  A 0 from input shows all monsters all levels
+5.  Return results as HTML (not text)
+6.  Return results with hyperlink to external reference
+7.  import shlex to split on whitespace 
+        without splitting on "quoted whitespace"
+        separates "bear" from "dire bear"
+8.  Search on exact name of monster returns monster details
+9.  First Attempts at 
+    check user input to remove anything not 0-9 a-z A-Z - _ +
+10.  Synonym lookup table for input: 
+        ("all" and "0" as input do the same thing)
+11.  "zebra striping"  rows alternate background colour 
+     (white on even, darker on odd) for contrast
+12.  Change sort order of displayed rows ascending/descending 
+     by clicking on column header
+13.  Unit tests: find HD of monster, find hp of monster, no feats
+14.  Unit tests: find HD of monster, find hp of monster, augs feat applied
+15.  Build OGL/ directory with LICENCE.txt and monsters.xml file
+16.  Display HD, hp of monsters
+17.  Apply "Augment Summoning" feat to hp and display in extended display
+18.  Search on approximate name of monster returns multiple monster details.
+     'wolf' returns [wolf, 'dire wolf']
+19.  Unit tests: find sq of monster, no template
+20.  Unit tests: find sq of monster, celestial template applied
+21.  Unit tests: find sq of monster, infernal template applied
+22.  input text 'blindsense' searches special qualities
+23.  input text 'DR' searches special qualities
+24.  take 'help' as an input value and return a helpful message
+25.  Push to github.com
