@@ -10,7 +10,7 @@ dist
 build
 eggs
 parts
-bin
+# bin # keep the bin directory here.
 var
 sdist
 develop-eggs
@@ -37,3 +37,6 @@ nosetests.xml
 # vim backups
 *.*~
 .*~
+
+# vim swap files
+*.swp

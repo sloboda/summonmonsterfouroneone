@@ -1,0 +1,67 @@
+$def with (form, ro)
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+<head>
+    <title>Summon Monster Four One One TABLE OUTPUT</title>
+        <link rel="stylesheet" href="/static/css/jq.css" type="text/css" media="print, projection, screen" />
+        <link rel="stylesheet" href="/static/css/style.css" type="text/css" media="print, projection, screen" />
+        <script type="text/javascript" src="/static/js/jquery-latest.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.tablesorter.js"></script>
+        <script type="text/javascript" id="js">
+        $$(document).ready(function() {
+                $$("table")
+                        .tablesorter({widthFixed: true, widgets: ['zebra']})
+                        .tablesorterPager({container: $$("#pager")});
+        });
+        </script>
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<center>
+<h1>Summon Monster Four One One TABLE OUTPUT</h1>
+<form name="main" method="post"> 
+$if not form.valid: <p class="error">Input error in text field:</p>
+$:form.render()
+</form>
+</center>
+<hr />
+$ hr = ""
+$ na = ""
+$ sz = ""
+$ al = ""
+$ myextras = ro.get_results_text()
+$ myresults = ro.get_results_list()
+$ mon_attr_methods =['name_w_link', 'hit_dice', 'hit_points', 'sq', 'size', 'alignment', ]
+$if myextras:
+    <p>$myextras</p>
+
+$#        <li>$row</li> $# working
+$if myresults:
+    <p>Result set:</p>
+    <table class="tablesorter">
+    <thead>
+    <tr>
+       <th>Name</th>
+       <th>HD</th>
+       <th>hp</th>
+       <th>SQ</th>
+       <th>Size</th>
+       <th>AL</th>
+    </tr>
+    </thead>
+    <tbody>
+    $for row in myresults:
+        <tr>
+        $for k in mon_attr_methods:
+            <td>
+            $:row.get_html_string(k)
+            </td>  
+        </tr>
+    </tbody>
+    </table>
+
+<hr />
+</body>
+</html>

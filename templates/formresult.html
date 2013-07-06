@@ -1,0 +1,36 @@
+$def with (form, ro)
+
+<html>
+<head>
+    <title>Summon Monster Four One One</title>
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<center>
+<h1>Summon Monster Four One One</h1>
+<form name="main" method="post"> 
+$if not form.valid: <p class="error">Input error in text field:</p>
+$:form.render()
+</form>
+</center>
+<hr />
+$ hr = ""
+$ na = ""
+$ myextras = ro.get_results_text()
+$ myresults = ro.get_results_list()
+$if myextras:
+    <p>$:myextras</p>
+
+$#        <li>$row</li> $# working
+$if myresults:
+    <p>Result set:</p>
+    <ol>
+    $for row in myresults:
+        $ hr = row.get_prd() 
+        $ na = row.get_name()
+        <li><a href="$hr">$na</a></li>
+    </ol>
+$#        <li>$row</li>  $#  for debugging
+<hr />
+</body>
+</html>
