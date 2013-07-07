@@ -1,4 +1,15 @@
 ﻿<?xml version="1.0"?>
+<!--  ##################################################   -->
+<!--  All content in this file monsters.xml is  -->
+<!--   released under thet  Open Game License (OGL)  -->
+<!--   See the file licence.txt in this directory for more information. -->
+<!--   -->
+<!--  The Pathfinder Roleplaying Game is released under the Open Game License, -->
+<!--  meaning the core rules that drive the Pathfinder RPG system are available --> 
+<!--  to anyone to use for free under the terms of the OGL. --> 
+<!--   -->
+<!--   -->
+<!--  ##################################################   -->
 <all_monsters>
   <monster id="100">
     <name>dog, riding</name>
