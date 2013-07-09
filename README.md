@@ -31,6 +31,18 @@ Description of use
 ------------------
 
 
+1.  Edit the file ./bin/setup.sh 
+     You want to set PROJECTDIR to the full path to summonmonsterfouroneone on your system
+2.  cd $PROJECTDIR
+3.  Source the file ./bin/setup.sh to set $PYTHONPATH environment variable.
+4.  At a prompt, type
+     python webserver.py
+5.  You now have a web server running on port 8080 on your host.  Open a web client and point it at http://localhost:8080/    You will see a form that expects input, and a submit button.  Type the following word in the field:
+     help
+6.  Press submit.  You should see the help message, with more options to search.
+
+
+
 Requirements
 ============
 
@@ -63,6 +75,39 @@ Source the file ./bin/setup.sh to set $PYTHONPATH environment variable.
 
 Example of use
 --------------
+
+
+In the following example I used a text mode web browser (lynx) to put 
+     1 +x +a
+into the search field, and hit submit.
+
+The 1 is for the *Summon Monster I* spell.  The +a modifies the result with the "Augment Summoning" feat, increasing the hit points.  The +x shows the results in the extended display.
+
+
+
+
+     Summon Monster Four One One TABLE OUTPUT
+     
+                   input: help, 0 to 9, 'dire wolf', blindSENSE, +a, +good
+                   1 +x +a_______________________
+                   (Submit a SumMon411 search!)
+     _________________________________________________________________
+     
+     You submitted: [1 +x +a] You chose the extended display. 
+     The Augment Summoning feat gives +4 to STR and + to CON for each summoned creature.
+     
+     Result set:
+
+        Name        HD    hp SQ Size AL
+     dog, riding    1d8+2 8     S    N
+     eagle          1d8+1 7     S    N
+     poisonous frog 1d8   6     T    N
+     viper (snake)  1d8-1 5     T    N
+     fire beetle    1d8   6     S    N
+     rat, dire      1d8+1 7     S    N
+     dolphin        2d8+2 15    M    N
+     pony (horse)   2d8+4 17    M    N
+     _________________________________________________________________
 
 
 Example of testing
