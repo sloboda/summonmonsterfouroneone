@@ -18,6 +18,10 @@ You should have received a copy of the GNU General Public License
 along with summonmonsterfouroneone in the file COPYING.  
 If not, see <http://www.gnu.org/licenses/>.
 
+
+
+
+
 PURPOSE:
 run a webserver that takes user input and returns useful output
    about summoned monsters.

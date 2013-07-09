@@ -2,6 +2,28 @@
 
 """rpg_data_mangling   parse text used in RPG games.
 
+copyright (c) 2013  by david sloboda
+
+This file is part of summonmonsterfouroneone.
+
+summonmonsterfouroneone is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+summonmonsterfouroneone is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with summonmonsterfouroneone in the file COPYING.  
+If not, see <http://www.gnu.org/licenses/>
+
+
+
+
+
 At present, I'm not completely sure of all the parsing
 that will be required from this module.
 It may also be that the types of data increase.

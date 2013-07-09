@@ -1,9 +1,34 @@
-"""test of summonfouroneone module methods 
+"""test of summonfouroneone/smfoo module methods 
+
+copyright (c) 2013  by david sloboda
+
+This file is part of summonmonsterfouroneone.
+
+summonmonsterfouroneone is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+summonmonsterfouroneone is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with summonmonsterfouroneone in the file COPYING.  
+If not, see <http://www.gnu.org/licenses/>
+
+
+
+
 
 summonfouroneone is a (bad) portmanteau of
   Summon Monster 411
+  or summon monster four one one
+  or smfoo
 
-The file summonfouroneone.py contains methods
+
+The file summonfouroneone/smfoo.py contains methods
   to help with directory assistance when summoning monsters
   in the PFRPG.
 """
