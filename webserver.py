@@ -1,3 +1,31 @@
+""" webserver.py 
+
+copyright (c) 2013  by david sloboda
+
+This file is part of summonmonsterfouroneone.
+
+summonmonsterfouroneone is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+summonmonsterfouroneone is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with summonmonsterfouroneone in the file COPYING.  
+If not, see <http://www.gnu.org/licenses/>.
+
+PURPOSE:
+run a webserver that takes user input and returns useful output
+   about summoned monsters.
+
+minimalist web server provided by web.py module
+
+"""
+
 import re
 import shlex
 import web
@@ -184,8 +212,13 @@ def handle_modifier(input):
     return result
 
 
-def testmethod(input):
-    """sample method to test input and sort """
+def input_is_integer(input):
+    """Determine if input is integer
+
+    If it is an integer, return an integer.
+    If not, lower case the input
+       and see if it is something else.
+    """
     result = ""
     try:
         term = int(input)
@@ -240,7 +273,7 @@ class index:
             #### set standard list of keys for monster attributes
             makeys = ['alignment', 'name', 'prd', 'size']
             for input in input_values:
-                result = testmethod(input)
+                result = input_is_integer(input)
                 if type(result) == tuple: 
                     if result[0] == "yes":# we have a modifier, like +good
                         modifier_text = handle_modifier(str(result[1]))
