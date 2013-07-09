@@ -195,7 +195,7 @@ def handle_modifier(input):
     list_display_terms = ["normal", "list", "n"] 
     input = input.lower()
     if input in augment_summoning_terms:
-         result="The Augment Summoning feat gives +4 to STR and + to CON for each summoned creature. "
+         result="The Augment Summoning feat gives +4 to STR and +4 to CON for each summoned creature. "
     ##### set [celestial or infernal] flag once only.  Use first flag set  ####
     if "celestial" not in ro.get_modifier_flags()  and "infernal" not in ro.get_modifier_flags(): 
         if input in celestial_terms:
