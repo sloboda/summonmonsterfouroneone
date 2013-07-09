@@ -94,7 +94,7 @@ The 1 is for the *Summon Monster I* spell.  The +a modifies the result with the 
      _________________________________________________________________
      
      You submitted: [1 +x +a] You chose the extended display. 
-     The Augment Summoning feat gives +4 to STR and + to CON for each summoned creature.
+     The Augment Summoning feat gives +4 to STR and +4 to CON for each summoned creature.
      
      Result set:
 
