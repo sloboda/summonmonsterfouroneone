@@ -123,6 +123,30 @@ class smxml:
         return result
 
 
+    def monster_takes_c_or_i_template(self, mylistofID=['100']):
+        """checks to see if monster element in XML file 
+            has a "takes_c_or_i_template" element
+
+        Expects list of monster id e.g.  ['100', '101']
+        
+        returns True or False
+        """
+        result=False  # assume it does not, to start
+        elements = ["takes_c_or_i_template"]
+        smxl = smxml()
+        t = smxl.setup_xml()
+        for mid in mylistofID:
+            mysubpath= "./monster[@id='" + str(mid) + "']"
+            for mvalue in t.xpath(mysubpath):
+                children_list = mvalue.getchildren()
+                for child in children_list:
+                    if child.tag == elements[0]:
+                        result = True
+                    else:
+                        pass
+        return result
+
+
     def id_attributes_into_element_values(self, mylistofID=['100']):
         """turn id_attributes_into_element_values
 

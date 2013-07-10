@@ -192,6 +192,22 @@ class summon_monster_four_one_one(unittest.TestCase):
         self.assertEqual(expect, result)
 
 
+    def test_monster_should_take_c_or_i_template(self):
+        """'dog, riding' should  take a celestial or infernal template"""
+        expect = True
+        mx = smxml.smxml()
+        result = mx.monster_takes_c_or_i_template(['100'])
+        self.assertEqual(expect, result)
+
+
+    def test_monster_should_not_take_c_or_i_template(self):
+        """demon (succubus) should NOT take a celestial or infernal template"""
+        expect = False
+        mx = smxml.smxml()
+        result = mx.monster_takes_c_or_i_template(['600'])
+        self.assertEqual(expect, result)
+
+
 
 
 if __name__ == "__main__":

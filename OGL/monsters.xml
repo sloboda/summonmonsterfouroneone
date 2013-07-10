@@ -19,6 +19,7 @@
     <size>S</size>
     <hit_dice>1d8+2</hit_dice>
     <hit_points>6</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="101">
     <name>eagle</name>
