@@ -132,17 +132,17 @@ class summonmonsterfouroneone(unittest.TestCase):
 
     def test_find_sq_of_eagle_celestial(self):
         """find the special qualities of a eagle with celestial template """
-        expect = 'DR 5/evil'
+        expect = 'smite evil 1/day for +1 dmg, resist electricity 5, resist cold 5, resist acid 5'
         monobj = smfoo.monster_object()
         monobj.set_hit_dice("1d8+1")
         monobj.apply_celestial_template()
-        result = monobj.get_html_string('sq')
+        result = monobj.get_html_string('special_qualities')
         self.assertEqual(expect, result)
 
 
     def test_find_sq_of_eagle_infernal(self):
         """find the special qualities of a eagle with infernal template """
-        expect = """resist fire 5, DR 5/good"""
+        expect = 'smite good 1/day for +1 dmg, resist fire 5, resist cold 5'
         monobj = smfoo.monster_object()
         monobj.set_hit_dice("1d8+1")
         monobj.apply_infernal_template()

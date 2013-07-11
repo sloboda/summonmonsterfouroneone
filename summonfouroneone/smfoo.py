@@ -294,9 +294,16 @@ class monster_object(object):
         hd = self.get_hit_dice() # get 1d8+2
         hd = rpg_data_mangling.parse_dice(hd)[0] # get only the 1
         hd = int(hd)  # coerce to int
+        smite = "smite evil 1/day for +%d dmg" % hd
+        sq_list_low = ['resist acid 5','resist cold 5', 'resist electricity 5', smite]
+        sq_list_med = ['DR 5/evil','resist acid 10','resist cold 10', 'resist electricity 10', smite]
+        sq_list_high = ['DR 10/evil','resist acid 15','resist cold 15', 'resist electricity 15', smite]
         if hd > 0 and hd < 5:
-            sq = 'DR 5/evil'
-        self.set_sq(sq)
+            self.set_special_qualities(sq_list_low)
+        elif hd > 4 and hd < 11:
+            self.set_special_qualities(sq_list_med)
+        else:
+            self.set_special_qualities(sq_list_high)
 
 
     def apply_infernal_template(self):
@@ -314,9 +321,16 @@ class monster_object(object):
         hd = self.get_hit_dice() # get 1d8+2
         hd = rpg_data_mangling.parse_dice(hd)[0] # get only the 1
         hd = int(hd)  # coerce to int
-        sq_list_low = ['DR 5/good', 'resist fire 5']
+        smite = "smite good 1/day for +%d dmg" % hd
+        sq_list_low = ['resist cold 5', 'resist fire 5', smite]
+        sq_list_med = ['DR 5/good','resist cold 10', 'resist fire 10', smite]
+        sq_list_high = ['DR 10/good','resist cold 15','resist fire 15', smite]
         if hd > 0 and hd < 5:
             self.set_special_qualities(sq_list_low)
+        elif hd > 4 and hd < 11:
+            self.set_special_qualities(sq_list_med)
+        else:
+            self.set_special_qualities(sq_list_high)
 
 
     def set_name_w_link(self):
