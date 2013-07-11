@@ -53,6 +53,15 @@ class summonmonsterfouroneone(unittest.TestCase):
         pass
 
 
+
+    def test_return_empty_list_for_no_special_qualities(self):
+        """monster object w no special_qualities returns empty list """
+        expect = []
+        monobj = smfoo.monster_object()
+        result = monobj.get_special_qualities()
+        self.assertEqual(expect, result)
+
+
     def test_return_html_for_monobj_attr_full(self):
         """for a monster object attribute with a value, return html string """
         expect = '5'
@@ -133,11 +142,11 @@ class summonmonsterfouroneone(unittest.TestCase):
 
     def test_find_sq_of_eagle_infernal(self):
         """find the special qualities of a eagle with infernal template """
-        expect = """['DR 5/good', 'resist fire 5']"""
+        expect = """resist fire 5, DR 5/good"""
         monobj = smfoo.monster_object()
         monobj.set_hit_dice("1d8+1")
         monobj.apply_infernal_template()
-        result = monobj.get_html_string('sq')
+        result = monobj.get_html_string('special_qualities')
         self.assertEqual(expect, result)
 
 

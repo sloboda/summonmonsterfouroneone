@@ -630,6 +630,9 @@
     <size>H</size>
     <hit_dice>10d8+30</hit_dice>
     <hit_points>75</hit_points>
+    <special_qualities>
+        <sq>stun (DC 23 or dazed 1 rd)</sq>
+    </special_qualities>
   </monster> 
   <monster id="600">
     <name>succubus (demon)</name>
@@ -707,7 +710,7 @@
         <sq>greater teleport</sq>
         <sq>trumpet</sq>
         <sq>magic circle against evil (constant) (CL 14th)</sq>
-        <sq>aid </sq>
+        <sq>aid</sq>
         <sq>continual flame</sq>
         <sq>detect evil</sq>
         <sq>message</sq>

@@ -175,7 +175,10 @@ class monster_object(object):
         self.prd = ""
         self.size = ""
         self.hit_dice = ""
+        ### plan to phase out str called sq
         self.sq = ""
+        ### plan to phase in list called special_qualities
+        self.special_qualities = []
         self.hit_points = 0
 
 
@@ -192,8 +195,19 @@ class monster_object(object):
         self.sq = text
 
 
-    def set_special_qualities(self, text=""): 
-        self.sq = text
+    def set_special_qualities(self, results_list=[]):
+        for thing in results_list:
+            if thing not in self.special_qualities: # do not add it twice
+                self.special_qualities.append(thing)
+
+   
+    def get_special_qualities(self):
+        result = self.special_qualities
+        return result
+
+
+    def zero_special_qualities(self):
+        self.special_qualities=[]
 
 
     def get_sq(self):
@@ -300,10 +314,9 @@ class monster_object(object):
         hd = self.get_hit_dice() # get 1d8+2
         hd = rpg_data_mangling.parse_dice(hd)[0] # get only the 1
         hd = int(hd)  # coerce to int
-        sq_list = ['DR 5/good', 'resist fire 5']
+        sq_list_low = ['DR 5/good', 'resist fire 5']
         if hd > 0 and hd < 5:
-            sq = sq_list # ? assign list to string, what happens?
-        self.set_sq(sq)
+            self.set_special_qualities(sq_list_low)
 
 
     def set_name_w_link(self):
@@ -338,18 +351,28 @@ class monster_object(object):
         result = ""
         value = 0 
         # build method call from method input
-#        value = getattr(sys.modules[__name__], "get_%s" % monobj_attr)()
         try:
             value = getattr(self,"get_%s" % monobj_attr)()
         except AttributeError:
             value = None  #  this may be a source of problems.
             ### should watch this try/except block; may cause future errors.
-        if value is None:   # Some attributes do not exist
+        if value is None:   # Some attributes do not have values
             result = '&nbsp;'
-        elif value == "":   # Some exist and are empty ('') at the start
+        elif value == "":   
             result = '&nbsp;'
         else:
             result = str(value)
+        #  with argument monobj_attr, check if that references an internal
+        #     attribute that isinstance "list".  If it does,
+        #     then break the list apart and send w/o single quotes
+        #     Saves some text and is arguably more readable
+        if hasattr(self, monobj_attr):
+            if isinstance(getattr(self, str(monobj_attr)), list):
+                result = ""
+                value = getattr(self,"get_%s" % monobj_attr)()
+                for v in sorted(value):
+                    result = v + ", " + result 
+                result = result.rstrip(', ') # remove final comma
         return result 
 
 

@@ -14,6 +14,8 @@ A list of milestones to be done for summonmonsterfouroneone.
 3.  Finish base stats for all monsters in all nine levels
 6.  Apply "Augment Summoning" feat to Melee Attack bonus, CMB, CMD
 7.  Apply Celestial template
+8.  Build command line interface.  
+       Requires rewrite of webserver.py , moving program logic into methods.
 9.  Filter by Caster Level, Caster Alignment (good= celestial),
 10.  Filter by Monster AC > 20
 11.  Filter by Monster Speed > 50

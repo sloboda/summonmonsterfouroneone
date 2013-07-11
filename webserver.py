@@ -308,6 +308,7 @@ class index:
                         except KeyError:
                             throwaway = getattr(monster_obj, "set_%s" % attribute)("")
                         throwaway2 = monster_obj.set_name_w_link()
+                    ## sometimes the input could be "eagle eagle eagle"  Weed out duplicates
                     if monster_obj.get_name() not in weed_out_duplicates:
                         xml_element_results.append(monster_obj)
                         weed_out_duplicates.append(monster_obj.get_name())
