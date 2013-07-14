@@ -54,6 +54,19 @@ class summonmonsterfouroneone(unittest.TestCase):
 
 
 
+
+    def test_apply_celestial_template_to_eagly(self):
+        """eagle takes celestial template"""
+        expect = ['resist acid 5', 'resist cold 5', 'resist electricity 5', 'smite evil 1/day for +1 dmg']
+        monobj = smfoo.monster_object()
+        monobj.set_name("eagle")
+        monobj.set_hit_dice("1d8+1")
+        monobj.set_takes_c_or_i_template(True)
+        monobj.apply_template("celestial")
+        result = monobj.get_special_qualities()
+        self.assertEqual(expect, result)
+
+
     def test_return_empty_list_for_no_special_qualities(self):
         """monster object w no special_qualities returns empty list """
         expect = []

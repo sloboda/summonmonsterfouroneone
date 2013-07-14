@@ -169,6 +169,7 @@ class monster_object(object):
     """object to hold monster data
     """ 
     def __init__(self):
+        self.id = ""
         self.name = ""
         self.name_w_link = ""
         self.alignment = ""
@@ -180,6 +181,25 @@ class monster_object(object):
         ### plan to phase in list called special_qualities
         self.special_qualities = []
         self.hit_points = 0
+        self.takes_c_or_i_template = False
+
+
+    def set_id(self, text=""): 
+        self.id = text
+
+
+    def get_id(self):
+        result = self.id
+        return result
+
+
+    def set_takes_c_or_i_template(self, my_boolean=False): 
+        self.takes_c_or_i_template = my_boolean
+
+
+    def get_takes_c_or_i_template(self):
+        result = self.takes_c_or_i_template
+        return result
 
 
     def set_name(self, text=""): 
@@ -277,6 +297,24 @@ class monster_object(object):
         bonus = hd * 2
         result = hp + bonus
         self.set_hit_points(result)
+
+    
+    
+    def apply_template(self, template_name="celestial"):
+        """determine if a monster may receive  either
+        celestial or infernal template.
+
+        Elementals and Demons and Archons, for example, do not.
+        Apply template if monster qualifies
+        """
+        if self.get_takes_c_or_i_template():
+            if template_name == "celestial":
+                self.apply_celestial_template()
+            elif template_name == "infernal":
+                self.apply_infernal_template()
+        else:
+            pass
+        
 
 
     def apply_celestial_template(self):

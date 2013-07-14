@@ -302,6 +302,10 @@ class index:
                     monster_obj = smfoo.monster_object() # create new monster object
                     mon_dict ={}
                     mon_dict = smx.id_into_dict(monster_id, mon_att_keys)
+                    # set the monster id from xml file into monster_object
+                    monster_obj.set_id(monster_id)
+                    # set a boolean flag if the monster takes a c_or_i template
+                    monster_obj.set_takes_c_or_i_template(smx.monster_takes_c_or_i_template([monster_id]))
                     for attribute in mon_att_keys:
                         try:
                             throwaway = getattr(monster_obj, "set_%s" % attribute)(mon_dict[attribute])
@@ -317,6 +321,23 @@ class index:
                         ro.set_results_list(r)
             ### set HTML list or HTML table.  Default is list ###
             if ro.get_display_output() =="extended":
+                ### see if apply celestial or infernal template
+                if  "Celestial" in ro.get_results_text():
+                    newlist=[]
+                    for monster_obj in ro.get_results_list():
+                        newlist.append(monster_obj)
+                    ro.zero_results_list()
+                    for mon_obj in newlist:
+                        mon_obj.apply_template("celestial")
+                        ro.set_results_list(mon_obj)
+                elif "Infernal" in ro.get_results_text():
+                    newlist=[]
+                    for monster_obj in ro.get_results_list():
+                        newlist.append(monster_obj)
+                    ro.zero_results_list()
+                    for mon_obj in newlist:
+                        mon_obj.apply_template("infernal")
+                        ro.set_results_list(mon_obj)
                 ### hack to get Augmented Summoning to show up in extended display
                 if "The Augment Summoning feat" in ro.get_results_text():
                     newlist=[]
