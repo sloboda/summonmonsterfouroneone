@@ -19,6 +19,9 @@
     <size>S</size>
     <hit_dice>1d8+2</hit_dice>
     <hit_points>6</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="101">
@@ -69,6 +72,9 @@
     <size>S</size>
     <hit_dice>1d8+1</hit_dice>
     <hit_points>5</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="106">
@@ -109,6 +115,10 @@
     <size>S</size>
     <hit_dice>2d10+2</hit_dice>
     <hit_points>13</hit_points>
+    <special_qualities>
+        <sq>air mastery</sq>
+        <sq>whirlwind</sq>
+    </special_qualities>
   </monster>
   <monster id="202">
     <name>elemental, small, earth</name>
@@ -260,6 +270,7 @@
     <size>L</size>
     <hit_dice>3d8+6</hit_dice>
     <hit_points>19</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="302">
     <name>aurochs (herd animal)</name>
@@ -269,6 +280,7 @@
     <size>L</size>
     <hit_dice>3d8+9</hit_dice>
     <hit_points>22</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="303">
     <name>boar</name>
@@ -278,6 +290,7 @@
     <size>M</size>
     <hit_dice>2d8+9</hit_dice>
     <hit_points>18</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="304">
     <name>cheetah</name>
@@ -287,6 +300,7 @@
     <size>M</size>
     <hit_dice>3d8+6</hit_dice>
     <hit_points>19</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="305">
     <name>constrictor snake</name>
@@ -296,6 +310,7 @@
     <size>M</size>
     <hit_dice>3d8+6</hit_dice>
     <hit_points>19</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="306">
     <name>crocodile</name>
@@ -305,6 +320,7 @@
     <size>L</size>
     <hit_dice>3d8+9</hit_dice>
     <hit_points>22</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="307">
     <name>dire bat</name>
@@ -317,6 +333,7 @@
     <special_qualities>
         <sq>blindsense</sq>
     </special_qualities>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="308">
     <name>dretch (demon)</name>
@@ -345,6 +362,7 @@
     <size>S</size>
     <hit_dice>2d8+8</hit_dice>
     <hit_points>17</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="310">
     <name>lantern archon</name>
@@ -363,6 +381,7 @@
     <size>M</size>
     <hit_dice>3d8+6</hit_dice>
     <hit_points>19</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="312">
     <name>monitor lizard</name>
@@ -372,6 +391,7 @@
     <size>M</size>
     <hit_dice>3d8+9</hit_dice>
     <hit_points>22</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="313">
     <name>shark</name>
@@ -381,6 +401,7 @@
     <size>L</size>
     <hit_dice>4d8+4</hit_dice>
     <hit_points>22</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="314">
     <name>wolverine</name>
@@ -390,6 +411,7 @@
     <size>M</size>
     <hit_dice>3d8+9</hit_dice>
     <hit_points>22</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="400">
     <name>ant, giant (drone)</name>
@@ -399,6 +421,7 @@
     <size>M</size>
     <hit_dice>2d8+13</hit_dice>
     <hit_points>22</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="401">
     <name>bison (herd animal)</name>
@@ -408,6 +431,7 @@
     <size>L</size>
     <hit_dice>5d8+20</hit_dice>
     <hit_points>42</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="402">
     <name>deinonychus (dinosaur)</name>
@@ -417,6 +441,7 @@
     <size>M</size>
     <hit_dice>4d8+16</hit_dice>
     <hit_points>34</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="403">
     <name>dire ape</name>
@@ -426,6 +451,7 @@
     <size>L</size>
     <hit_dice>4d8+12</hit_dice>
     <hit_points>30</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="404">
     <name>dire boar</name>
@@ -435,6 +461,7 @@
     <size>L</size>
     <hit_dice>5d8+20</hit_dice>
     <hit_points>42</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="405">
     <name>dire wolf</name>
@@ -444,6 +471,7 @@
     <size>L</size>
     <hit_dice>5d8+15</hit_dice>
     <hit_points>37</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="406">
     <name>elemental, medium, air</name>
@@ -453,6 +481,10 @@
     <size>M</size>
     <hit_dice>4d10+8</hit_dice>
     <hit_points>30</hit_points>
+    <special_qualities>
+        <sq>air mastery</sq>
+        <sq>whirlwind</sq>
+    </special_qualities>
   </monster>
   <monster id="407">
     <name>elemental, medium, earth</name>
@@ -489,6 +521,7 @@
     <size>L</size>
     <hit_dice>5d8+15</hit_dice>
     <hit_points>37</hit_points>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="411">
     <name>giant wasp</name>
@@ -498,6 +531,7 @@
     <size>L</size>
     <hit_dice>4d8+16</hit_dice>
     <hit_points>34</hit_points>
+    <takes_c_or_i_template/>
   </monster> 
   <monster id="412">
     <name>grizzly bear</name>
@@ -507,6 +541,7 @@
     <size>L</size>
     <hit_dice>5d8+20</hit_dice>
     <hit_points>42</hit_points>
+    <takes_c_or_i_template/>
   </monster> 
   <monster id="413">
     <name>hell hound</name>
@@ -534,6 +569,7 @@
     <size>L</size>
     <hit_dice>5d8+10</hit_dice>
     <hit_points>32</hit_points>
+    <takes_c_or_i_template/>
   </monster> 
   <monster id="416">
     <name>mephit, air</name>
@@ -636,6 +672,7 @@
     <size>L</size>
     <hit_dice>5d8+10</hit_dice>
     <hit_points>32</hit_points>
+    <takes_c_or_i_template/>
   </monster> 
   <monster id="427">
     <name>rhinoceros</name>
@@ -645,6 +682,7 @@
     <size>L</size>
     <hit_dice>5d8+20</hit_dice>
     <hit_points>42</hit_points>
+    <takes_c_or_i_template/>
   </monster> 
   <monster id="500">
     <name>ankylosaurus (dinosaur)</name>
@@ -657,6 +695,7 @@
     <special_qualities>
         <sq>stun (DC 23 or dazed 1 rd)</sq>
     </special_qualities>
+    <takes_c_or_i_template/>
   </monster> 
   <monster id="501">
     <name>babau (demon)</name>
@@ -731,7 +770,142 @@
         <sq>pounce</sq>
         <sq>rake</sq>
     </special_qualities>
+    <takes_c_or_i_template/>
   </monster> 
+  <monster id="505">
+    <name>elemental, large, air</name>
+    <summon_monster_integer_list>5</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-air</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>8d10+24</hit_dice>
+    <hit_points>68</hit_points>
+    <special_qualities>
+        <sq>air mastery</sq>
+        <sq>whirlwind</sq>
+    </special_qualities>
+  </monster>
+  <monster id="506">
+    <name>elemental, large, earth</name>
+    <summon_monster_integer_list>5</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-earth</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>8d10+24</hit_dice>
+    <hit_points>68</hit_points>
+    <special_qualities>
+        <sq>earth mastery</sq>
+        <sq>earth glide</sq>
+        <sq>tremorsense</sq>
+        <sq>DR 5/-</sq>
+    </special_qualities>
+  </monster>
+  <monster id="507">
+    <name>elemental, large, fire</name>
+    <summon_monster_integer_list>5</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-fire</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>8d10+16</hit_dice>
+    <hit_points>60</hit_points>
+    <special_qualities>
+        <sq>burn (1d8, DC 16)</sq>
+        <sq>immune fire</sq>
+        <sq>vulnerable to cold</sq>
+        <sq>DR 5/-</sq>
+    </special_qualities>
+  </monster>
+  <monster id="508">
+    <name>elemental, large, water</name>
+    <summon_monster_integer_list>5</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-water</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>8d10+24</hit_dice>
+    <hit_points>68</hit_points>
+    <special_qualities>
+        <sq>water mastery</sq>
+        <sq>drench</sq>
+        <sq>vortex</sq>
+        <sq>DR 5/-</sq>
+    </special_qualities>
+  </monster>
+  <monster id="510">
+    <name>eel, giant moray</name>
+    <summon_monster_integer_list>5</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/eel.html#_eel-giant-moray</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>7d8+21</hit_dice>
+    <hit_points>52</hit_points>
+    <special_qualities>
+        <sq>gnaw</sq>
+        <sq>scent</sq>
+    </special_qualities>
+    <takes_c_or_i_template/>
+  </monster>
+  <monster id="511">
+    <name>kyton</name>
+    <summon_monster_integer_list>5</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/kyton.html#_kyton</prd>
+    <alignment>LE</alignment>
+    <size>M</size>
+    <hit_dice>8d10+16</hit_dice>
+    <hit_points>60</hit_points>
+    <special_qualities>
+        <sq>regeneration 2</sq>
+        <sq>DR 5/silver or good</sq>
+        <sq>immune cold</sq>
+        <sq>SR 17</sq>
+        <sq>dancing chains</sq>
+        <sq>chain armor</sq>
+        <sq>unnerving gaze</sq>
+    </special_qualities>
+  </monster>
+  <monster id="512">
+    <name>dolphin, orca</name>
+    <summon_monster_integer_list>5</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/dolphin.html#_dolphin-orca</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>9d8+27</hit_dice>
+    <hit_points>67</hit_points>
+    <special_qualities>
+        <sq>blindsight</sq>
+        <sq>hold breath</sq>
+    </special_qualities>
+    <takes_c_or_i_template/>
+  </monster>
+  <monster id="513">
+    <name>salamander</name>
+    <summon_monster_integer_list>5</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/salamander.html#_salamander</prd>
+    <alignment>CE</alignment>
+    <size>M</size>
+    <hit_dice>8d10+32</hit_dice>
+    <hit_points>76</hit_points>
+    <special_qualities>
+        <sq>DR 10/magic</sq>
+        <sq>immune fire</sq>
+        <sq>vulnerable to cold</sq>
+        <sq>constrict</sq>
+        <sq>heat</sq>
+    </special_qualities>
+  </monster>
+  <monster id="514">
+    <name>rhinoceros, woolly</name>
+    <summon_monster_integer_list>5</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/rhinoceros.html#_rhinoceros-woolly.html</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>8d8+40</hit_dice>
+    <hit_points>76</hit_points>
+    <special_qualities>
+        <sq>powerful charge</sq>
+        <sq>scent</sq>
+        <sq>trample</sq>
+    </special_qualities>
+  </monster>
   <monster id="600">
     <name>succubus (demon)</name>
     <summon_monster_integer_list>6</summon_monster_integer_list>
@@ -763,6 +937,7 @@
     <size>G</size>
     <hit_dice>18d8+90</hit_dice>
     <hit_points>171</hit_points>
+    <takes_c_or_i_template/>
   </monster> 
   <monster id="701">
     <name>tyrannosaurus (dinosaur)</name>
@@ -775,6 +950,7 @@
     <special_qualities>
         <sq>powerful bite</sq>
     </special_qualities>
+    <takes_c_or_i_template/>
   </monster> 
   <monster id="800">
     <name>hezrou (demon)</name>
