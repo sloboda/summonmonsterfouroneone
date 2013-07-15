@@ -13,7 +13,6 @@ A list of milestones to be done for summonmonsterfouroneone.
 2.  Show text of Celestial template, Infernal template
 3.  Finish base stats for all monsters in all nine levels
 6.  Apply "Augment Summoning" feat to Melee Attack bonus, CMB, CMD
-7.  Apply Celestial template
 8.  Build command line interface.  
        Requires rewrite of webserver.py , moving program logic into methods.
 9.  Filter by Caster Level, Caster Alignment (good= celestial),
@@ -22,7 +21,6 @@ A list of milestones to be done for summonmonsterfouroneone.
 13.  build the xmlns to validate the XML against.
 14.  Filter by "monster has a fly speed"
 15.  Filter by "monster has a swim speed"
-16.  Apply Infernal template
 17.  Redo the project in Python 3
 18.  Redo in wxPython
 19.  Redo in C++
@@ -64,3 +62,5 @@ A list of milestones to be done for summonmonsterfouroneone.
 23.  input text 'DR' searches special qualities
 24.  take 'help' as an input value and return a helpful message
 25.  Push to github.com
+26.  Apply Celestial template
+27.  Apply Infernal template

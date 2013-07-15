@@ -92,7 +92,8 @@ class summon_monster_four_one_one(unittest.TestCase):
                   '400', '401', '402', '403', '404', '405', '406', '407', '408', '409', 
                   '410', '411', '412', '413', '414', '415', '416', '417', '418', '419', 
                   '420', '421', '422', '423', '424', '425', '426', '427',
-                  '500', '501', '502', '503', '504', 
+                  '500', '501', '502', '503', '504', '505', '506', '507', '508', '509', 
+                  '510', '511', '512', '513', '514', 
                   '600',
                   '700','701',
                   '800',
@@ -111,26 +112,26 @@ class summon_monster_four_one_one(unittest.TestCase):
 
 
     def test_find_id_value_for_monster_name(self):
-        """given the name Dolphin, find id 106 """
-        expect = ['106'] 
+        """given the name Eagle, find id 101 """
+        expect = ['101'] 
         mx = smxml.smxml()
-        result = mx.search_for_monster_name("Dolphin")
+        result = mx.search_for_monster_name("Eagle")
         self.assertEqual(expect, result)
 
 
     def test_ignore_case_when_id_value_for_monster_name(self):
-        """given the name doLPHin, find id 106 """
-        expect = ['106'] 
+        """given the name eaGLe, find id 101 """
+        expect = ['101'] 
         mx = smxml.smxml()
-        result = mx.search_for_monster_name("doLPHin")
+        result = mx.search_for_monster_name("eaGLe")
         self.assertEqual(expect, result)
 
 
     def test_on_partial_name_find_a_match(self):
-        """given partial input dolph, find id 106 """
-        expect = ['106'] 
+        """given partial input eagl, find id 101 """
+        expect = ['101'] 
         mx = smxml.smxml()
-        result = mx.search_for_monster_name("dolph")
+        result = mx.search_for_monster_name("eagl")
         self.assertEqual(expect, result)
 
 

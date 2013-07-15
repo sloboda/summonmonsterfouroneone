@@ -830,7 +830,7 @@
         <sq>DR 5/-</sq>
     </special_qualities>
   </monster>
-  <monster id="510">
+  <monster id="509">
     <name>eel, giant moray</name>
     <summon_monster_integer_list>5</summon_monster_integer_list>
     <prd>http://paizo.com/pathfinderRPG/prd/monsters/eel.html#_eel-giant-moray</prd>
@@ -844,7 +844,7 @@
     </special_qualities>
     <takes_c_or_i_template/>
   </monster>
-  <monster id="511">
+  <monster id="510">
     <name>kyton</name>
     <summon_monster_integer_list>5</summon_monster_integer_list>
     <prd>http://paizo.com/pathfinderRPG/prd/monsters/kyton.html#_kyton</prd>
@@ -862,7 +862,7 @@
         <sq>unnerving gaze</sq>
     </special_qualities>
   </monster>
-  <monster id="512">
+  <monster id="511">
     <name>dolphin, orca</name>
     <summon_monster_integer_list>5</summon_monster_integer_list>
     <prd>http://paizo.com/pathfinderRPG/prd/monsters/dolphin.html#_dolphin-orca</prd>
@@ -876,7 +876,7 @@
     </special_qualities>
     <takes_c_or_i_template/>
   </monster>
-  <monster id="513">
+  <monster id="512">
     <name>salamander</name>
     <summon_monster_integer_list>5</summon_monster_integer_list>
     <prd>http://paizo.com/pathfinderRPG/prd/monsters/salamander.html#_salamander</prd>
@@ -892,10 +892,10 @@
         <sq>heat</sq>
     </special_qualities>
   </monster>
-  <monster id="514">
+  <monster id="513">
     <name>rhinoceros, woolly</name>
     <summon_monster_integer_list>5</summon_monster_integer_list>
-    <prd>http://paizo.com/pathfinderRPG/prd/monsters/rhinoceros.html#_rhinoceros-woolly.html</prd>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/rhinoceros.html#_rhinoceros-woolly</prd>
     <alignment>N</alignment>
     <size>L</size>
     <hit_dice>8d8+40</hit_dice>
@@ -904,6 +904,22 @@
         <sq>powerful charge</sq>
         <sq>scent</sq>
         <sq>trample</sq>
+    </special_qualities>
+  </monster>
+  <monster id="514">
+    <name>xill</name>
+    <summon_monster_integer_list>5</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/xill.html#_xill</prd>
+    <alignment>LE</alignment>
+    <size>M</size>
+    <hit_dice>9d10+18</hit_dice>
+    <hit_points>67</hit_points>
+    <special_qualities>
+        <sq>implant</sq>
+        <sq>paralysis</sq>
+        <sq>planewalk</sq>
+        <sq>multiweapon mastery</sq>
+        <sq>SR 17</sq>
     </special_qualities>
   </monster>
   <monster id="600">
