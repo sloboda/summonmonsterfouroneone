@@ -42,6 +42,9 @@
     <size>T</size>
     <hit_dice>1d8</hit_dice>
     <hit_points>4</hit_points>
+    <special_qualities>
+        <sq>poison Fort DC10 for 1d2 Con</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="103">
@@ -52,6 +55,9 @@
     <size>T</size>
     <hit_dice>1d8-1</hit_dice>
     <hit_points>3</hit_points>
+    <special_qualities>
+        <sq>poison Fort DC9 for 1d2 Con</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="104">
@@ -62,6 +68,9 @@
     <size>S</size>
     <hit_dice>1d8</hit_dice>
     <hit_points>4</hit_points>
+    <special_qualities>
+        <sq>luminescence</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="105">
@@ -74,6 +83,7 @@
     <hit_points>5</hit_points>
     <special_qualities>
         <sq>scent</sq>
+        <sq>disease Fort DC11 for 1d3 Con and 1d3 Dex</sq>
     </special_qualities>
     <takes_c_or_i_template/>
   </monster>
@@ -85,6 +95,9 @@
     <size>M</size>
     <hit_dice>2d8+2</hit_dice>
     <hit_points>11</hit_points>
+    <special_qualities>
+        <sq>hold breath</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="107">
@@ -128,6 +141,11 @@
     <size>S</size>
     <hit_dice>2d10+2</hit_dice>
     <hit_points>13</hit_points>
+    <special_qualities>
+        <sq>earth mastery</sq>
+        <sq>earth glide</sq>
+        <sq>tremorsense 60 ft</sq>
+    </special_qualities>
   </monster>
   <monster id="203">
     <name>elemental, small, fire</name>
@@ -137,6 +155,11 @@
     <size>S</size>
     <hit_dice>2d10</hit_dice>
     <hit_points>11</hit_points>
+    <special_qualities>
+        <sq>immune fire</sq>
+        <sq>vulnerable to cold</sq>
+        <sq>burn (1d4, DC 11)</sq>
+    </special_qualities>
   </monster>
   <monster id="204">
     <name>elemental, small, water</name>
@@ -146,6 +169,11 @@
     <size>S</size>
     <hit_dice>2d10+2</hit_dice>
     <hit_points>13</hit_points>
+    <special_qualities>
+        <sq>drench</sq>
+        <sq>vortex (DC13)</sq>
+        <sq>water mastery</sq>
+    </special_qualities>
   </monster>
   <monster id="205">
     <name>giant centipede</name>
@@ -155,6 +183,9 @@
     <size>M</size>
     <hit_dice>1d8+1</hit_dice>
     <hit_points>5</hit_points>
+    <special_qualities>
+        <sq>poison (Fort DC13, 1d3 Dex)</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="206">
@@ -165,6 +196,10 @@
     <size>M</size>
     <hit_dice>2d8+6</hit_dice>
     <hit_points>15</hit_points>
+    <special_qualities>
+        <sq>tongue (15' reach)</sq>
+        <sq>swallow whole</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="207">
@@ -175,6 +210,10 @@
     <size>M</size>
     <hit_dice>3d8+3</hit_dice>
     <hit_points>16</hit_points>
+    <special_qualities>
+        <sq>poison (Fort DC14, 1d2 Str)</sq>
+        <sq>web</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="208">
@@ -185,6 +224,9 @@
     <size>M</size>
     <hit_dice>1d8+5</hit_dice>
     <hit_points>9</hit_points>
+    <special_qualities>
+        <sq>allergic reaction (Fort DC12, -2 Dex and Chr)</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="209">
@@ -195,6 +237,9 @@
     <size>L</size>
     <hit_dice>2d8+6</hit_dice>
     <hit_points>15</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="210">
@@ -205,6 +250,9 @@
     <size>M</size>
     <hit_dice>2d8+4</hit_dice>
     <hit_points>13</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="211">
@@ -216,6 +264,7 @@
     <hit_dice>2d10+2</hit_dice>
     <hit_points>13</hit_points>
     <special_qualities>
+        <sq>see in darkness</sq>
         <sq>DR 5/good or silver</sq>
         <sq>immune fire, mind-affecting effects, poison</sq>
         <sq>resist acid 10</sq> 
@@ -230,6 +279,11 @@
     <size>S</size>
     <hit_dice>2d8+4</hit_dice>
     <hit_points>13</hit_points>
+    <special_qualities>
+        <sq>ink cloud</sq>
+        <sq>jet 200'</sq>
+        <sq>poison (Fort DC 13, 1 Str) </sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="213">
@@ -240,6 +294,10 @@
     <size>M</size>
     <hit_dice>3d8</hit_dice>
     <hit_points>13</hit_points>
+    <special_qualities>
+        <sq>ink cloud</sq>
+        <sq>jet 240'</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="214">
@@ -250,6 +308,9 @@
     <size>S</size>
     <hit_dice>2d8+4</hit_dice>
     <hit_points>13</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="300">
