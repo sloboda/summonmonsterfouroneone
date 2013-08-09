@@ -966,6 +966,7 @@
         <sq>scent</sq>
         <sq>trample</sq>
     </special_qualities>
+    <takes_c_or_i_template/>
   </monster>
   <monster id="514">
     <name>xill</name>
