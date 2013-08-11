@@ -1090,6 +1090,44 @@
         <sq>DR 5/-</sq>
     </special_qualities>
   </monster>
+  <monster id="607">
+    <name>elephant</name>
+    <summon_monster_integer_list>6</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elephant.html#_elephant</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>11d8+44</hit_dice>
+    <hit_points>93</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>trample</sq>
+    </special_qualities>
+    <takes_c_or_i_template/>
+  </monster> 
+  <monster id="608">
+    <name>erinyes (devil)</name>
+    <summon_monster_integer_list>6</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/devil.html#_devil-erinyes</prd>
+    <alignment>LE</alignment>
+    <size>M</size>
+    <hit_dice>9d10+45</hit_dice>
+    <hit_points>94</hit_points>
+    <special_qualities>
+        <sq>DR 5/good</sq>
+        <sq>Immune fire, poison</sq>
+        <sq>darkvision 60</sq>
+        <sq>see in darkness</sq>
+        <sq>true seeing</sq>
+        <sq>Resist acid 10, cold 10</sq>
+        <sq>SR 19</sq>
+        <sq>fear</sq>
+        <sq>minor image</sq>
+        <sq>unholy blight</sq>
+        <sq>telepathy 100'</sq>
+        <sq>greater teleport</sq>
+        <sq>1/day—summon (level 3, 2 bearded devils 50%)</sq>
+    </special_qualities>
+  </monster> 
   <monster id="610">
     <name>succubus (demon)</name>
     <summon_monster_integer_list>6</summon_monster_integer_list>
