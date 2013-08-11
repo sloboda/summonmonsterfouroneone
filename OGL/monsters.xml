@@ -130,6 +130,7 @@
     <hit_points>13</hit_points>
     <special_qualities>
         <sq>air mastery</sq>
+        <sq>darkvision 60</sq>
         <sq>whirlwind</sq>
     </special_qualities>
   </monster>
@@ -544,6 +545,7 @@
     <hit_points>30</hit_points>
     <special_qualities>
         <sq>air mastery</sq>
+        <sq>darkvision 60</sq>
         <sq>whirlwind</sq>
     </special_qualities>
   </monster>
@@ -843,6 +845,8 @@
     <hit_points>68</hit_points>
     <special_qualities>
         <sq>air mastery</sq>
+        <sq>darkvision 60</sq>
+        <sq>DR 5/-</sq>
         <sq>whirlwind</sq>
     </special_qualities>
   </monster>
@@ -985,6 +989,108 @@
     </special_qualities>
   </monster>
   <monster id="600">
+    <name>dire bear</name>
+    <summon_monster_integer_list>6</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/bear.html#_bear-dire</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>10d8+50</hit_dice>
+    <hit_points>95</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+    </special_qualities>
+    <takes_c_or_i_template/>
+  </monster> 
+  <monster id="601">
+    <name>dire tiger</name>
+    <summon_monster_integer_list>6</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/tiger.html#_tiger-dire</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>14d8+42</hit_dice>
+    <hit_points>105</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+    </special_qualities>
+    <takes_c_or_i_template/>
+  </monster> 
+  <monster id="602">
+    <name>Elasmosaurus (dinosaur)</name>
+    <summon_monster_integer_list>6</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/dinosaur.html#_dinosaur-elasmosaurus</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>10d8+60</hit_dice>
+    <hit_points>105</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+    </special_qualities>
+    <takes_c_or_i_template/>
+  </monster> 
+  <monster id="603">
+    <name>elemental, huge, air</name>
+    <summon_monster_integer_list>6</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-air</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>10d10+40</hit_dice>
+    <hit_points>95</hit_points>
+    <special_qualities>
+        <sq>air mastery</sq>
+        <sq>darkvision 60</sq>
+        <sq>DR 5/-</sq>
+        <sq>whirlwind</sq>
+    </special_qualities>
+  </monster>
+  <monster id="604">
+    <name>elemental, huge, earth</name>
+    <summon_monster_integer_list>6</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-earth</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>10d10+40</hit_dice>
+    <hit_points>95</hit_points>
+    <special_qualities>
+        <sq>earth mastery</sq>
+        <sq>earth glide</sq>
+        <sq>darkvision 60</sq>
+        <sq>tremorsense</sq>
+        <sq>DR 5/-</sq>
+    </special_qualities>
+  </monster>
+  <monster id="605">
+    <name>elemental, huge, fire</name>
+    <summon_monster_integer_list>6</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-fire</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>10d10+30</hit_dice>
+    <hit_points>85</hit_points>
+    <special_qualities>
+        <sq>burn (2d6, DC 18)</sq>
+        <sq>darkvision 60</sq>
+        <sq>immune fire</sq>
+        <sq>vulnerable to cold</sq>
+        <sq>DR 5/-</sq>
+    </special_qualities>
+  </monster>
+  <monster id="606">
+    <name>elemental, huge, water</name>
+    <summon_monster_integer_list>6</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-water</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>10d10+40</hit_dice>
+    <hit_points>95</hit_points>
+    <special_qualities>
+        <sq>water mastery</sq>
+        <sq>darkvision 60</sq>
+        <sq>drench</sq>
+        <sq>vortex</sq>
+        <sq>DR 5/-</sq>
+    </special_qualities>
+  </monster>
+  <monster id="610">
     <name>succubus (demon)</name>
     <summon_monster_integer_list>6</summon_monster_integer_list>
     <prd>http://paizo.com/pathfinderRPG/prd/monsters/demon.html#demon-succubus</prd>
