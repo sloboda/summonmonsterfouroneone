@@ -778,7 +778,6 @@
         <sq>SR 17</sq>
         <sq>At will—darkness</sq>
         <sq>dispel magic</sq>
-        <sq>greater teleport</sq>
         <sq>1/day—summon (level 3, 1 babau at 40%)</sq>
     </special_qualities>
   </monster> 
@@ -797,7 +796,6 @@
         <sq>SR 16</sq>
         <sq>beard</sq>
         <sq>infernal wound</sq>
-        <sq>greater teleport</sq>
         <sq>1/day—summon (level 3, 1 bearded devil or 6 lemures, 50%)</sq>
     </special_qualities>
   </monster> 
@@ -1015,7 +1013,7 @@
     <takes_c_or_i_template/>
   </monster> 
   <monster id="602">
-    <name>Elasmosaurus (dinosaur)</name>
+    <name>elasmosaurus (dinosaur)</name>
     <summon_monster_integer_list>6</summon_monster_integer_list>
     <prd>http://paizo.com/pathfinderRPG/prd/monsters/dinosaur.html#_dinosaur-elasmosaurus</prd>
     <alignment>N</alignment>
@@ -1124,11 +1122,94 @@
         <sq>minor image</sq>
         <sq>unholy blight</sq>
         <sq>telepathy 100'</sq>
-        <sq>greater teleport</sq>
-        <sq>1/day—summon (level 3, 2 bearded devils 50%)</sq>
     </special_qualities>
   </monster> 
+  <monster id="609">
+    <name>octopus, giant</name>
+    <summon_monster_integer_list>6</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/octopus.html#_octopus-giant</prd>
+    <alignment>N</alignment>
+    <size>L</size>
+    <hit_dice>12d8+36</hit_dice>
+    <hit_points>90</hit_points>
+    <special_qualities>
+        <sq>poison</sq>
+        <sq>constrict</sq>
+        <sq>ink cloud</sq>
+    </special_qualities>
+    <takes_c_or_i_template/>
+  </monster> 
   <monster id="610">
+    <name>invisible stalker</name>
+    <summon_monster_integer_list>6</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/invisibleStalker.html#_invisible-stalker</prd>
+    <alignment>N</alignment>
+    <size>M</size>
+    <hit_dice>7d10+42</hit_dice>
+    <hit_points>80</hit_points>
+    <special_qualities>
+        <sq>darkvision 60'</sq>
+        <sq>natural invisibility</sq>
+        <sq>improved tracking</sq>
+    </special_qualities>
+  </monster>
+  <monster id="611">
+    <name>azata, lillend</name>
+    <summon_monster_integer_list>6</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/azata.html#_azata-lillend</prd>
+    <alignment>CG</alignment>
+    <size>L</size>
+    <hit_dice>7d10+35</hit_dice>
+    <hit_points>73</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>Immune electricity, petrification, poison</sq>
+        <sq>Resist cold 10, fire 10</sq>
+        <sq>bardic performance</sq>
+        <sq>constrict</sq>
+        <sq>darkness</sq>
+        <sq>hallucinatory terrain</sq>
+        <sq>knock</sq>
+        <sq>light</sq>
+        <sq>charm person</sq>
+        <sq>speak with animals</sq>
+        <sq>speak with plants</sq>
+        <sq>charm monster</sq>
+        <sq>cure serious wounds</sq>
+        <sq>hold person</sq>
+        <sq>suggestion</sq>
+        <sq>cure light wounds</sq>
+        <sq>sleep</sq>
+    </special_qualities>
+  </monster>
+  <monster id="612">
+    <name>demon, shadow</name>
+    <summon_monster_integer_list>6</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/demon.html#_demon-shadow</prd>
+    <alignment>CE</alignment>
+    <size>M</size>
+    <hit_dice>7d10+21</hit_dice>
+    <hit_points>59</hit_points>
+    <special_qualities>
+        <sq>DR 10/cold iron or good</sq>
+        <sq>Immune electricity, cold, poison</sq>
+        <sq>darkvision 60</sq>
+        <sq>incorporeal</sq>
+        <sq>Resist acid 10, fire 10</sq>
+        <sq>SR 17</sq>
+        <sq>deeper darkness</sq>
+        <sq>fear</sq>
+        <sq>telekinesis</sq>
+        <sq>shadow evocation</sq>
+        <sq>shadow conjuration</sq>
+        <sq>magic jar</sq>
+        <sq>sunlight powerlessness</sq>
+        <sq>telepathy 100 ft.</sq>
+        <sq>sprint</sq>
+        <sq>shadow blend</sq>
+    </special_qualities>
+  </monster>
+  <monster id="613">
     <name>succubus (demon)</name>
     <summon_monster_integer_list>6</summon_monster_integer_list>
     <prd>http://paizo.com/pathfinderRPG/prd/monsters/demon.html#demon-succubus</prd>
@@ -1145,12 +1226,26 @@
         <sq>detect thoughts (DC 20)</sq>
         <sq>ethereal jaunt</sq>
         <sq>suggestion (DC 21)</sq>
-        <sq>greater teleport</sq>
         <sq>vampiric touch</sq>
         <sq>1/day dominate person (DC 23)</sq>
-        <sq>1/day summon (level 3, 1 babau 50%)</sq>
     </special_qualities>
   </monster>
+  <monster id="614">
+    <name>triceratops (dinosaur)</name>
+    <summon_monster_integer_list>6</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/dinosaur.html#dinosaur-triceratops</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>14d8+56</hit_dice>
+    <hit_points>119</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>trample</sq>
+        <sq>gore</sq>
+        <sq>powerful charge</sq>
+    </special_qualities>
+    <takes_c_or_i_template/>
+  </monster> 
   <monster id="700">
     <name>brachiosaurus (dinosaur)</name>
     <summon_monster_integer_list>7</summon_monster_integer_list>
@@ -1185,7 +1280,6 @@
     <special_qualities>
         <sq>nausea</sq>
         <sq>amphibious</sq>
-        <sq>greater teleport</sq>
         <sq>chaos hammer (DC 18)</sq>
         <sq>unholy blight (DC 18)</sq>
         <sq>3/day gaseous form</sq>
@@ -1203,7 +1297,6 @@
     <hit_dice>14d10+98</hit_dice>
     <hit_points>175</hit_points>
     <special_qualities>
-        <sq>greater teleport</sq>
         <sq>trumpet</sq>
         <sq>magic circle against evil (constant) (CL 14th)</sq>
         <sq>aid</sq>

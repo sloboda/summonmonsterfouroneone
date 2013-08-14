@@ -94,7 +94,8 @@ class summon_monster_four_one_one(unittest.TestCase):
                   '420', '421', '422', '423', '424', '425', '426', '427',
                   '500', '501', '502', '503', '504', '505', '506', '507', '508', '509', 
                   '510', '511', '512', '513', '514', 
-                  '600', '601', '602', '603', '604', '605', '606', '607', '608', '610',
+                  '600', '601', '602', '603', '604', '605', '606', '607', '608', '609',
+                  '610', '611', '612', '613', '614',
                   '700', '701',
                   '800',
                   '900']
@@ -103,11 +104,11 @@ class summon_monster_four_one_one(unittest.TestCase):
         self.assertEqual(expect, result)
 
 
-    def test_return_elements_for_id_610(self):
-        """given monster element with attribute id=610, return child elements"""
+    def test_return_elements_for_id_613(self):
+        """given monster element with attribute id=613, return child elements"""
         expect = [[{'name': 'succubus (demon)'}, {'prd': 'http://paizo.com/pathfinderRPG/prd/monsters/demon.html#demon-succubus'}, {'alignment': 'CE'}, {'size': 'M'}]]
         mx = smxml.smxml()
-        result = mx.id_attributes_into_element_values(['610'])
+        result = mx.id_attributes_into_element_values(['613'])
         self.assertEqual(expect, result)
 
 
