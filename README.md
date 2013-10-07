@@ -47,7 +47,14 @@ Requirements
 ============
 
 
-This application should require python 2.7 and nothing else.   Once I stop adding features, I intend to redo the application in python3.
+This application requires python 2.7 and two other libraries which are not standard on my python installation: web.py and lxml.   
+
+web.py I installed from the web.py site.  sudo privileges to root were required to install it on my Linux system, but the installation was pretty simple.
+
+lxml was available through the Linux Ubuntu package installer synaptic. 
+
+
+Once I stop adding features, I intend to redo the application in python3.
 
 
 I have access only to a UNIX (Ubuntu 12.04) host for development and testing.    If you are able to help improve this application for other operating systems, great, please do so.
