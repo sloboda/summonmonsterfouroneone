@@ -323,6 +323,8 @@
     <hit_dice>2d8+9</hit_dice>
     <hit_points>18</hit_points>
     <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>scent</sq>
         <sq>poison Fort DC14 for 1d2 Str</sq>
     </special_qualities>
     <takes_c_or_i_template/>
@@ -559,6 +561,12 @@
     <size>M</size>
     <hit_dice>2d8+13</hit_dice>
     <hit_points>22</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>scent</sq>
+        <sq>poison Fort DC14 for 1d2 Str</sq>
+        <sq>fly 30</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="401">
@@ -569,6 +577,12 @@
     <size>L</size>
     <hit_dice>5d8+20</hit_dice>
     <hit_points>42</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>low-light vision</sq>
+        <sq>stampede</sq>
+        <sq>trample</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="402">
