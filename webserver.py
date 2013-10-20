@@ -191,7 +191,7 @@ def handle_modifier(input):
     augment_summoning_terms = ["augs", "augment_summoning", "augment summoning", "a"] 
     celestial_terms = ["good", "celestial", "g", "gd"] 
     infernal_terms = ["evil", "infernal", "e", "ev"] 
-    extended_display_terms = ["extend", "ext", "ex", "x"] 
+    extended_display_terms = ["extended", "extend", "ext", "ex", "x"] 
     list_display_terms = ["normal", "list", "n"] 
     input = input.lower()
     if input in augment_summoning_terms:
