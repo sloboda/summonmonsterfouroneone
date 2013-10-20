@@ -171,24 +171,24 @@ class summon_monster_four_one_one(unittest.TestCase):
 
 
     def test_find_id_value_for_monster_sq_term(self):
-        """given the sq_term blindsense, find id 307 """
-        expect = ['307'] 
+        """given the sq_term blindsense, find id 307 and 313"""
+        expect = ['307', '313'] 
         mx = smxml.smxml()
         result = mx.search_for_monster_sq("blindsense")
         self.assertEqual(expect, result)
 
 
     def test_ignore_case_when_id_value_for_monster_sq_term(self):
-        """given the sq_term bliNDSEnse, find id 307 """
-        expect = ['307'] 
+        """given the sq_term bliNDSEnse, find id 307 and 313 """
+        expect = ['307', '313'] 
         mx = smxml.smxml()
         result = mx.search_for_monster_sq("bliNDSEnse")
         self.assertEqual(expect, result)
 
 
     def test_on_partial_sq_term_find_a_match(self):
-        """given partial input blindsens, find id 307 """
-        expect = ['307'] 
+        """given partial input blindsens, find id 307 and 313 """
+        expect = ['307', '313'] 
         mx = smxml.smxml()
         result = mx.search_for_monster_sq("blindsens")
         self.assertEqual(expect, result)
