@@ -322,6 +322,9 @@
     <size>M</size>
     <hit_dice>2d8+9</hit_dice>
     <hit_points>18</hit_points>
+    <special_qualities>
+        <sq>poison Fort DC14 for 1d2 Str</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="301">
@@ -332,6 +335,11 @@
     <size>L</size>
     <hit_dice>3d8+6</hit_dice>
     <hit_points>19</hit_points>
+    <special_qualities>
+        <sq>low-light vision</sq>
+        <sq>scent</sq>
+        <sq>climb 30</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="302">
@@ -342,6 +350,12 @@
     <size>L</size>
     <hit_dice>3d8+9</hit_dice>
     <hit_points>22</hit_points>
+    <special_qualities>
+        <sq>low-light vision</sq>
+        <sq>scent</sq>
+        <sq>trample</sq>
+        <sq>stampede</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="303">
@@ -352,6 +366,11 @@
     <size>M</size>
     <hit_dice>2d8+9</hit_dice>
     <hit_points>18</hit_points>
+    <special_qualities>
+        <sq>low-light vision</sq>
+        <sq>scent</sq>
+        <sq>ferocity</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="304">
@@ -362,6 +381,11 @@
     <size>M</size>
     <hit_dice>3d8+6</hit_dice>
     <hit_points>19</hit_points>
+    <special_qualities>
+        <sq>low-light vision</sq>
+        <sq>scent</sq>
+        <sq>sprint 1/hour</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="305">
@@ -372,6 +396,12 @@
     <size>M</size>
     <hit_dice>3d8+6</hit_dice>
     <hit_points>19</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>constrict</sq>
+        <sq>climb 20</sq>
+        <sq>swim 20</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="306">
@@ -382,6 +412,13 @@
     <size>L</size>
     <hit_dice>3d8+9</hit_dice>
     <hit_points>22</hit_points>
+    <special_qualities>
+        <sq>low-light vision</sq>
+        <sq>sprint</sq>
+        <sq>death roll</sq>
+        <sq>hold breath</sq>
+        <sq>swim 30</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="307">
@@ -424,6 +461,10 @@
     <size>S</size>
     <hit_dice>2d8+8</hit_dice>
     <hit_points>17</hit_points>
+    <special_qualities>
+        <sq>resist electricity 10</sq>
+        <sq>electricity (DC 15 Fort or stunned 1d4 rounds)</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="310">
@@ -434,6 +475,17 @@
     <size>S</size>
     <hit_dice>2d10+2</hit_dice>
     <hit_points>13</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>low-light vision</sq>
+        <sq>DR 10/evil</sq>
+        <sq>immune electricity</sq>
+        <sq>immune petrification</sq>
+        <sq>aura of menace</sq>
+        <sq>aid</sq>
+        <sq>continual flame</sq>
+        <sq>detect evil</sq>
+    </special_qualities>
   </monster>
   <monster id="311">
     <name>leopard (cat)</name>
@@ -443,6 +495,13 @@
     <size>M</size>
     <hit_dice>3d8+6</hit_dice>
     <hit_points>19</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>low-light vision</sq>
+        <sq>climb 20</sq>
+        <sq>pounce</sq>
+        <sq>rake</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="312">
@@ -453,6 +512,12 @@
     <size>M</size>
     <hit_dice>3d8+9</hit_dice>
     <hit_points>22</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>low-light vision</sq>
+        <sq>swim 30</sq>
+        <sq>poison Fort DC14 for 1d2 Dex</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="313">
@@ -463,6 +528,10 @@
     <size>L</size>
     <hit_dice>4d8+4</hit_dice>
     <hit_points>22</hit_points>
+    <special_qualities>
+        <sq>keen scent</sq>
+        <sq>blindsense 30'</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="314">
@@ -473,6 +542,13 @@
     <size>M</size>
     <hit_dice>3d8+9</hit_dice>
     <hit_points>22</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>low-light vision</sq>
+        <sq>burrow 10</sq>
+        <sq>climb 10</sq>
+        <sq>rage</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="400">
