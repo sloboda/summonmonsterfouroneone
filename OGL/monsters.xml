@@ -826,8 +826,8 @@
     <special_qualities>
         <sq>darkvision 60</sq>
         <sq>fast healing 2 </sq>
-        <sq>fly 60</sq>
         <sq>DR 5/magic</sq>d
+        <sq>fly 60</sq>
         <sq>breath weapon 15 foot cone 1d8</sq>
         <sq>gust of wind 1/day</sq>
         <sq>blur 1/hr</sq>
@@ -844,7 +844,7 @@
     <special_qualities>
         <sq>darkvision 60</sq>
         <sq>fast healing 2 </sq>
-        <sq>fly 40</sq>
+        <sq>fly 50</sq>
         <sq>DR 5/magic</sq>d
         <sq>breath weapon 15 foot cone DC 13 Ref or 1d4 plus sickened</sq>
         <sq>dehydrate 1/day 20' radius 2d8 DC 14 Fort half</sq>
@@ -859,6 +859,15 @@
     <size>S</size>
     <hit_dice>3d10+3</hit_dice>
     <hit_points>19</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>fast healing 2 </sq>
+        <sq>fly 40</sq>
+        <sq>DR 5/magic</sq>d
+        <sq>breath weapon 15 foot cone DC 13 Ref or 1d8</sq>
+        <sq>enlarge person 1/day</sq>
+        <sq>soften earth and stone 1/day</sq>
+    </special_qualities>
   </monster>
   <monster id="419">
     <name>mephit, fire</name>
@@ -868,6 +877,17 @@
     <size>S</size>
     <hit_dice>3d10+3</hit_dice>
     <hit_points>19</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>fast healing 2 </sq>
+        <sq>fly 40</sq>
+        <sq>DR 5/magic</sq>d
+        <sq>immune fire</sq>
+        <sq>vulnerability to cold</sq>
+        <sq>breath weapon 15 foot cone DC 13 Ref or 1d8</sq>
+        <sq>scorching ray 1/hr</sq>
+        <sq>heat metal 1/day</sq>
+    </special_qualities>
   </monster>
   <monster id="420">
     <name>mephit, ice</name>
@@ -877,6 +897,17 @@
     <size>S</size>
     <hit_dice>3d10+3</hit_dice>
     <hit_points>19</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>fast healing 2 </sq>
+        <sq>fly 40</sq>
+        <sq>DR 5/magic</sq>d
+        <sq>immune cold</sq>
+        <sq>vulnerability to fire</sq>
+        <sq>breath weapon 15 foot cone DC 13 Ref or 1d4 plus sickened</sq>
+        <sq>magic missile 1/hr</sq>
+        <sq>chill metal 1/day</sq>
+    </special_qualities>
   </monster>
   <monster id="421">
     <name>mephit, magma</name>
@@ -886,6 +917,17 @@
     <size>S</size>
     <hit_dice>3d10+3</hit_dice>
     <hit_points>19</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>fast healing 2 </sq>
+        <sq>fly 40</sq>
+        <sq>DR 5/magic</sq>d
+        <sq>immune fire</sq>
+        <sq>vulnerability to cold</sq>
+        <sq>breath weapon 15 foot cone DC 13 Ref or 1d8</sq>
+        <sq>magma form  1/hr (like gaseous form, but pool of magma)</sq>
+        <sq>pyrotechnics 1/day</sq>
+    </special_qualities>
   </monster>
   <monster id="422">
     <name>mephit, ooze</name>
@@ -895,6 +937,17 @@
     <size>S</size>
     <hit_dice>3d10+3</hit_dice>
     <hit_points>19</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>fast healing 2 </sq>
+        <sq>swim 30</sq>
+        <sq>DR 5/magic</sq>d
+        <sq>immune cold</sq>
+        <sq>vulnerability to fire</sq>
+        <sq>breath weapon 15 foot cone DC 13 Ref or 1d4 acid plus sickened</sq>
+        <sq>acid arrow 1/hr</sq>
+        <sq>stinking cloud 1/day</sq>
+    </special_qualities>
   </monster>
   <monster id="423">
     <name>mephit, salt</name>
