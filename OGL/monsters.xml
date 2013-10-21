@@ -785,6 +785,18 @@
     <size>M</size>
     <hit_dice>6d10+6</hit_dice>
     <hit_points>39</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>darkvision 60</sq>
+        <sq>detect evil</sq>
+        <sq>low-light vision</sq>
+        <sq>aura of menace</sq>
+        <sq>magic circle against evil</sq>
+        <sq>speed 40</sq>
+        <sq>aid</sq>
+        <sq>continual flame</sq>
+        <sq>change shape</sq>
+    </special_qualities>
   </monster> 
   <monster id="415">
     <name>lion</name>
@@ -794,6 +806,13 @@
     <size>L</size>
     <hit_dice>5d8+10</hit_dice>
     <hit_points>32</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>low-light vision</sq>
+        <sq>rake</sq>
+        <sq>pounce</sq>
+        <sq>speed 40</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster> 
   <monster id="416">
@@ -804,6 +823,15 @@
     <size>S</size>
     <hit_dice>3d10+3</hit_dice>
     <hit_points>19</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>fast healing 2 </sq>
+        <sq>fly 60</sq>
+        <sq>DR 5/magic</sq>d
+        <sq>breath weapon 15 foot cone 1d8</sq>
+        <sq>gust of wind 1/day</sq>
+        <sq>blur 1/hr</sq>
+    </special_qualities>
   </monster>
   <monster id="417">
     <name>mephit, dust</name>
@@ -813,6 +841,15 @@
     <size>S</size>
     <hit_dice>3d10+3</hit_dice>
     <hit_points>19</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>fast healing 2 </sq>
+        <sq>fly 40</sq>
+        <sq>DR 5/magic</sq>d
+        <sq>breath weapon 15 foot cone DC 13 Ref or 1d4 plus sickened</sq>
+        <sq>dehydrate 1/day 20' radius 2d8 DC 14 Fort half</sq>
+        <sq>glitterdust 1/hr</sq>
+    </special_qualities>
   </monster>
   <monster id="418">
     <name>mephit, earth</name>
@@ -868,6 +905,12 @@
     <hit_dice>3d10+3</hit_dice>
     <hit_points>19</hit_points>
     <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>fast healing 2</sq>
+        <sq>fly 40</sq>
+        <sq>DR 5/magic</sq>d
+        <sq>breath weapon 15 foot cone DC 13 Ref or 1d4 plus sickened</sq>
+        <sq>dehydrate 1/day 20' radius 2d8 DC 14 Fort half</sq>
         <sq>glitterdust 1/hr</sq>
     </special_qualities>
   </monster>
