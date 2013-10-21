@@ -722,6 +722,12 @@
     <size>L</size>
     <hit_dice>5d8+15</hit_dice>
     <hit_points>37</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>tremorsense 60</sq>
+        <sq>speed 50</sq>
+        <sq>poison Fort DC17 for 1d2 Str</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="411">
@@ -732,6 +738,11 @@
     <size>L</size>
     <hit_dice>4d8+16</hit_dice>
     <hit_points>34</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>fly 60</sq>
+        <sq>poison Fort DC18 for 1d2 Dex</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster> 
   <monster id="412">
@@ -742,6 +753,11 @@
     <size>L</size>
     <hit_dice>5d8+20</hit_dice>
     <hit_points>42</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>low-light vision</sq>
+        <sq>speed 40</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster> 
   <monster id="413">
@@ -752,6 +768,14 @@
     <size>M</size>
     <hit_dice>4d10+8</hit_dice>
     <hit_points>30</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>darkvision 60</sq>
+        <sq>immune fire</sq>
+        <sq>vulnerability to cold</sq>
+        <sq>speed 40</sq>
+        <sq>breath weapon 10' cone for 2d6 fire</sq>
+    </special_qualities>
   </monster> 
   <monster id="414">
     <name>hound archon</name>
