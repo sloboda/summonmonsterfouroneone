@@ -130,6 +130,7 @@
     <hit_points>13</hit_points>
     <special_qualities>
         <sq>air mastery</sq>
+        <sq>fly 100</sq>
         <sq>darkvision 60</sq>
         <sq>whirlwind</sq>
     </special_qualities>
@@ -145,6 +146,7 @@
     <special_qualities>
         <sq>earth mastery</sq>
         <sq>earth glide</sq>
+        <sq>darkvision 60</sq>
         <sq>tremorsense 60 ft</sq>
     </special_qualities>
   </monster>
@@ -159,6 +161,7 @@
     <special_qualities>
         <sq>immune fire</sq>
         <sq>vulnerable to cold</sq>
+        <sq>darkvision 60</sq>
         <sq>burn (1d4, DC 11)</sq>
     </special_qualities>
   </monster>
@@ -172,6 +175,8 @@
     <hit_points>13</hit_points>
     <special_qualities>
         <sq>drench</sq>
+        <sq>swim 90</sq>
+        <sq>darkvision 60</sq>
         <sq>vortex (DC13)</sq>
         <sq>water mastery</sq>
     </special_qualities>
@@ -593,6 +598,11 @@
     <size>M</size>
     <hit_dice>4d8+16</hit_dice>
     <hit_points>34</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>low-light vision</sq>
+        <sq>speed 60</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="403">
@@ -603,6 +613,12 @@
     <size>L</size>
     <hit_dice>4d8+12</hit_dice>
     <hit_points>30</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>low-light vision</sq>
+        <sq>climb 30</sq>
+        <sq>rend</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="404">
@@ -613,6 +629,11 @@
     <size>L</size>
     <hit_dice>5d8+20</hit_dice>
     <hit_points>42</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>low-light vision</sq>
+        <sq>ferocity</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="405">
@@ -623,6 +644,12 @@
     <size>L</size>
     <hit_dice>5d8+15</hit_dice>
     <hit_points>37</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>low-light vision</sq>
+        <sq>trip</sq>
+        <sq>speed 50</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="406">
@@ -636,6 +663,7 @@
     <special_qualities>
         <sq>air mastery</sq>
         <sq>darkvision 60</sq>
+        <sq>fly 100</sq>
         <sq>whirlwind</sq>
     </special_qualities>
   </monster>
@@ -647,6 +675,13 @@
     <size>M</size>
     <hit_dice>4d10+12</hit_dice>
     <hit_points>34</hit_points>
+    <special_qualities>
+        <sq>earth mastery</sq>
+        <sq>darkvision 60</sq>
+        <sq>tremorsense 60</sq>
+        <sq>earth glide</sq>
+        <sq>burrow 20</sq>
+    </special_qualities>
   </monster>
   <monster id="408">
     <name>elemental, medium, fire</name>
@@ -656,6 +691,12 @@
     <size>M</size>
     <hit_dice>4d10+8</hit_dice>
     <hit_points>30</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>immune fire</sq>
+        <sq>speed 50</sq>
+        <sq>burn 1d6</sq>
+    </special_qualities>
   </monster>
   <monster id="409">
     <name>elemental, medium, water</name>
@@ -665,6 +706,13 @@
     <size>M</size>
     <hit_dice>4d10+8</hit_dice>
     <hit_points>30</hit_points>
+    <special_qualities>
+        <sq>drench</sq>
+        <sq>swim 90</sq>
+        <sq>darkvision 60</sq>
+        <sq>vortex (DC15)</sq>
+        <sq>water mastery</sq>
+    </special_qualities>
   </monster>
   <monster id="410">
     <name>giant scorpion</name>
