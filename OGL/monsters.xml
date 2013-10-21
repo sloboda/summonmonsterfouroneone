@@ -975,15 +975,13 @@
     <hit_points>73</hit_points>
     <special_qualities>
         <sq>see invisibility</sq>
-        <sq>see invisibility</sq>
         <sq>protective slime</sq>
         <sq> DR 10/cold iron or good</sq>
         <sq>Immune electricity, poison</sq>
         <sq>Resist acid 10, cold 10, fire 10</sq>
         <sq>SR 17</sq>
-        <sq>At will—darkness</sq>
-        <sq>dispel magic</sq>
-        <sq>1/day—summon (level 3, 1 babau at 40%)</sq>
+        <sq>At will — darkness</sq>
+        <sq>At will - dispel magic</sq>
     </special_qualities>
   </monster> 
   <monster id="502">
