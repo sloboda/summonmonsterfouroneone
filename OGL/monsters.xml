@@ -848,7 +848,8 @@
         <sq>DR 5/magic</sq>d
         <sq>breath weapon 15 foot cone DC 13 Ref or 1d4 plus sickened</sq>
         <sq>dehydrate 1/day 20' radius 2d8 DC 14 Fort half</sq>
-        <sq>glitterdust 1/hr</sq>
+        <sq>blur 1/hr</sq>
+        <sq>wind wall 1/day</sq>
     </special_qualities>
   </monster>
   <monster id="418">

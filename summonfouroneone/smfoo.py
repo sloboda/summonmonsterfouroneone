@@ -56,6 +56,10 @@ Valid values are:
 -- integers are shorthand for summon monster spells
    (e.g. a 5 is the same as  'summon monster v')
 -- The integer 0 is shorthand for "all summon monster spells"
+-- special qualities that a summoned monster might have
+   (e.g. 'blindsense', 'dispel magic')
+-- abbreviations for special qualities that a summoned monster might have
+   (e.g. type 'gli' for both 'glitterdust' and 'earth glide')
 -- Modifiers are added with a leading plus sign '+'
    Valid modifiers are:
    +n +normal for normal display
