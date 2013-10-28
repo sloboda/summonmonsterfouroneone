@@ -32,6 +32,9 @@
     <size>S</size>
     <hit_dice>1d8+1</hit_dice>
     <hit_points>5</hit_points>
+    <special_qualities>
+        <sq>fly 80</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="102">
@@ -108,6 +111,11 @@
     <size>M</size>
     <hit_dice>2d8+4</hit_dice>
     <hit_points>13</hit_points>
+    <special_qualities>
+        <sq>low-light vision</sq>
+        <sq>scent</sq>
+        <sq>speed 40</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="200">
@@ -118,6 +126,13 @@
     <size>M</size>
     <hit_dice>2d8+9</hit_dice>
     <hit_points>18</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>darkvision 60</sq>
+        <sq>speed 50</sq>
+        <sq>climb 20</sq>
+        <sq>immune mind-affecting effects</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster>
   <monster id="201">
@@ -245,6 +260,7 @@
     <hit_points>15</hit_points>
     <special_qualities>
         <sq>scent</sq>
+        <sq>speed 50</sq>
     </special_qualities>
     <takes_c_or_i_template/>
   </monster>
@@ -438,6 +454,7 @@
     <hit_points>22</hit_points>
     <special_qualities>
         <sq>blindsense</sq>
+        <sq>fly 40</sq>
     </special_qualities>
     <takes_c_or_i_template/>
   </monster>
@@ -976,6 +993,17 @@
     <size>S</size>
     <hit_dice>3d10+3</hit_dice>
     <hit_points>19</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>fast healing 2 </sq>
+        <sq>fly 40</sq>
+        <sq>DR 5/magic</sq>d
+        <sq>immune fire</sq>
+        <sq>vulnerability to cold</sq>
+        <sq>breath weapon 15 foot cone DC 13 Ref or 1d4 fire plus sickened</sq>
+        <sq>blur 1/hr</sq>
+        <sq>1/day rainstorm 2d6 fire (Fort DC 14 half) in 20' square</sq>
+    </special_qualities>
   </monster>
   <monster id="425">
     <name>mephit, water</name>
@@ -985,6 +1013,15 @@
     <size>S</size>
     <hit_dice>3d10+3</hit_dice>
     <hit_points>19</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>fast healing 2 </sq>
+        <sq>swim 30</sq>
+        <sq>DR 5/magic</sq>d
+        <sq>breath weapon 15 foot cone DC 13 Ref or 1d8 acid</sq>
+        <sq>acid arrow 1/hr</sq>
+        <sq>stinking cloud 1/day (DC 15)</sq>
+    </special_qualities>
   </monster>
   <monster id="426">
     <name>pteranodon (dinosaur)</name>
@@ -994,6 +1031,9 @@
     <size>L</size>
     <hit_dice>5d8+10</hit_dice>
     <hit_points>32</hit_points>
+    <special_qualities>
+        <sq>fly 50</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster> 
   <monster id="427">
@@ -1004,6 +1044,10 @@
     <size>L</size>
     <hit_dice>5d8+20</hit_dice>
     <hit_points>42</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>powerful charge</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster> 
   <monster id="500">
