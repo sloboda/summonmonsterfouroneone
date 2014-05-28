@@ -65,7 +65,7 @@ Valid values are:
    +n +normal for normal display
    +x +extended for extended display
    +g +good +celestial to apply the celestial template to some monsters
-   +e +evil +infernal to apply the celestial template to some monsters
+   +e +evil +infernal to apply the infernal template to some monsters
    +a +augs '+augment summoning' to apply the Augment Summoning feat to monsters
 
 Use quotation marks to preserve white space.
