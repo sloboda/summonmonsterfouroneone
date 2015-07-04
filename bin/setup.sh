@@ -39,7 +39,7 @@
 
 # replace this with the full path 
 #    to summonmonsterfouroneone on your system
-PROJECTDIR="/opt/sm/summonmonster411"
+PROJECTDIR="/opt/sm/summonmonsterfouroneone"
 
 PATH=$PATH:$PROJECTDIR/bin
 ### python files to be imported go in directory specified by next line
