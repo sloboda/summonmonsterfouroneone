@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0"?>
 <!--  ##################################################   -->
 <!--  All content in this file monsters.xml is  -->
-<!--   released under thet  Open Game License (OGL)  -->
+<!--   released under the  Open Game License (OGL)  -->
 <!--   See the file licence.txt in this directory for more information. -->
 <!--   -->
-<!--  The Pathfinder Roleplaying Game is released under the Open Game License, -->
+<!--  The Pathfinder Role Playing Game is released under the Open Game License, -->
 <!--  meaning the core rules that drive the Pathfinder RPG system are available --> 
 <!--  to anyone to use for free under the terms of the OGL. --> 
 <!--   -->
@@ -1097,7 +1097,6 @@
         <sq>SR 16</sq>
         <sq>beard</sq>
         <sq>infernal wound</sq>
-        <sq>1/day—summon (level 3, 1 bearded devil or 6 lemures, 50%)</sq>
     </special_qualities>
   </monster> 
   <monster id="503">
@@ -1570,6 +1569,25 @@
     </special_qualities>
     <takes_c_or_i_template/>
   </monster> 
+  <monster id="702">
+    <name>bebilith</name>
+    <summon_monster_integer_list>7</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/bebilith.html#bebilith</prd>
+    <alignment>CE</alignment>
+    <size>H</size>
+    <hit_dice>12d10+84</hit_dice>
+    <hit_points>150</hit_points>
+    <special_qualities>
+        <sq>rot</sq>
+        <sq>dismantle armor</sq>
+        <sq>penetrating strike</sq>
+        <sq>telepathy 100 ft.</sq>
+        <sq>plane shift</sq>
+        <sq>scent</sq>
+        <sq>darkvision 60</sq>
+        <sq>climb 20</sq>
+    </special_qualities>
+  </monster> 
   <monster id="800">
     <name>hezrou (demon)</name>
     <summon_monster_integer_list>8</summon_monster_integer_list>
@@ -1585,7 +1603,6 @@
         <sq>unholy blight (DC 18)</sq>
         <sq>3/day gaseous form</sq>
         <sq>1/day blasphemy (DC 21)</sq>
-        <sq>1/day summon (level 4, 1 hezrou 35%)</sq>
         <sq>telepathy 100 ft.</sq>
     </special_qualities>
   </monster>
