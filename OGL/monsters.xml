@@ -1078,7 +1078,7 @@
         <sq>Immune electricity, poison</sq>
         <sq>Resist acid 10, cold 10, fire 10</sq>
         <sq>SR 17</sq>
-        <sq>At will — darkness</sq>
+        <sq>At will - darkness</sq>
         <sq>At will - dispel magic</sq>
     </special_qualities>
   </monster> 
@@ -1582,10 +1582,34 @@
         <sq>dismantle armor</sq>
         <sq>penetrating strike</sq>
         <sq>telepathy 100 ft.</sq>
-        <sq>plane shift</sq>
+        <sq>web</sq>
         <sq>scent</sq>
         <sq>darkvision 60</sq>
         <sq>climb 20</sq>
+    </special_qualities>
+  </monster> 
+  <monster id="703">
+    <name>bone devil</name>
+    <summon_monster_integer_list>7</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/devil.html#devil-bone</prd>
+    <alignment>LE</alignment>
+    <size>L</size>
+    <hit_dice>10d10+50</hit_dice>
+    <hit_points>105</hit_points>
+    <special_qualities>
+        <sq>see in darkness</sq>
+        <sq>darkvision 60</sq>
+        <sq>fear aura</sq>
+        <sq>immune fire</sq>
+        <sq>immune poison</sq>
+        <sq>At will - dimensional anchor</sq>
+        <sq>At will - invisibility (self only)</sq>
+        <sq>At will - wall of ice</sq>
+        <sq>At will - major image</sq>
+        <sq>3/day - quickened invisibility (self only)</sq>
+        <sq>fly 60</sq>
+        <sq>poison</sq>
+        <sq>telepathy 100 ft.</sq>
     </special_qualities>
   </monster> 
   <monster id="800">
