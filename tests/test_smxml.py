@@ -81,6 +81,24 @@ class summon_monster_four_one_one(unittest.TestCase):
         self.assertEqual(expect, result)
 
 
+    def test_find_all_id_attributes_for_monster_elements_on_sm5_sl(self):
+        """given a 5, find all ID values for monster elements on SM5 spell list"""
+        expect = ['500', '501', '502', '503', '504', '505', '506', '507', '508', '509', 
+                  '510', '511', '512', '513', '514', ]
+        mx = smxml.smxml()
+        result = mx.search_for_id_attributes(5)
+        self.assertEqual(expect, result)
+
+
+    def test_find_all_id_attributes_for_monster_elements_on_sm6_sl(self):
+        """given a 6, find all ID values for monster elements on SM6 spell list"""
+        expect = ['600', '601', '602', '603', '604', '605', '606', '607', '608', '609', 
+                  '610', '611', '612', '613', '614', ]
+        mx = smxml.smxml()
+        result = mx.search_for_id_attributes(6)
+        self.assertEqual(expect, result)
+
+
     def test_find_all_id_attributes_for_all_monster_elements_on_all_sl(self):
         self.maxDiff = None
         """given a 0, find all ID values for all monster elements on all spell lists"""
@@ -96,7 +114,7 @@ class summon_monster_four_one_one(unittest.TestCase):
                   '510', '511', '512', '513', '514', 
                   '600', '601', '602', '603', '604', '605', '606', '607', '608', '609',
                   '610', '611', '612', '613', '614',
-                  '700', '701',
+                  '700', '701', '702', 
                   '800',
                   '900']
         mx = smxml.smxml()
