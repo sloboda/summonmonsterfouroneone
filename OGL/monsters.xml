@@ -1794,6 +1794,103 @@
     </special_qualities>
   </monster>
   <monster id="800">
+    <name>barbed devil</name>
+    <summon_monster_integer_list>8</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/devil.html#devil-barbed</prd>
+    <alignment>LE</alignment>
+    <size>M</size>
+    <hit_dice>12d10+72</hit_dice>
+    <hit_points>138</hit_points>
+    <special_qualities>
+        <sq>see in darkness</sq>
+        <sq>darkvision 60</sq>
+        <sq>DR 10/good</sq>
+        <sq>immune fire</sq>
+        <sq>immune poison</sq>
+        <sq>SR 22</sq>
+        <sq>resist acid 10</sq>
+        <sq>resist cold 10</sq>
+        <sq>At will - hold person</sq>
+        <sq>At will - major image</sq>
+        <sq>At will - produce flame</sq>
+        <sq>At will - pyrotechnics</sq>
+        <sq>At will - scorching ray</sq>
+        <sq>1/day - order's wrath</sq>
+        <sq>1/day - unholy blight</sq>
+        <sq>telepathy 100 ft.</sq>
+        <sq>fear</sq>
+        <sq>barbed defense</sq>
+        <sq>grab</sq>
+        <sq>impale</sq>
+    </special_qualities>
+  </monster> 
+  <monster id="801">
+    <name>elemental, elder, air</name>
+    <summon_monster_integer_list>8</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-air</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>16d10+64</hit_dice>
+    <hit_points>152</hit_points>
+    <special_qualities>
+        <sq>air mastery</sq>
+        <sq>darkvision 60</sq>
+        <sq>fly 100</sq>
+        <sq>whirlwind (DC 27)</sq>
+        <sq>DR 10/-</sq>
+    </special_qualities>
+  </monster>
+  <monster id="802">
+    <name>elemental, elder, earth</name>
+    <summon_monster_integer_list>8</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-earth</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>16d10+80</hit_dice>
+    <hit_points>168</hit_points>
+    <special_qualities>
+        <sq>earth mastery</sq>
+        <sq>darkvision 60</sq>
+        <sq>tremorsense 60</sq>
+        <sq>earth glide</sq>
+        <sq>burrow 20</sq>
+        <sq>DR 10/-</sq>
+    </special_qualities>
+  </monster>
+  <monster id="803">
+    <name>elemental, elder, fire</name>
+    <summon_monster_integer_list>8</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-fire</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>16d10+64</hit_dice>
+    <hit_points>152</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>immune fire</sq>
+        <sq>speed 60</sq>
+        <sq>burn 2d8</sq>
+        <sq>DR 10/-</sq>
+    </special_qualities>
+  </monster>
+  <monster id="804">
+    <name>elemental, elder, water</name>
+    <summon_monster_integer_list>8</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-water</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>16d10+64</hit_dice>
+    <hit_points>152</hit_points>
+    <special_qualities>
+        <sq>drench</sq>
+        <sq>swim 90</sq>
+        <sq>darkvision 60</sq>
+        <sq>vortex (DC25)</sq>
+        <sq>water mastery</sq>
+        <sq>DR 10/-</sq>
+    </special_qualities>
+  </monster>
+  <monster id="805">
     <name>hezrou (demon)</name>
     <summon_monster_integer_list>8</summon_monster_integer_list>
     <prd>http://paizo.com/pathfinderRPG/prd/monsters/demon.html#demon-hezrou</prd>
@@ -1804,8 +1901,16 @@
     <special_qualities>
         <sq>nausea</sq>
         <sq>amphibious</sq>
-        <sq>chaos hammer (DC 18)</sq>
-        <sq>unholy blight (DC 18)</sq>
+        <sq>swim 30</sq>
+        <sq>DR 10/good</sq>
+        <sq>immune electricity</sq>
+        <sq>immune poison</sq>
+        <sq>SR 22</sq>
+        <sq>resist acid 10</sq>
+        <sq>resist cold 10</sq>
+        <sq>resist fire 10</sq>
+        <sq>At will - chaos hammer (DC 18)</sq>
+        <sq>At will - unholy blight (DC 18)</sq>
         <sq>3/day gaseous form</sq>
         <sq>1/day blasphemy (DC 21)</sq>
         <sq>telepathy 100 ft.</sq>
