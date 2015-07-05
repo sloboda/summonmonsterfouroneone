@@ -319,6 +319,8 @@
     <special_qualities>
         <sq>ink cloud</sq>
         <sq>jet 240'</sq>
+        <sq>swim 60</sq>
+        <sq>low-light vision</sq>
     </special_qualities>
     <takes_c_or_i_template/>
   </monster>
@@ -555,6 +557,7 @@
     <special_qualities>
         <sq>keen scent</sq>
         <sq>blindsense 30'</sq>
+        <sq>swim 60</sq>
     </special_qualities>
     <takes_c_or_i_template/>
   </monster>
@@ -1554,6 +1557,11 @@
     <size>G</size>
     <hit_dice>18d8+90</hit_dice>
     <hit_points>171</hit_points>
+    <special_qualities>
+        <sq>scent</sq>
+        <sq>trample</sq>
+        <sq>low-light vision</sq>
+    </special_qualities>
     <takes_c_or_i_template/>
   </monster> 
   <monster id="701">
@@ -1612,6 +1620,179 @@
         <sq>telepathy 100 ft.</sq>
     </special_qualities>
   </monster> 
+  <monster id="704">
+    <name>dire crocodile</name>
+    <summon_monster_integer_list>7</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/crocodile.html#crocodile-dire</prd>
+    <alignment>N</alignment>
+    <size>G</size>
+    <hit_dice>12d8+84</hit_dice>
+    <hit_points>138</hit_points>
+    <special_qualities>
+        <sq>low-light vision</sq>
+        <sq>sprint</sq>
+        <sq>death roll</sq>
+        <sq>hold breath</sq>
+        <sq>swallow hole</sq>
+        <sq>swim 30</sq>
+    </special_qualities>
+    <takes_c_or_i_template/>
+  </monster>
+  <monster id="705">
+    <name>dire shark</name>
+    <summon_monster_integer_list>7</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/shark.html#shark-dire</prd>
+    <alignment>N</alignment>
+    <size>G</size>
+    <hit_dice>15d8+45</hit_dice>
+    <hit_points>112</hit_points>
+    <special_qualities>
+        <sq>keen scent</sq>
+        <sq>blindsense 30'</sq>
+        <sq>swallow whole</sq>
+        <sq>swim 60</sq>
+    </special_qualities>
+    <takes_c_or_i_template/>
+  </monster>
+  <monster id="706">
+    <name>elemental, greater, air</name>
+    <summon_monster_integer_list>7</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-air</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>13d10+52</hit_dice>
+    <hit_points>123</hit_points>
+    <special_qualities>
+        <sq>air mastery</sq>
+        <sq>darkvision 60</sq>
+        <sq>fly 100</sq>
+        <sq>whirlwind (DC 23)</sq>
+        <sq>DR 10/-</sq>
+    </special_qualities>
+  </monster>
+  <monster id="707">
+    <name>elemental, greater, earth</name>
+    <summon_monster_integer_list>7</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-earth</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>13d10+65</hit_dice>
+    <hit_points>136</hit_points>
+    <special_qualities>
+        <sq>earth mastery</sq>
+        <sq>darkvision 60</sq>
+        <sq>tremorsense 60</sq>
+        <sq>earth glide</sq>
+        <sq>burrow 20</sq>
+        <sq>DR 10/-</sq>
+    </special_qualities>
+  </monster>
+  <monster id="708">
+    <name>elemental, greater, fire</name>
+    <summon_monster_integer_list>7</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-fire</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>13d10+52</hit_dice>
+    <hit_points>123</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>immune fire</sq>
+        <sq>speed 60</sq>
+        <sq>burn 2d8</sq>
+        <sq>DR 10/-</sq>
+    </special_qualities>
+  </monster>
+  <monster id="709">
+    <name>elemental, greater, water</name>
+    <summon_monster_integer_list>7</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elemental.html#elemental-water</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>13d10+52</hit_dice>
+    <hit_points>123</hit_points>
+    <special_qualities>
+        <sq>drench</sq>
+        <sq>swim 90</sq>
+        <sq>darkvision 60</sq>
+        <sq>vortex (DC25)</sq>
+        <sq>water mastery</sq>
+        <sq>DR 10/-</sq>
+    </special_qualities>
+  </monster>
+  <monster id="710">
+    <name>giant squid</name>
+    <summon_monster_integer_list>7</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/squid.html#squid-giant</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>12d8+48</hit_dice>
+    <hit_points>102</hit_points>
+    <special_qualities>
+        <sq>ink cloud</sq>
+        <sq>constrict</sq>
+        <sq>jet 260'</sq>
+        <sq>swim 60</sq>
+        <sq>low-light vision</sq>
+    </special_qualities>
+    <takes_c_or_i_template/>
+  </monster>
+  <monster id="711">
+    <name>elephant, mastodon</name>
+    <summon_monster_integer_list>7</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/elephant.html#elephant-mastodon</prd>
+    <alignment>N</alignment>
+    <size>H</size>
+    <hit_dice>14d8+70</hit_dice>
+    <hit_points>133</hit_points>
+    <special_qualities>
+        <sq>low-light vision</sq>
+        <sq>scent</sq>
+        <sq>trample</sq>
+    </special_qualities>
+    <takes_c_or_i_template/>
+  </monster> 
+  <monster id="712">
+    <name>roc</name>
+    <summon_monster_integer_list>7</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/roc.html#roc</prd>
+    <alignment>N</alignment>
+    <size>G</size>
+    <hit_dice>16d8+48</hit_dice>
+    <hit_points>120</hit_points>
+    <special_qualities>
+        <sq>low-light vision</sq>
+        <sq>fly 80</sq>
+    </special_qualities>
+    <takes_c_or_i_template/>
+  </monster> 
+  <monster id="713">
+    <name>vrock (demon)</name>
+    <summon_monster_integer_list>7</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/demon.html#demon-vrock</prd>
+    <alignment>CE</alignment>
+    <size>L</size>
+    <hit_dice>9d10+63</hit_dice>
+    <hit_points>112</hit_points>
+    <special_qualities>
+        <sq>darkvision 60</sq>
+        <sq>DR 10/good</sq>
+        <sq>immune electricity</sq>
+        <sq>immune poison</sq>
+        <sq>SR 20</sq>
+        <sq>at will: telekinesis</sq>
+        <sq>resist acid 10</sq>
+        <sq>resist cold 10</sq>
+        <sq>resist fire 10</sq>
+        <sq>fly 50</sq>
+        <sq>1/day: heroism</sq>
+        <sq>1/day: mirror image</sq>
+        <sq>telepathy 100 ft.</sq>
+        <sq>dance of ruin</sq>
+        <sq>spores</sq>
+        <sq>stunning screech</sq>
+    </special_qualities>
+  </monster>
   <monster id="800">
     <name>hezrou (demon)</name>
     <summon_monster_integer_list>8</summon_monster_integer_list>
