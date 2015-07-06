@@ -117,7 +117,7 @@ class summon_monster_four_one_one(unittest.TestCase):
                   '700', '701', '702', '703', '704', '705', '706', '707', '708', '709',
                   '710', '711', '712', '713', 
                   '800', '801', '802', '803', '804', '805', 
-                  '900']
+                  '900', '901', '905']
         mx = smxml.smxml()
         result = mx.search_for_id_attributes(0)
         self.assertEqual(expect, result)

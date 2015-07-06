@@ -1917,14 +1917,123 @@
     </special_qualities>
   </monster>
   <monster id="900">
+    <name>astral deva (angel)</name>
+    <summon_monster_integer_list>9</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/angel.html#angel-astral-deva</prd>
+    <alignment>NG</alignment>
+    <size>M</size>
+    <hit_dice>15d10+90</hit_dice>
+    <hit_points>172</hit_points>
+    <special_qualities>
+        <sq>darkvision</sq>
+        <sq>low-light vision</sq>
+        <sq>protective aura</sq>
+        <sq>DR 10/evil</sq>
+        <sq>Immune acid</sq>
+        <sq>Immune cold</sq>
+        <sq>Immune petrification</sq>
+        <sq>Resist electricity 10</sq>
+        <sq>Resist fire 10</sq>
+        <sq>SR 25</sq>
+        <sq>uncanny dodge</sq>
+        <sq>change shape alter self</sq>
+        <sq>aid</sq>
+        <sq>continual flame</sq>
+        <sq>detect evil</sq>
+        <sq>dispel evil (DC 21)</sq>
+        <sq>1/day heal</sq>
+        <sq>1/day blade barrier</sq>
+        <sq>7/day cure light wounds</sq>
+        <sq>7/day see invisibility</sq>
+        <sq>discern lies (DC 20)</sq>
+        <sq>dispel magic</sq>
+        <sq>holy aura (DC 24)</sq>
+        <sq>holy smite (DC 20)</sq>
+        <sq>holy word (DC 23)</sq>
+        <sq>invisibility (self only)</sq>
+        <sq>remove curse</sq>
+        <sq>remove disease</sq>
+        <sq>remove fear</sq>
+        <sq>stun</sq>
+    </special_qualities>
+  </monster>
+  <monster id="901">
+    <name>ghaele azata</name>
+    <summon_monster_integer_list>9</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/azata.html#azata-ghaele</prd>
+    <alignment>CG</alignment>
+    <size>M</size>
+    <hit_dice>13d10+65</hit_dice>
+    <hit_points>136</hit_points>
+    <special_qualities>
+        <sq>darkvision</sq>
+        <sq>detect evil</sq>
+        <sq>low-light vision</sq>
+        <sq>see invisibility</sq>
+        <sq>holy aura</sq>
+        <sq>DR 10/cold iron and evil</sq>
+        <sq>Immune electricity</sq>
+        <sq>Immune petrification</sq>
+        <sq>Resist cold 10</sq>
+        <sq>Resist fire 10</sq>
+        <sq>SR 25</sq>
+        <sq>fly 150</sq>
+        <sq>gaze</sq>
+        <sq>light form</sq>
+        <sq>aid</sq>
+        <sq>charm monster (DC17)</sq>
+        <sq>continual flame</sq>
+        <sq>cure light wounds</sq>
+        <sq>dancing lights</sq>
+        <sq>detect thoughts (DC 15)</sq>
+        <sq>disguise self</sq>
+        <sq>dispel magic</sq>
+        <sq>hold monster (DC18)</sq>
+        <sq>greater invisibility (self only)</sq>
+        <sq>major image</sq>
+        <sq>3/day globe of invulnerability</sq>
+        <sq>1/day chain lightning</sq>
+        <sq>1/day prismatic spray</sq>
+        <sq>1/day wall of force</sq>
+        <sq>holy word (DC 21)</sq>
+        <sq>banishment (DC 20)</sq>
+        <sq>heal</sq>
+        <sq>flame strike (DC 19)</sq>
+        <sq>raise dead</sq>
+        <sq>true seeing</sq>
+        <sq>death ward</sq>
+        <sq>dismissal (2) (DC 18)</sq>
+        <sq>divine power</sq>
+        <sq>restoration</sq>
+        <sq>cure serious wounds (3)</sq>
+        <sq>searing light</sq>
+        <sq>aid</sq>
+        <sq>align weapon</sq>
+        <sq>bear's endurance</sq>
+        <sq>lesser restoration (2)</sq>
+        <sq>bless</sq>
+        <sq>command (DC 15)</sq>
+        <sq>divine favor</sq>
+        <sq>obscuring mist</sq>
+        <sq>shield of faith</sq>
+        <sq>detect magic</sq>
+        <sq>purify food and drink</sq>
+        <sq>stabilize</sq>
+        <sq>virtue</sq>
+        <sq>light ray</sq>
+    </special_qualities>
+  </monster>
+  <monster id="905">
     <name>trumpet archon</name>
     <summon_monster_integer_list>9</summon_monster_integer_list>
-    <prd>http://paizo.com/pathfinderRPG/prd/monsters/archon.html#_archon-trumpet</prd>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/archon.html#archon-trumpet</prd>
     <alignment>LG</alignment>
     <size>M</size>
     <hit_dice>14d10+98</hit_dice>
     <hit_points>175</hit_points>
     <special_qualities>
+        <sq>darkvision</sq>
+        <sq>low-light vision</sq>
         <sq>trumpet</sq>
         <sq>magic circle against evil (constant) (CL 14th)</sq>
         <sq>aid</sq>
@@ -1936,7 +2045,6 @@
         <sq>heal (2)</sq>
         <sq>dispel evil (DC 20)</sq>
         <sq>mass cure light wounds</sq>
-        <sq>plane shift (DC 20)</sq>
         <sq>raise dead</sq>
         <sq>dismissal (DC 19)</sq>
         <sq>divine power</sq>
