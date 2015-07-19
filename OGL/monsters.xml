@@ -2023,6 +2023,91 @@
         <sq>light ray</sq>
     </special_qualities>
   </monster>
+  <monster id="902">
+    <name>glabrezu (demon)</name>
+    <summon_monster_integer_list>9</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/demon.html#demon-glabrezu</prd>
+    <alignment>CE</alignment>
+    <size>H</size>
+    <hit_dice>12d10+120</hit_dice>
+    <hit_points>186</hit_points>
+    <special_qualities>
+        <sq>darkvision</sq>
+        <sq>true seeing</sq>
+        <sq>DR 10/good</sq>
+        <sq>immune electricity</sq>
+        <sq>immune poison</sq>
+        <sq>resist acid 10</sq>
+        <sq>resist cold 10</sq>
+        <sq>resist fire 10</sq>
+        <sq>SR 24</sq>
+        <sq>At will:chaos hammer (DC 19)</sq>
+        <sq>At will:confusion (DC 19)</sq>
+        <sq>At will:dispel magic</sq>
+        <sq>At will:mirror image</sq>
+        <sq>At will:reverse gravity (DC 22)</sq>
+        <sq>At will:veil (self only)</sq>
+        <sq>At will:unholy blight</sq>
+        <sq>1/day: power word stun</sq>
+        <sq>1/month: wish</sq>
+        <sq>telepathy 100 feet</sq>
+    </special_qualities>
+  </monster>
+  <monster id="903">
+    <name>ice devil</name>
+    <summon_monster_integer_list>9</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/devil.html#devil-ice</prd>
+    <alignment>LE</alignment>
+    <size>L</size>
+    <hit_dice>14d10+84</hit_dice>
+    <hit_points>161</hit_points>
+    <special_qualities>
+        <sq>darkvision</sq>
+        <sq>see in darkness</sq>
+        <sq>DR 10/good</sq>
+        <sq>Aura fear (10 ft., DC 22)</sq>
+        <sq>immune fire</sq>
+        <sq>immune cold</sq>
+        <sq>immune poison</sq>
+        <sq>resist acid 10</sq>
+        <sq>SR 24</sq>
+        <sq>fly 60</sq>
+        <sq>At will:cone of cold</sq>
+        <sq>At will:ice storm</sq>
+        <sq>At will:persistent image</sq>
+        <sq>At will:wall of ice</sq>
+        <sq>telepathy 100 feet</sq>
+        <sq>slow</sq>
+    </special_qualities>
+  </monster>
+  <monster id="904">
+    <name>nalfeshnee (demon)</name>
+    <summon_monster_integer_list>9</summon_monster_integer_list>
+    <prd>http://paizo.com/pathfinderRPG/prd/monsters/demon.html#demon-nalfeshnee</prd>
+    <alignment>CE</alignment>
+    <size>H</size>
+    <hit_dice>14d10+126</hit_dice>
+    <hit_points>203</hit_points>
+    <special_qualities>
+        <sq>darkvision</sq>
+        <sq>true seeing</sq>
+        <sq>Unholy Aura DC 23</sq>
+        <sq>DR 10/good</sq>
+        <sq>immune electricity</sq>
+        <sq>immune poison</sq>
+        <sq>resist acid 10</sq>
+        <sq>resist cold 10</sq>
+        <sq>resist fire 10</sq>
+        <sq>SR 25</sq>
+        <sq>fly 40</sq>
+        <sq>unholy nimbus</sq>
+        <sq>At will:call lightning</sq>
+        <sq>At will:feeblemind</sq>
+        <sq>At will:greater dispel magic</sq>
+        <sq>At will:slow</sq>
+        <sq>telepathy 100 feet</sq>
+    </special_qualities>
+  </monster>
   <monster id="905">
     <name>trumpet archon</name>
     <summon_monster_integer_list>9</summon_monster_integer_list>
