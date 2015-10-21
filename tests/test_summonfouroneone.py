@@ -195,7 +195,7 @@ class summonmonsterfouroneone(unittest.TestCase):
 
     def test_build_name_w_hyperlink(self):
         """return href with name as linktext and prd link as link target"""
-        expect = """<a href="foobar">eagle</a>"""
+        expect = """<a href = "foobar">eagle</a>"""
         monobj = smfoo.monster_object()
         monobj.set_name('eagle')  # give object a name 
         monobj.set_prd('foobar')  # give object a link

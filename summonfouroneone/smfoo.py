@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 """ smfoo: "summon monster four one one"
 
 copyright (c) 2013  by david sloboda
@@ -16,7 +16,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with summonmonsterfouroneone in the file COPYING.  
+along with summonmonsterfouroneone in the file COPYING.
 If not, see <http://www.gnu.org/licenses/>
 
 
@@ -25,7 +25,7 @@ If not, see <http://www.gnu.org/licenses/>
 
 This file has the XML subroutines for unit testing
 used by webserver.py and other applications
-when filtering monster.xml 
+when filtering monster.xml
 to return only a sub set of information.
 
 """
@@ -44,12 +44,12 @@ import sys
 #   for parsing out hit dice values
 from summonfouroneone import rpg_data_mangling
 
-help_text="""
+help_text = """
 Type a value in the input field, then press 'search'.
 
 Valid values are:
 -- the word "help" for this helpful message.
--- names of monsters to summon 
+-- names of monsters to summon
    (e.g. 'wolf' or 'dire bat')
 -- names of summon monster spells
    (e.g. 'summon monster iii')
@@ -80,11 +80,11 @@ def display_help_text(format=None):
     """
     result = ""
     if format == "html":
-       result = "<pre>"
-       result = result + help_text
-       result = result + "</pre>"
+        result = "<pre>"
+        result = result + help_text
+        result = result + "</pre>"
     elif format is None:
-       result = help_text
+        result = help_text
     return result
 
 
@@ -97,7 +97,7 @@ def apply_augs_feat(hd, hp):
 
     Given the hd and hp, return the modified hp total
     """
-    result = 0 
+    result = 0
     hd = int(hd)  # coerce to int
     hp = int(hp)  # coerce to int
     bonus = hd * 2
@@ -109,7 +109,7 @@ def apply_augs_feat(hd, hp):
 class results_object(object):
     """object to hold results from searches.
 
-    (at least) Two types of data in this object: 
+    (at least) Two types of data in this object:
     1) A list of all monsters
     2) A string of text containing any text messages.
     """
@@ -120,7 +120,7 @@ class results_object(object):
         """next line is flag for list or HTML table
         standard_list means <ol><li><li></ol> type HTML list
         """
-        self.display_output = "" 
+        self.display_output = ""
 
 
     def set_display_output(self, text=""):
@@ -129,7 +129,7 @@ class results_object(object):
 
     def get_display_output(self):
         result = self.display_output
-        return result 
+        return result
 
 
     def set_results_text(self, text=""):
@@ -138,40 +138,40 @@ class results_object(object):
 
     def get_results_text(self):
         result = self.results_text
-        return result 
+        return result
 
 
     def set_results_list(self, results_list=[]):
         self.results_list.append(results_list)
 
-   
+
     def get_results_list(self):
         result = self.results_list
         return result
 
 
     def zero_results_list(self):
-        self.results_list=[]
+        self.results_list = []
 
 
     def set_modifier_flags(self, flag_list=[]):
         self.flag_list.append(flag_list)
 
-   
+
     def get_modifier_flags(self):
         result = self.flag_list
         return result
 
 
     def zero_modifier_flags(self):
-        self.flag_list=[]
+        self.flag_list = []
 
 
 
 
 class monster_object(object):
     """object to hold monster data
-    """ 
+    """
     def __init__(self):
         self.id = ""
         self.name = ""
@@ -188,7 +188,7 @@ class monster_object(object):
         self.takes_c_or_i_template = False
 
 
-    def set_id(self, text=""): 
+    def set_id(self, text=""):
         self.id = text
 
 
@@ -197,7 +197,7 @@ class monster_object(object):
         return result
 
 
-    def set_takes_c_or_i_template(self, my_boolean=False): 
+    def set_takes_c_or_i_template(self, my_boolean=False):
         self.takes_c_or_i_template = my_boolean
 
 
@@ -206,7 +206,7 @@ class monster_object(object):
         return result
 
 
-    def set_name(self, text=""): 
+    def set_name(self, text=""):
         self.name = text
 
 
@@ -215,7 +215,7 @@ class monster_object(object):
         return result
 
 
-    def set_sq(self, text=""): 
+    def set_sq(self, text=""):
         self.sq = text
 
 
@@ -224,14 +224,14 @@ class monster_object(object):
             if thing not in self.special_qualities: # do not add it twice
                 self.special_qualities.append(thing)
 
-   
+
     def get_special_qualities(self):
         result = self.special_qualities
         return result
 
 
     def zero_special_qualities(self):
-        self.special_qualities=[]
+        self.special_qualities = []
 
 
     def get_sq(self):
@@ -239,7 +239,7 @@ class monster_object(object):
         return result
 
 
-    def set_alignment(self, text=""): 
+    def set_alignment(self, text=""):
         self.alignment = text
 
 
@@ -248,7 +248,7 @@ class monster_object(object):
         return result
 
 
-    def set_prd(self, text=""): 
+    def set_prd(self, text=""):
         self.prd = text
 
 
@@ -257,7 +257,7 @@ class monster_object(object):
         return result
 
 
-    def set_size(self, text=""): 
+    def set_size(self, text=""):
         self.size = text
 
 
@@ -266,7 +266,7 @@ class monster_object(object):
         return result
 
 
-    def set_hit_points(self, hp=0): 
+    def set_hit_points(self, hp=0):
         self.hit_points = hp
 
 
@@ -275,7 +275,7 @@ class monster_object(object):
         return result
 
 
-    def set_hit_dice(self, hd="1d8"): 
+    def set_hit_dice(self, hd="1d8"):
         self.hit_dice = hd
 
 
@@ -292,7 +292,7 @@ class monster_object(object):
 
         requires hd and hp; sets the modified hp total
         """
-        result = 0 
+        result = 0
         hd = self.get_hit_dice() # get 1d8+2
         hd = rpg_data_mangling.parse_dice(hd)[0] # get only the 1
         hp = self.get_hit_points()
@@ -302,8 +302,8 @@ class monster_object(object):
         result = hp + bonus
         self.set_hit_points(result)
 
-    
-    
+
+
     def apply_template(self, template_name="celestial"):
         """determine if a monster may receive  either
         celestial or infernal template.
@@ -318,28 +318,31 @@ class monster_object(object):
                 self.apply_infernal_template()
         else:
             pass
-        
+
 
 
     def apply_celestial_template(self):
         """first cut at apply celestial_template
 
-        The template provides a number of features 
+        The template provides a number of features
            dependent on hit dice.
         Assumption at start is that this is a string.
         It might make more sense to work with a list for the
            sq attribute,
-        and convert that list into a string using the 
+        and convert that list into a string using the
            get_html_string() method.
         """
-        sq =""
+        sq = ""
         hd = self.get_hit_dice() # get 1d8+2
         hd = rpg_data_mangling.parse_dice(hd)[0] # get only the 1
         hd = int(hd)  # coerce to int
         smite = "smite evil 1/day for +%d dmg" % hd
-        sq_list_low = ['resist acid 5','resist cold 5', 'resist electricity 5', smite]
-        sq_list_med = ['DR 5/evil','resist acid 10','resist cold 10', 'resist electricity 10', smite]
-        sq_list_high = ['DR 10/evil','resist acid 15','resist cold 15', 'resist electricity 15', smite]
+        sq_list_low = ['resist acid 5', 'resist cold 5',
+                       'resist electricity 5', smite]
+        sq_list_med = ['DR 5/evil', 'resist acid 10',
+                       'resist cold 10', 'resist electricity 10', smite]
+        sq_list_high = ['DR 10/evil', 'resist acid 15', 'resist cold 15',
+                        'resist electricity 15', smite]
         if hd > 0 and hd < 5:
             self.set_special_qualities(sq_list_low)
         elif hd > 4 and hd < 11:
@@ -351,22 +354,23 @@ class monster_object(object):
     def apply_infernal_template(self):
         """first cut at apply infernal_template
 
-        The template provides a number of features 
+        The template provides a number of features
            dependent on hit dice.
         Assumption at start is that this is a string.
         It might make more sense to work with a list for the
            sq attribute,
-        and convert that list into a string using the 
+        and convert that list into a string using the
            get_html_string() method.
         """
-        sq =""
+        sq = ""
         hd = self.get_hit_dice() # get 1d8+2
         hd = rpg_data_mangling.parse_dice(hd)[0] # get only the 1
         hd = int(hd)  # coerce to int
         smite = "smite good 1/day for +%d dmg" % hd
         sq_list_low = ['resist cold 5', 'resist fire 5', smite]
-        sq_list_med = ['DR 5/good','resist cold 10', 'resist fire 10', smite]
-        sq_list_high = ['DR 10/good','resist cold 15','resist fire 15', smite]
+        sq_list_med = ['DR 5/good', 'resist cold 10', 'resist fire 10', smite]
+        sq_list_high = ['DR 10/good', 'resist cold 15',
+                        'resist fire 15', smite]
         if hd > 0 and hd < 5:
             self.set_special_qualities(sq_list_low)
         elif hd > 4 and hd < 11:
@@ -383,7 +387,7 @@ class monster_object(object):
         """
         name = self.get_name()
         prd = self.get_prd()
-        result = '''<a href="''' + prd + '''">''' + name + '</a>'
+        result = '''<a href = "''' + prd + '''">''' + name + '</a>'
         self.name_w_link = result
 
 
@@ -396,8 +400,8 @@ class monster_object(object):
         """return the value for monobj_attr as HTML
 
         monster_object attributes may be:
-            strings such as name, or 
-            integers such as hit_points, or 
+            strings such as name, or
+            integers such as hit_points, or
             lists such as special_qualities
 
         This method returns the result as a string.
@@ -405,16 +409,16 @@ class monster_object(object):
             for non breaking space &nbsp;
         """
         result = ""
-        value = 0 
+        value = 0
         # build method call from method input
         try:
-            value = getattr(self,"get_%s" % monobj_attr)()
+            value = getattr(self, "get_%s" % monobj_attr)()
         except AttributeError:
             value = None  #  this may be a source of problems.
             ### should watch this try/except block; may cause future errors.
         if value is None:   # Some attributes do not have values
             result = '&nbsp;'
-        elif value == "":   
+        elif value == "":
             result = '&nbsp;'
         else:
             result = str(value)
@@ -425,11 +429,11 @@ class monster_object(object):
         if hasattr(self, monobj_attr):
             if isinstance(getattr(self, str(monobj_attr)), list):
                 result = ""
-                value = getattr(self,"get_%s" % monobj_attr)()
+                value = getattr(self, "get_%s" % monobj_attr)()
                 for v in sorted(value):
-                    result = v + ", " + result 
+                    result = v + ", " + result
                 result = result.rstrip(', ') # remove final comma
-        return result 
+        return result
 
 
 
@@ -441,24 +445,25 @@ class smxml:
         return t
 
 
-    def search_for_monster_name(self, monster_name="Eagle"):  
+    def search_for_monster_name(self, monster_name="Eagle"):
         """search xml for a monster name
 
-        The contains(text, searchterm) method in the lxml call 
+        The contains(text, searchterm) method in the lxml call
               allows for input like "dem" to match "demon"
 
-        Returns a list of id values.  
-        Each id value provides a single match 
+        Returns a list of id values.
+        Each id value provides a single match
           on an attribute "id" in a monster element in the XML file.
         """
         result = []
         smxl = smxml()
         t = smxl.setup_xml()
         monster_name = monster_name.lower()
-        mypathval="""./monster/name[contains(text(), '""" + str(monster_name) +"""') ]/.."""
+        mypathval = """./monster/name[contains(text(), '"""
+        mypathval = mypathval + str(monster_name) +"""') ]/.."""
         for m in t.xpath(mypathval):
-             mid = m.get("id")
-             result.append(mid)
+            mid = m.get("id")
+            result.append(mid)
         return result
 
 
@@ -466,32 +471,32 @@ class smxml:
         result = []
         smxl = smxml()
         t = smxl.setup_xml()
-        mdict={}
-        elements = ["name","prd","alignment","size"]
-        """ nine summon monster spells, nine integers expected
-
-        "zero" makes a nice shorthand way of referencing the set [1-9]
-        """
-        expected_digits = [1 ,2, 3, 4, 5, 6, 7, 8, 9]
+        mdict = {}
+        elements = ["name", "prd", "alignment", "size"]
+        # nine summon monster spells, nine integers expected
+        # "zero" makes a nice shorthand way of referencing the set [1-9]
+        expected_digits = [1, 2, 3, 4, 5, 6, 7, 8, 9]
         try:
-           int(searchterm)
+            int(searchterm)
         except:
-           fail_text="this search method expects an integer."
-           result.append(fail_text)
-           return result
-        if int(searchterm) in expected_digits: 
+            fail_text = "this search method expects an integer."
+            result.append(fail_text)
+            return result
+        if int(searchterm) in expected_digits:
             summon_monster_integer = searchterm
-            mypathval="./monster/summon_monster_integer_list[text()='" + str(summon_monster_integer) + "']/.."
+            mypathval = "./monster/summon_monster_integer_list[text()='"
+            mypathval = mypathval + str(summon_monster_integer) + "']/.."
             for m in t.xpath(mypathval):
-                 mid = m.get("id")
-                 result.append(mid)
-        elif int(searchterm) == 0:  # search everything on 0 
+                mid = m.get("id")
+                result.append(mid)
+        elif int(searchterm) == 0:  # search everything on 0
             for i in expected_digits:
                 summon_monster_integer = i
-                mypathval="./monster/summon_monster_integer_list[text()='" + str(summon_monster_integer) + "']/.."
+                mypathval = "./monster/summon_monster_integer_list[text()='"
+                mypathval = mypathval + str(summon_monster_integer) + "']/.."
                 for m in t.xpath(mypathval):
-                     mid = m.get("id")
-                     result.append(mid)
+                    mid = m.get("id")
+                    result.append(mid)
         else:
             pass
         return result
@@ -503,18 +508,18 @@ class smxml:
         Expects ['100', '101']
         Searches XML file for all elements in list
         """
-        result=[]
-        mdict={}
-        elements = ["name","prd","alignment","size"]
+        result = []
+        mdict = {}
+        elements = ["name", "prd", "alignment", "size"]
         smxl = smxml()
         t = smxl.setup_xml()
         for mid in mylistofID:
-            mysubpath= "./monster[@id='" + str(mid) + "']"
+            mysubpath = "./monster[@id='" + str(mid) + "']"
             for mvalue in t.xpath(mysubpath):
-                internal_list=[]
+                internal_list = []
                 for e in elements:
                     mdict[e] = mvalue.find(e).text
-                    internal_list.append({e: mdict[e] })
+                    internal_list.append({e: mdict[e]})
                 result.append(internal_list)
         return result
 
@@ -526,32 +531,28 @@ class smxml:
         and a list of keys for the dictionary
 
         Returns a dictionary
-        
-        subelement_list is a list of elements that have text in their subelements, not of themselves.
+
+        subelement_list is a list of elements
+          that have text in their subelements, not of themselves.
         """
-        result={}
+        result = {}
         subelement_list = ['special_qualities']
         smxl = smxml()  # set up xml object
         t = smxl.setup_xml()  # attach it to our xml file
-        mysubpath= "./monster[@id='" + str(my_id) + "']"
+        mysubpath = "./monster[@id='" + str(my_id) + "']"
         for mvalue in t.xpath(mysubpath):
-                internal_list=[]
-                for k in keys:
-                    if k in subelement_list:
-                        mylist =[]
-                        for subele in mvalue.find(k).getchildren():
-                             mylist.append(subele.text)
-                        result[k] = mylist
+            internal_list = []
+            for k in keys:
+                if k in subelement_list:
+                    mylist = []
+                    for subele in mvalue.find(k).getchildren():
+                        mylist.append(subele.text)
+                    result[k] = mylist
+                else:
+                    if mvalue.find(k) is not None:
+                        result[k] = mvalue.find(k).text
                     else:
-                        if mvalue.find(k) is not None:
-                            result[k] = mvalue.find(k).text
-                        else:
-                            pass # we've been passed a key that does not exist
+                        pass # we've been passed a key that does not exist
         return result
-
-
-
-
-
 
 
