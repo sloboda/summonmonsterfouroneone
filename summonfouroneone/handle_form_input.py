@@ -1,7 +1,7 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 """ handle_form_input
 
-copyright (c) 2013  by david sloboda
+copyright (c) 2015  by david sloboda
 
 This file is part of summonmonsterfouroneone.
 
@@ -16,26 +16,22 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with summonmonsterfouroneone in the file COPYING.  
+along with summonmonsterfouroneone in the file COPYING.
 If not, see <http://www.gnu.org/licenses/>
 
-
-
-
-
-This file has methods for 
+This file has methods for
 cleaning and santizing form input
 used by webserver.py and other applications
-when filtering monster.xml 
+when filtering monster.xml
 to return only a subset of information.
 
 """
 
 import re
 import shlex
+import sys
 
-MAX_INPUT_CHARACTER_LENGTH=100
-
+MAX_INPUT_CHARACTER_LENGTH = 100
 
 def check_is_input_cry_for_help(form_input):
     """check to see if form input is a request for help
@@ -46,10 +42,8 @@ def check_is_input_cry_for_help(form_input):
     result = False
     help_terms = ["help", "--help", "+help", "usage", "+usage"]
     if form_input in help_terms:
-         result = True
+        result = True
     return result
-
-
 
 def split_input_keep_quotes(form_input):
     """split input sent to form. preserve 'quoted whitespace'
@@ -60,7 +54,6 @@ def split_input_keep_quotes(form_input):
     result = shlex.split(form_input)
     return result
 
-
 def check_input_length(input_string):
     """check input length of input_string
 
@@ -68,19 +61,20 @@ def check_input_length(input_string):
     """
     result = ""
     try:
-       input = str(input_string)
-    except:
-       print "cannot coerce to string"
-    while len(input) > MAX_INPUT_CHARACTER_LENGTH:
-       input = input[:MAX_INPUT_CHARACTER_LENGTH]
-    return input
-     
+        result = str(input_string)
+    except ValueError:
+        print "cannot coerce to string"
+        sys.exit(2)
+    while len(result) > MAX_INPUT_CHARACTER_LENGTH:
+        result = result[:MAX_INPUT_CHARACTER_LENGTH]
+    return result
+
 
 def scrub_form_input(input_string):
     """check input_string for bad characters we do not want.
-   
+
     Remove them.
-    returns string 
+    returns string
     """
     result = ""
     #  remove backslash  \
@@ -104,5 +98,5 @@ def scrub_form_input(input_string):
     input_string = re.sub(prog, "", input_string)
 
     result = input_string
-    return result 
+    return result
 

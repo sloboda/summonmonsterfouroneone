@@ -181,7 +181,10 @@ def check_if_modifier(input_value):
     """
     result = ()
     pattern = '^\+'
+#    pattern = r'^(%s)(a-zA-Z])' % '\+'
+#r'([^a-zA-Z0-9])(%s)([^a-zA-Z0-9])' % '\+test'
     prog = re.compile(pattern)
+#    prog = re.compile(r'(%s)(a-zA-Z])' % '\+', re.I)
     match_result = prog.search(input_value)
     if match_result:
         return_value = re.sub(pattern, '', input_value)
