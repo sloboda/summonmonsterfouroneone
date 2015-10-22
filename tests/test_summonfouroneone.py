@@ -1,6 +1,6 @@
 """test of summonfouroneone/smfoo module methods 
 
-copyright (c) 2013  by david sloboda
+copyright (c) 2015  by david sloboda
 
 This file is part of summonmonsterfouroneone.
 
@@ -18,32 +18,25 @@ You should have received a copy of the GNU General Public License
 along with summonmonsterfouroneone in the file COPYING.  
 If not, see <http://www.gnu.org/licenses/>
 
-
-
-
-
 summonfouroneone is a (bad) portmanteau of
   Summon Monster 411
   or summon monster four one one
   or smfoo
-
 
 The file summonfouroneone/smfoo.py contains methods
   to help with directory assistance when summoning monsters
   in the PFRPG.
 """
 
-
-
 import os
 import random
 import sys
 import unittest
 
-
 from summonfouroneone import smfoo
 from summonfouroneone import smxml
-from summonfouroneone import rpg_data_mangling
+from summonfouroneone import rpgDataMangling
+
 
 class summonmonsterfouroneone(unittest.TestCase):
     """ test smfoo methods """
@@ -52,12 +45,10 @@ class summonmonsterfouroneone(unittest.TestCase):
         """ set up goes here """
         pass
 
-
-
-
     def test_apply_celestial_template_to_eagly(self):
         """eagle takes celestial template"""
-        expect = ['resist acid 5', 'resist cold 5', 'resist electricity 5', 'smite evil 1/day for +1 dmg']
+        expect = ['resist acid 5', 'resist cold 5',
+                  'resist electricity 5', 'smite evil 1/day for +1 dmg']
         monobj = smfoo.monster_object()
         monobj.set_name("eagle")
         monobj.set_hit_dice("1d8+1")
@@ -66,7 +57,6 @@ class summonmonsterfouroneone(unittest.TestCase):
         result = monobj.get_special_qualities()
         self.assertEqual(expect, result)
 
-
     def test_return_empty_list_for_no_special_qualities(self):
         """monster object w no special_qualities returns empty list """
         expect = []
@@ -74,23 +64,20 @@ class summonmonsterfouroneone(unittest.TestCase):
         result = monobj.get_special_qualities()
         self.assertEqual(expect, result)
 
-
     def test_return_html_for_monobj_attr_full(self):
-        """for a monster object attribute with a value, return html string """
+        """for a monster object attribute with a value, return html string"""
         expect = '5'
         monobj = smfoo.monster_object()
         monobj.set_hit_points(5)
         result = monobj.get_html_string('hit_points')
         self.assertEqual(expect, result)
 
-
     def test_return_html_for_monobj_attr_empty(self):
-        """for an empty monster object attribute (value is None), return html non-brk space """
+        """empty monster object attr returns html non-breaking space """
         expect = '&nbsp;'
         monobj = smfoo.monster_object()
         result = monobj.get_html_string('senses')
         self.assertEqual(expect, result)
-
 
     def test_find_hd_of_eagle(self):
         """given an eagle, return the number of hit dice the eagle has"""
@@ -98,33 +85,32 @@ class summonmonsterfouroneone(unittest.TestCase):
         mx = smxml.smxml()
         raw_hitdice = sorted(mx.id_into_dict('101', ['hit_dice']).values())[0]
         # raw_hitdice would contain something like (1d8+2) and we want only the 1
-        result = rpg_data_mangling.parse_dice(raw_hitdice)[0]
+        result = rpgDataMangling.parse_dice(raw_hitdice)[0]
         self.assertEqual(expect, result)
-
 
     def test_find_hp_of_eagle(self):
         """given an eagle, return the value for average hit points """
         expect = 5 
         mx = smxml.smxml()
-        raw_hitpoints = sorted(mx.id_into_dict('101', ['hit_points']).values())[0]
+        raw_hitpoints = sorted(mx.id_into_dict('101',
+                                               ['hit_points']).values())[0]
         result = int(raw_hitpoints)
         self.assertEqual(expect, result)
-
 
     def test_find_hp_of_eagle_w_augs_feat(self):
         """given an eagle, apply augment summoning feat, show hit points """
         expect = 7 
         mx = smxml.smxml()
-        raw_hitpoints = sorted(mx.id_into_dict('101', ['hit_points']).values())[0]
+        raw_hitpoints = sorted(mx.id_into_dict('101',
+                                               ['hit_points']).values())[0]
         raw_hitdice = sorted(mx.id_into_dict('101', ['hit_dice']).values())[0]
-        hitdice = rpg_data_mangling.parse_dice(raw_hitdice)[0]
+        hitdice = rpgDataMangling.parse_dice(raw_hitdice)[0]
         hitpoints = smfoo.apply_augs_feat(hitdice, raw_hitpoints)
         result = int(hitpoints)
         self.assertEqual(expect, result)
 
-
     def test_call_monster_apply_augs_feat_get_hit_points(self):
-        """use monster's apply_augs_feat() method to apply feat, show hit points """
+        """use monster's applyASFeat() method, match final hp """
         expect = 7 
         monobj = smfoo.monster_object()
         monobj.set_hit_points(5)
@@ -134,7 +120,6 @@ class summonmonsterfouroneone(unittest.TestCase):
         result = int(hitpoints)
         self.assertEqual(expect, result)
 
-
     def test_find_sq_of_eagle(self):
         """find the special qualities of a eagle, no template """
         expect = '&nbsp;'
@@ -142,16 +127,15 @@ class summonmonsterfouroneone(unittest.TestCase):
         result = monobj.get_html_string('sq')
         self.assertEqual(expect, result)
 
-
     def test_find_sq_of_eagle_celestial(self):
         """find the special qualities of a eagle with celestial template """
-        expect = 'smite evil 1/day for +1 dmg, resist electricity 5, resist cold 5, resist acid 5'
+        expect = 'smite evil 1/day for +1 dmg,'
+        expect = expect + ' resist electricity 5, resist cold 5, resist acid 5'
         monobj = smfoo.monster_object()
         monobj.set_hit_dice("1d8+1")
         monobj.apply_celestial_template()
         result = monobj.get_html_string('special_qualities')
         self.assertEqual(expect, result)
-
 
     def test_find_sq_of_eagle_infernal(self):
         """find the special qualities of a eagle with infernal template """
@@ -162,9 +146,8 @@ class summonmonsterfouroneone(unittest.TestCase):
         result = monobj.get_html_string('special_qualities')
         self.assertEqual(expect, result)
 
-
     def test_find_name_of_first_monobj_in_resultset(self):
-        """build a results list, find the name of the first object in that list """
+        """build a results list, find name of first object in list """
         expect = 'dog, riding'
         ro = smfoo.results_object()
         for term in ['dog, riding', 'eagle']:
@@ -176,10 +159,9 @@ class summonmonsterfouroneone(unittest.TestCase):
         result_object = ro.get_results_list()[0]
         result = result_object.get_name()
         self.assertEqual(expect, result)
-            
 
     def test_find_name_of_second_monobj_in_resultset(self):
-        """build a results list, find the name of the second object in that list """
+        """build a results list, find name of second object in list"""
         expect = 'eagle'
         ro = smfoo.results_object()
         for term in ['dog, riding', 'eagle']:
@@ -192,7 +174,6 @@ class summonmonsterfouroneone(unittest.TestCase):
         result = result_object.get_name()
         self.assertEqual(expect, result)
 
-
     def test_build_name_w_hyperlink(self):
         """return href with name as linktext and prd link as link target"""
         expect = """<a href = "foobar">eagle</a>"""
@@ -202,11 +183,10 @@ class summonmonsterfouroneone(unittest.TestCase):
         monobj.set_name_w_link()  # set the attribe w name and link
         result = monobj.get_name_w_link() # get attribute 
         self.assertEqual(expect, result)
-            
 
     def test_display_help_text(self):
         """request for help displays help text"""
-        expect = smfoo.help_text
+        expect = smfoo.HELPTEXT
         result = smfoo.display_help_text()
         self.assertEqual(expect, result)
 

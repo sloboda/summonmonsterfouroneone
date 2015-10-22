@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """ smfoo: "summon monster four one one"
 
-copyright (c) 2013  by david sloboda
+copyright (c) 2015  by david sloboda
 
 This file is part of summonmonsterfouroneone.
 
@@ -42,9 +42,9 @@ import sys
 #####################################################################
 #
 #   for parsing out hit dice values
-from summonfouroneone import rpg_data_mangling
+from summonfouroneone import rpgDataMangling
 
-help_text = """
+HELPTEXT = """
 Type a value in the input field, then press 'search'.
 
 Valid values are:
@@ -74,17 +74,17 @@ Use quotation marks to preserve white space.
 def display_help_text(format=None):
     """display the help text.
 
-    grabs help_text from this module and displays it.
+    grabs HELPTEXT from this module and displays it.
 
     Take a Format operator in the future for alternate output formats.
     """
     result = ""
     if format == "html":
         result = "<pre>"
-        result = result + help_text
+        result = result + HELPTEXT
         result = result + "</pre>"
     elif format is None:
-        result = help_text
+        result = HELPTEXT
     return result
 
 
@@ -294,7 +294,7 @@ class monster_object(object):
         """
         result = 0
         hd = self.get_hit_dice() # get 1d8+2
-        hd = rpg_data_mangling.parse_dice(hd)[0] # get only the 1
+        hd = rpgDataMangling.parse_dice(hd)[0] # get only the 1
         hp = self.get_hit_points()
         hd = int(hd)  # coerce to int
         hp = int(hp)  # coerce to int
@@ -334,7 +334,7 @@ class monster_object(object):
         """
         sq = ""
         hd = self.get_hit_dice() # get 1d8+2
-        hd = rpg_data_mangling.parse_dice(hd)[0] # get only the 1
+        hd = rpgDataMangling.parse_dice(hd)[0] # get only the 1
         hd = int(hd)  # coerce to int
         smite = "smite evil 1/day for +%d dmg" % hd
         sq_list_low = ['resist acid 5', 'resist cold 5',
@@ -364,7 +364,7 @@ class monster_object(object):
         """
         sq = ""
         hd = self.get_hit_dice() # get 1d8+2
-        hd = rpg_data_mangling.parse_dice(hd)[0] # get only the 1
+        hd = rpgDataMangling.parse_dice(hd)[0] # get only the 1
         hd = int(hd)  # coerce to int
         smite = "smite good 1/day for +%d dmg" % hd
         sq_list_low = ['resist cold 5', 'resist fire 5', smite]

@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-"""rpg_data_mangling   parse text used in RPG games.
+"""rpgDataMangling   parse text used in RPG games.
 
-copyright (c) 2013  by david sloboda
+copyright (c) 2015  by david sloboda
 
 This file is part of summonmonsterfouroneone.
 
@@ -17,7 +17,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with summonmonsterfouroneone in the file COPYING.  
+along with summonmonsterfouroneone in the file COPYING.
 If not, see <http://www.gnu.org/licenses/>
 
 
@@ -38,7 +38,13 @@ import re
 
 ###########################################################
 ### define exceptions
-class rpg_data_mangling_error(Exception): pass
+class RpgDataManglingError(Exception):
+    """ Error for handling RPG Data
+
+    Role Playing Games make use of their own unique strings
+    and data structures.
+    """
+    pass
 
 
 ###########################################################
@@ -57,12 +63,12 @@ def parse_dice(dice_expression="2d6+3"):
     """
     result = []
     dice_expression = dice_expression.lower() # turn D into d
-    pattern = "(\d+)d(\d+)\+?(\d+)?"
+    pattern = r"(\d+)d(\d+)\+?(\d+)?"
     prog = re.compile(pattern)
     try:
         results = prog.findall(dice_expression)  # findall returns a list
     except:
-        raise rpg_data_mangling_error("I don't know what you are saying")
+        raise RpgDataManglingError("I don't know what you are saying")
     number_of_dice = int(results[0][0])
     type_of_dice = int(results[0][1])
     result.append(number_of_dice)
@@ -77,6 +83,7 @@ def parse_dice(dice_expression="2d6+3"):
 ###########################################################
 ### define main here
 def main():
+    """ where it all goes down"""
     pass
 
 ###########################################################
