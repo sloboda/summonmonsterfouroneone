@@ -31,7 +31,7 @@ minimalist web server provided by web.py module
 """
 
 import re
-import shlex
+#import shlex
 import web
 
 from web import form
@@ -40,7 +40,7 @@ from web import form
 #####################################################################
 #  for xml searching
 #
-from lxml import etree
+#from lxml import etree
 
 # next import breaks out XML search routines into a separate file
 #   for ease in unit testing.
@@ -56,10 +56,10 @@ from summonfouroneone import smfoo
 
 render = web.template.render('templates/')
 
-urls = ('/', 'index')
-app = web.application(urls, globals())
+URLS = ('/', 'IndexSummonMonster')
+APP = web.application(URLS, globals())
 
-myform = form.Form(
+MYFORM = form.Form(
     form.Textbox("searchfield",
         form.notnull,
         description="input: help, 0 to 9, 'dire wolf', blindSENSE, +a, +good ",
@@ -70,8 +70,8 @@ myform = form.Form(
     )
 
 
-### define a class for a results_object, then create an instance
-class results_object(object):
+### define a class for a ResultsObject, then create an instance
+class ResultsObject(object):
     """object to hold results from searches.
 
     (at least) Two types of data in this object:
@@ -86,53 +86,56 @@ class results_object(object):
         # standard_list means <ol><li><li></ol> type HTML list
         self.display_output = ""
 
-
     def set_display_output(self, text=""):
+        """ Set either standard short list or extended table """
         self.display_output = text
 
-
     def get_display_output(self):
+        """ get toggle: either standard short list or extended table """
         result = self.display_output
         return result
 
-
     def set_results_text(self, text=""):
+        """ Set text to be displayed when returning a result.
+
+        This holds text description of what the customer searched for.
+        Essentially here for real time debugging.
+        """
         self.results_text = text
 
-
     def get_results_text(self):
+        """ get text to be displayed in returned result"""
         result = self.results_text
         return result
 
-
     def set_results_list(self, results_list):
+        """ set list of monsters returned """
         self.results_list.append(results_list)
 
-
     def get_results_list(self):
+        """ get list of monsters returned """
         result = self.results_list
         return result
 
-
     def zero_results_list(self):
+        """ set the list of monsters to zero (empty set)"""
         self.results_list = []
 
-
     def set_modifier_flags(self, flag_list):
+        """ set list of modifier flags submitted by customer query"""
         self.flag_list.append(flag_list)
 
-
     def get_modifier_flags(self):
+        """ get list of modifier flags submitted by customer query"""
         result = self.flag_list
         return result
 
-
     def zero_modifier_flags(self):
+        """ set the list of modifier flags to zero (empty set)"""
         self.flag_list = []
 
 
-
-ro = results_object()
+RO = ResultsObject()
 
 
 def check_for_synonyms(search_term):
@@ -188,84 +191,93 @@ def check_if_modifier(input_value):
     return result
 
 
-def handle_modifier(input):
+def handle_modifier(myinput):
     """handle any modifiers thrown into the search field.
 
     A modifier starts with a plus sign
     example:   +good
     example:   +infernal
 
-    return the text associated with the input.
+    return the text associated with the myinput.
     """
     result = ""
-    global ro
+#    global RO
     augment_summoning_terms = ["augs", "augment_summoning",
                                "augment summoning", "a"]
     celestial_terms = ["good", "celestial", "g", "gd"]
     infernal_terms = ["evil", "infernal", "e", "ev"]
     extended_display_terms = ["extended", "extend", "ext", "ex", "x"]
     list_display_terms = ["normal", "list", "n"]
-    input = input.lower()
-    if input in augment_summoning_terms:
+    myinput = myinput.lower()
+    if myinput in augment_summoning_terms:
         result = "The Augment Summoning feat gives +4 to STR and +4 to CON"
         result = result + " for each summoned creature. "
     # set [celestial or infernal] flag once only.  Use first flag set
-    if "celestial" not in ro.get_modifier_flags() and "infernal" not in ro.get_modifier_flags():
-        if input in celestial_terms:
-            ro.zero_modifier_flags()
-            ro.set_modifier_flags("celestial")
+    if ("celestial" not in RO.get_modifier_flags() and
+        "infernal" not in RO.get_modifier_flags()):
+        if myinput in celestial_terms:
+            RO.zero_modifier_flags()
+            RO.set_modifier_flags("celestial")
             result = "Summoned creatures with the Celestial template "
             result = result + " smite evil. "
-        if input in infernal_terms:
-            ro.zero_modifier_flags()
-            ro.set_modifier_flags("infernal")
+        if myinput in infernal_terms:
+            RO.zero_modifier_flags()
+            RO.set_modifier_flags("infernal")
             result = "Summoned creatures with the Infernal template "
             result = result + " smite good."
     ##### set display flag once only.  Use standard unless flag set
-    if input in extended_display_terms:
+    if myinput in extended_display_terms:
         result = "You chose the extended display. "
-        ro.set_display_output("extended")
-    if input in list_display_terms:
+        RO.set_display_output("extended")
+    if myinput in list_display_terms:
         result = "You chose the normal display. "
-        ro.set_display_output("standard_list")
+        RO.set_display_output("standard_list")
     return result
 
 
-def input_is_integer(input):
-    """Determine if input is integer
+def input_is_integer(myinput):
+    """Determine if myinput is integer
 
     If it is an integer, return an integer.
-    If not, lower case the input
+    If not, lower case the myinput
        and see if it is something else.
     """
     result = ""
     try:
-        term = int(input)
-        result = input
+        term = int(myinput)
+        term > -1
+        result = myinput
     except ValueError:
-        input = input.lower()
-        result = check_if_modifier(input)
+        myinput = myinput.lower()
+        result = check_if_modifier(myinput)
     return result
 
 
-class index:
+class IndexSummonMonster:
+    """ used for web.py base page"""
+    def __init__(self):
+        """ not used """
+        pass
+
     def GET(self):
-        form = myform()
-        global ro
-        return render.formresult(form, ro)
+        """ webserver.py GET method """
+        form = MYFORM()
+        global RO
+        return render.formresult(form, RO)
 
 
     def POST(self):
-        form = myform()
-        global ro
+        """ webserver.py POST method """
+        form = MYFORM()
+        global RO
         #  remove any previous results from previous searches
-        ro.zero_results_list()
+        RO.zero_results_list()
         # remove any previous modifier flags.  Maybe we're no longer evil.
-        ro.zero_modifier_flags()
+        RO.zero_modifier_flags()
         myextras = ""
         if not form.validates():
             myresults = []
-            return render.formresult(form, ro)
+            return render.formresult(form, RO)
         else:
             xml_element_results = []
             xml_id_results = []
@@ -275,17 +287,17 @@ class index:
             ### first, for debugging, capture original form input.
             ### comment out the next two lines for production use
             text = "You submitted: [%s]\n" % searchterm
-            ro.set_results_text(text)
+            RO.set_results_text(text)
             ### sanity check the data sent from the customer
             searchterm = handle_form_input.check_input_length(searchterm)
             searchterm = handle_form_input.scrub_form_input(searchterm)
             searchterm = searchterm.lower()  # lower case text for searching
-            ### check if this is a True cry for help
+            ### check if this is a True Cry For Help
             if handle_form_input.check_is_input_cry_for_help(searchterm):
-                help_text = ro.get_results_text()
+                help_text = RO.get_results_text()
                 help_text = help_text +  smfoo.display_help_text("html")
-                ro.set_results_text(help_text)
-                return render.formresult(form, ro)
+                RO.set_results_text(help_text)
+                return render.formresult(form, RO)
             smx = smxml.smxml()
             input_values = handle_form_input.split_input_keep_quotes(searchterm)
             #### look up synonyms before weeding out duplicates.
@@ -293,22 +305,24 @@ class index:
             #
             #### set standard list of keys for monster attributes
             makeys = ['alignment', 'name', 'prd', 'size']
-            for input in input_values:
-                result = input_is_integer(input)
+            for myinput in input_values:
+                result = input_is_integer(myinput)
                 if type(result) == tuple:
                     if result[0] == "yes":# we have a modifier, like +good
                         modifier_text = handle_modifier(str(result[1]))
-                        myextras = ro.get_results_text() + modifier_text
-                        ro.set_results_text(myextras)
+                        myextras = RO.get_results_text() + modifier_text
+                        RO.set_results_text(myextras)
                     else:
                         # we have other text input, like "dog, riding" or "all"
                         # check it for synonyms and normalize it
                         norm_st = check_for_synonyms(str(result[1]))
                         try:
                             norm_st = int(norm_st)
-                            xml_id_results = smx.search_for_id_attributes(norm_st)
+                            xml_id_results = smx.search_for_id_attributes(
+                                             norm_st)
                         except ValueError:
-                            xml_id_results = smx.search_for_monster_name(norm_st)
+                            xml_id_results = smx.search_for_monster_name(
+                                             norm_st)
                         # If this list is empty,
                         #  no monster names like 'wolf' have been provided.
                         # Assume it is a special quality search
@@ -327,56 +341,61 @@ class index:
                     # set the monster id from xml file into monster_object
                     monster_obj.set_id(monster_id)
                     # set a boolean flag if the monster takes a c_or_i template
-                    monster_obj.set_takes_c_or_i_template(smx.monster_takes_c_or_i_template([monster_id]))
+                    monster_obj.set_takes_c_or_i_template(
+                        smx.monster_takes_c_or_i_template([monster_id]))
                     for attribute in mon_att_keys:
+                        throwaway = ""
                         try:
-                            throwaway = getattr(monster_obj, "set_%s" % attribute)(mon_dict[attribute])
+                            throwaway = getattr(monster_obj,
+                                                "set_%s" %
+                                                attribute)(mon_dict[attribute])
                         except KeyError:
-                            throwaway = getattr(monster_obj, "set_%s" % attribute)("")
-                        throwaway2 = monster_obj.set_name_w_link()
+                            throwaway = getattr(monster_obj,
+                                                "set_%s" % attribute)("")
+                        throwaway = monster_obj.set_name_w_link()
                     # Sometimes the input could be "eagle eagle eagle"
                     # Weed out duplicates
                     if monster_obj.get_name() not in weed_out_duplicates:
                         xml_element_results.append(monster_obj)
                         weed_out_duplicates.append(monster_obj.get_name())
-                for r in xml_element_results:
-                    if r not in ro.get_results_list():
-                        ro.set_results_list(r)
+                for returned_result in xml_element_results:
+                    if returned_result not in RO.get_results_list():
+                        RO.set_results_list(returned_result)
             ### set HTML list or HTML table.  Default is list
-            if ro.get_display_output() == "extended":
+            if RO.get_display_output() == "extended":
                 ### see if apply celestial or infernal template
-                if  "Celestial" in ro.get_results_text():
+                if  "Celestial" in RO.get_results_text():
                     newlist = []
-                    for monster_obj in ro.get_results_list():
+                    for monster_obj in RO.get_results_list():
                         newlist.append(monster_obj)
-                    ro.zero_results_list()
+                    RO.zero_results_list()
                     for mon_obj in newlist:
                         mon_obj.apply_template("celestial")
-                        ro.set_results_list(mon_obj)
-                elif "Infernal" in ro.get_results_text():
+                        RO.set_results_list(mon_obj)
+                elif "Infernal" in RO.get_results_text():
                     newlist = []
-                    for monster_obj in ro.get_results_list():
+                    for monster_obj in RO.get_results_list():
                         newlist.append(monster_obj)
-                    ro.zero_results_list()
+                    RO.zero_results_list()
                     for mon_obj in newlist:
                         mon_obj.apply_template("infernal")
-                        ro.set_results_list(mon_obj)
-                ### hack to get Augmented Summoning 
+                        RO.set_results_list(mon_obj)
+                ### hack to get Augmented Summoning
                 ###     to show up in extended display
-                if "The Augment Summoning feat" in ro.get_results_text():
+                if "The Augment Summoning feat" in RO.get_results_text():
                     newlist = []
-                    for monster_obj in ro.get_results_list():
+                    for monster_obj in RO.get_results_list():
                         newlist.append(monster_obj)
-                    ro.zero_results_list()
+                    RO.zero_results_list()
                     for mon_obj in newlist:
                         mon_obj.apply_augs_feat()
-                        ro.set_results_list(mon_obj)
-                return render.formresultextended(form, ro)
+                        RO.set_results_list(mon_obj)
+                return render.formresultextended(form, RO)
             else:
-                return render.formresult(form, ro)
+                return render.formresult(form, RO)
 
 
 
 if __name__ == "__main__":
     web.internalerror = web.debugerror
-    app.run()
+    APP.run()
