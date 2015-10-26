@@ -338,10 +338,10 @@ class IndexSummonMonster:
                                 'special_qualities', 'size', 'alignment']
                 for monster_id in xml_id_results:
                     # create new monster object
-                    monster_obj = smfoo.monster_object()
+                    monster_obj = smfoo.MonsterObject()
                     mon_dict = {}
                     mon_dict = smx.id_into_dict(monster_id, mon_att_keys)
-                    # set the monster id from xml file into monster_object
+                    # set the monster id from xml file into MonsterObject
                     monster_obj.set_id(monster_id)
                     # set a boolean flag if the monster takes a c_or_i template
                     monster_obj.set_takes_c_or_i_template(

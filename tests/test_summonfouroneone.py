@@ -35,7 +35,7 @@ import unittest
 
 from summonfouroneone import smfoo
 from summonfouroneone import smxml
-from summonfouroneone import rpgDataMangling
+from summonfouroneone import RpgDataMangling
 
 
 class summonmonsterfouroneone(unittest.TestCase):
@@ -49,7 +49,7 @@ class summonmonsterfouroneone(unittest.TestCase):
         """eagle takes celestial template"""
         expect = ['resist acid 5', 'resist cold 5',
                   'resist electricity 5', 'smite evil 1/day for +1 dmg']
-        monobj = smfoo.monster_object()
+        monobj = smfoo.MonsterObject()
         monobj.set_name("eagle")
         monobj.set_hit_dice("1d8+1")
         monobj.set_takes_c_or_i_template(True)
@@ -60,14 +60,14 @@ class summonmonsterfouroneone(unittest.TestCase):
     def test_return_empty_list_for_no_special_qualities(self):
         """monster object w no special_qualities returns empty list """
         expect = []
-        monobj = smfoo.monster_object()
+        monobj = smfoo.MonsterObject()
         result = monobj.get_special_qualities()
         self.assertEqual(expect, result)
 
     def test_return_html_for_monobj_attr_full(self):
         """for a monster object attribute with a value, return html string"""
         expect = '5'
-        monobj = smfoo.monster_object()
+        monobj = smfoo.MonsterObject()
         monobj.set_hit_points(5)
         result = monobj.get_html_string('hit_points')
         self.assertEqual(expect, result)
@@ -75,7 +75,7 @@ class summonmonsterfouroneone(unittest.TestCase):
     def test_return_html_for_monobj_attr_empty(self):
         """empty monster object attr returns html non-breaking space """
         expect = '&nbsp;'
-        monobj = smfoo.monster_object()
+        monobj = smfoo.MonsterObject()
         result = monobj.get_html_string('senses')
         self.assertEqual(expect, result)
 
@@ -85,7 +85,7 @@ class summonmonsterfouroneone(unittest.TestCase):
         mx = smxml.smxml()
         raw_hitdice = sorted(mx.id_into_dict('101', ['hit_dice']).values())[0]
         # raw_hitdice would contain something like (1d8+2) and we want only the 1
-        result = rpgDataMangling.parse_dice(raw_hitdice)[0]
+        result = RpgDataMangling.parse_dice(raw_hitdice)[0]
         self.assertEqual(expect, result)
 
     def test_find_hp_of_eagle(self):
@@ -104,7 +104,7 @@ class summonmonsterfouroneone(unittest.TestCase):
         raw_hitpoints = sorted(mx.id_into_dict('101',
                                                ['hit_points']).values())[0]
         raw_hitdice = sorted(mx.id_into_dict('101', ['hit_dice']).values())[0]
-        hitdice = rpgDataMangling.parse_dice(raw_hitdice)[0]
+        hitdice = RpgDataMangling.parse_dice(raw_hitdice)[0]
         hitpoints = smfoo.apply_augs_feat(hitdice, raw_hitpoints)
         result = int(hitpoints)
         self.assertEqual(expect, result)
@@ -112,7 +112,7 @@ class summonmonsterfouroneone(unittest.TestCase):
     def test_call_monster_apply_augs_feat_get_hit_points(self):
         """use monster's applyASFeat() method, match final hp """
         expect = 7 
-        monobj = smfoo.monster_object()
+        monobj = smfoo.MonsterObject()
         monobj.set_hit_points(5)
         monobj.set_hit_dice("1d8+1")
         monobj.apply_augs_feat()
@@ -123,7 +123,7 @@ class summonmonsterfouroneone(unittest.TestCase):
     def test_find_sq_of_eagle(self):
         """find the special qualities of a eagle, no template """
         expect = '&nbsp;'
-        monobj = smfoo.monster_object()
+        monobj = smfoo.MonsterObject()
         result = monobj.get_html_string('sq')
         self.assertEqual(expect, result)
 
@@ -131,7 +131,7 @@ class summonmonsterfouroneone(unittest.TestCase):
         """find the special qualities of a eagle with celestial template """
         expect = 'smite evil 1/day for +1 dmg,'
         expect = expect + ' resist electricity 5, resist cold 5, resist acid 5'
-        monobj = smfoo.monster_object()
+        monobj = smfoo.MonsterObject()
         monobj.set_hit_dice("1d8+1")
         monobj.apply_celestial_template()
         result = monobj.get_html_string('special_qualities')
@@ -140,7 +140,7 @@ class summonmonsterfouroneone(unittest.TestCase):
     def test_find_sq_of_eagle_infernal(self):
         """find the special qualities of a eagle with infernal template """
         expect = 'smite good 1/day for +1 dmg, resist fire 5, resist cold 5'
-        monobj = smfoo.monster_object()
+        monobj = smfoo.MonsterObject()
         monobj.set_hit_dice("1d8+1")
         monobj.apply_infernal_template()
         result = monobj.get_html_string('special_qualities')
@@ -149,9 +149,9 @@ class summonmonsterfouroneone(unittest.TestCase):
     def test_find_name_of_first_monobj_in_resultset(self):
         """build a results list, find name of first object in list """
         expect = 'dog, riding'
-        ro = smfoo.results_object()
+        ro = smfoo.ResultsObject()
         for term in ['dog, riding', 'eagle']:
-            monobj = smfoo.monster_object()
+            monobj = smfoo.MonsterObject()
             monobj.set_name(term)
             ro.set_results_list(monobj)
         ### assumption here is that with two items, the term we want
@@ -163,9 +163,9 @@ class summonmonsterfouroneone(unittest.TestCase):
     def test_find_name_of_second_monobj_in_resultset(self):
         """build a results list, find name of second object in list"""
         expect = 'eagle'
-        ro = smfoo.results_object()
+        ro = smfoo.ResultsObject()
         for term in ['dog, riding', 'eagle']:
-            monobj = smfoo.monster_object()
+            monobj = smfoo.MonsterObject()
             monobj.set_name(term)
             ro.set_results_list(monobj)
         ### assumption here is that with two items, the term we want
@@ -177,7 +177,7 @@ class summonmonsterfouroneone(unittest.TestCase):
     def test_build_name_w_hyperlink(self):
         """return href with name as linktext and prd link as link target"""
         expect = """<a href = "foobar">eagle</a>"""
-        monobj = smfoo.monster_object()
+        monobj = smfoo.MonsterObject()
         monobj.set_name('eagle')  # give object a name 
         monobj.set_prd('foobar')  # give object a link
         monobj.set_name_w_link()  # set the attribe w name and link
