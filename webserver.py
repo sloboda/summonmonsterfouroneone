@@ -31,20 +31,10 @@ minimalist web server provided by web.py module
 """
 
 import re
-#import shlex
 import web
-
 from web import form
-
-
-#####################################################################
-#  for xml searching
-#
-#from lxml import etree
-
 # next import breaks out XML search routines into a separate file
 #   for ease in unit testing.
-
 from summonfouroneone import smxml
 
 
@@ -53,12 +43,10 @@ from summonfouroneone import handle_form_input
 
 ### treat the monsters as objects with methods and attributes
 from summonfouroneone import smfoo
-
+RO = smfoo.ResultsObject()
 render = web.template.render('templates/')
-
 URLS = ('/', 'IndexSummonMonster')
 APP = web.application(URLS, globals())
-
 MYFORM = form.Form(
     form.Textbox("searchfield",
         form.notnull,
@@ -68,74 +56,6 @@ MYFORM = form.Form(
         ),
     form.Button("Submit a SumMon411 search!")
     )
-
-
-### define a class for a ResultsObject, then create an instance
-class ResultsObject(object):
-    """object to hold results from searches.
-
-    (at least) Two types of data in this object:
-    1) A list of all monsters
-    2) A string of text containing any text messages.
-    """
-    def __init__(self):
-        self.results_list = [] # holds list of monsters
-        self.flag_list = [] # holds modifiers to monsters
-        self.results_text = "" # holds text for display page
-        # next line is flag for list or HTML table
-        # standard_list means <ol><li><li></ol> type HTML list
-        self.display_output = ""
-
-    def set_display_output(self, text=""):
-        """ Set either standard short list or extended table """
-        self.display_output = text
-
-    def get_display_output(self):
-        """ get toggle: either standard short list or extended table """
-        result = self.display_output
-        return result
-
-    def set_results_text(self, text=""):
-        """ Set text to be displayed when returning a result.
-
-        This holds text description of what the customer searched for.
-        Essentially here for real time debugging.
-        """
-        self.results_text = text
-
-    def get_results_text(self):
-        """ get text to be displayed in returned result"""
-        result = self.results_text
-        return result
-
-    def set_results_list(self, results_list):
-        """ set list of monsters returned """
-        self.results_list.append(results_list)
-
-    def get_results_list(self):
-        """ get list of monsters returned """
-        result = self.results_list
-        return result
-
-    def zero_results_list(self):
-        """ set the list of monsters to zero (empty set)"""
-        self.results_list = []
-
-    def set_modifier_flags(self, flag_list):
-        """ set list of modifier flags submitted by customer query"""
-        self.flag_list.append(flag_list)
-
-    def get_modifier_flags(self):
-        """ get list of modifier flags submitted by customer query"""
-        result = self.flag_list
-        return result
-
-    def zero_modifier_flags(self):
-        """ set the list of modifier flags to zero (empty set)"""
-        self.flag_list = []
-
-
-RO = ResultsObject()
 
 
 def check_for_synonyms(search_term):
@@ -181,10 +101,7 @@ def check_if_modifier(input_value):
     """
     result = ()
     pattern = '^\+'
-#    pattern = r'^(%s)(a-zA-Z])' % '\+'
-#r'([^a-zA-Z0-9])(%s)([^a-zA-Z0-9])' % '\+test'
     prog = re.compile(pattern)
-#    prog = re.compile(r'(%s)(a-zA-Z])' % '\+', re.I)
     match_result = prog.search(input_value)
     if match_result:
         return_value = re.sub(pattern, '', input_value)
@@ -204,7 +121,6 @@ def handle_modifier(myinput):
     return the text associated with the myinput.
     """
     result = ""
-#    global RO
     augment_summoning_terms = ["augs", "augment_summoning",
                                "augment summoning", "a"]
     celestial_terms = ["good", "celestial", "g", "gd"]
@@ -248,8 +164,8 @@ def input_is_integer(myinput):
     result = ""
     try:
         term = int(myinput)
-        term > -1
-        result = myinput
+        if term > -1:
+            result = myinput
     except ValueError:
         myinput = myinput.lower()
         result = check_if_modifier(myinput)
@@ -264,29 +180,28 @@ class IndexSummonMonster:
 
     def GET(self):
         """ webserver.py GET method """
-        form = MYFORM()
+        my_form = MYFORM()
         global RO
-        return render.formresult(form, RO)
+        return render.formresult(my_form, RO)
 
 
     def POST(self):
         """ webserver.py POST method """
-        form = MYFORM()
+        post_form = MYFORM()
         global RO
         #  remove any previous results from previous searches
         RO.zero_results_list()
         # remove any previous modifier flags.  Maybe we're no longer evil.
         RO.zero_modifier_flags()
         myextras = ""
-        if not form.validates():
-            myresults = []
-            return render.formresult(form, RO)
+        if not post_form.validates():
+            return render.formresult(post_form, RO)
         else:
             xml_element_results = []
             xml_id_results = []
             weed_out_duplicates = []
             text = ""
-            searchterm = form.d.searchfield
+            searchterm = post_form.d.searchfield
             ### first, for debugging, capture original form input.
             ### comment out the next two lines for production use
             text = "You submitted: [%s]\n" % searchterm
@@ -300,14 +215,14 @@ class IndexSummonMonster:
                 help_text = RO.get_results_text()
                 help_text = help_text +  smfoo.display_help_text("html")
                 RO.set_results_text(help_text)
-                return render.formresult(form, RO)
-            smx = smxml.smxml()
+                return render.formresult(post_form, RO)
+            smx = smxml.Smxml()
             input_values = handle_form_input.split_input_keep_quotes(searchterm)
             #### look up synonyms before weeding out duplicates.
             #### put something in here to weed out duplicates
             #
             #### set standard list of keys for monster attributes
-            makeys = ['alignment', 'name', 'prd', 'size']
+#            makeys = ['alignment', 'name', 'prd', 'size']
             for myinput in input_values:
                 result = input_is_integer(myinput)
                 if type(result) == tuple:
@@ -347,7 +262,6 @@ class IndexSummonMonster:
                     monster_obj.set_takes_c_or_i_template(
                         smx.monster_takes_c_or_i_template([monster_id]))
                     for attribute in mon_att_keys:
-                        throwaway = ""
                         try:
                             throwaway = getattr(monster_obj,
                                                 "set_%s" %
@@ -393,9 +307,9 @@ class IndexSummonMonster:
                     for mon_obj in newlist:
                         mon_obj.apply_augs_feat()
                         RO.set_results_list(mon_obj)
-                return render.formresultextended(form, RO)
+                return render.formresultextended(post_form, RO)
             else:
-                return render.formresult(form, RO)
+                return render.formresult(post_form, RO)
 
 
 

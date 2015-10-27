@@ -28,15 +28,6 @@ to return only a subset of information.
 """
 
 #####################################################################
-#  for xml searching
-#
-from lxml import etree
-#
-#####################################################################
-#
-#   for dynamic on the fly method call
-import sys
-#####################################################################
 #
 #   for parsing out hit dice values
 from summonfouroneone import RpgDataMangling
@@ -118,58 +109,54 @@ class ResultsObject(object):
         # standard_list means <ol><li><li></ol> type HTML list
         self.display_output = ""
 
-
     def set_display_output(self, text=""):
-        """ set the text displayed to the customer """
+        """ Set either standard short list or extended table """
         self.display_output = text
 
-
     def get_display_output(self):
-        """ get the text displayed to the customer """
+        """ get toggle: either standard short list or extended table """
         result = self.display_output
         return result
 
-
     def set_results_text(self, text=""):
-        """ set result text for the list """
+        """ Set text to be displayed when returning a result.
+
+        This holds text description of what the customer searched for.
+        Essentially here for real time debugging.
+        """
         self.results_text = text
 
     def get_results_text(self):
-        """ get result text for the list """
+        """ get text to be displayed in returned result"""
         result = self.results_text
         return result
 
-    def set_results_list(self, results_list=[]):
-        """ set results as a list """
+    def set_results_list(self, results_list):
+        """ set list of monsters returned """
         self.results_list.append(results_list)
 
     def get_results_list(self):
-        """ get results in list """
+        """ get list of monsters returned """
         result = self.results_list
         return result
 
     def zero_results_list(self):
-        """  set the list to an empty list
-
-        Good for starting over
-        """
+        """ set the list of monsters to zero (empty set)"""
         self.results_list = []
 
-    def set_modifier_flags(self, flag_list=[]):
-        """ set the list of modifier flags """
+    def set_modifier_flags(self, flag_list):
+        """ set list of modifier flags submitted by customer query"""
         self.flag_list.append(flag_list)
 
     def get_modifier_flags(self):
-        """ get the list of modifier flags """
+        """ get list of modifier flags submitted by customer query"""
         result = self.flag_list
         return result
 
     def zero_modifier_flags(self):
-        """  set the list of modifier flags to an empty list
-
-        Good for starting over
-        """
+        """ set the list of modifier flags to zero (empty set)"""
         self.flag_list = []
+
 
 
 class MonsterObject(object):
@@ -231,7 +218,7 @@ class MonsterObject(object):
         result = self.sq
         return result
 
-    def set_special_qualities(self, results_list=[]):
+    def set_special_qualities(self, results_list=None):
         """ set the list of special qualities"""
         for thing in results_list:
             if thing not in self.special_qualities: # do not add it twice
@@ -433,129 +420,14 @@ class MonsterObject(object):
             if isinstance(getattr(self, str(monobj_attr)), list):
                 result = ""
                 value = getattr(self, "get_%s" % monobj_attr)()
-                for v in sorted(value):
-                    result = v + ", " + result
+                for myvalue in sorted(value):
+                    result = myvalue + ", " + result
                 result = result.rstrip(', ') # remove final comma
         return result
 
 
-class Smxml:
-    def __init__(self):
-        """ define path to xml file """
-        ### specify path to xml file
-        self.xmlfile = "./OGL/monsters.xml"
-
-    def setup_xml(self):
-        """ set up the xml source for monster info"""
-        t = etree.parse(self.xmlfile)
-        return t
-
-    def search_for_monster_name(self, monster_name="Eagle"):
-        """search xml for a monster name
-
-        The contains(text, searchterm) method in the lxml call
-              allows for input like "dem" to match "demon"
-
-        Returns a list of id values.
-        Each id value provides a single match
-          on an attribute "id" in a monster element in the XML file.
-        """
-        result = []
-        smxl = Smxml()
-        t = smxl.setup_xml()
-        monster_name = monster_name.lower()
-        mypathval = """./monster/name[contains(text(), '"""
-        mypathval = mypathval + str(monster_name) +"""') ]/.."""
-        for m in t.xpath(mypathval):
-            mid = m.get("id")
-            result.append(mid)
-        return result
-
-    def search_for_id_attributes(self, searchterm):
-        result = []
-        smxl = Smxml()
-        t = smxl.setup_xml()
-        mdict = {}
-#        elements = ["name", "prd", "alignment", "size"]
-        # nine summon monster spells, nine integers expected
-        # "zero" makes a nice shorthand way of referencing the set [1-9]
-        expected_digits = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        try:
-            int(searchterm)
-        except:
-            fail_text = "this search method expects an integer."
-            result.append(fail_text)
-            return result
-        if int(searchterm) in expected_digits:
-            summon_monster_integer = searchterm
-            mypathval = "./monster/summon_monster_integer_list[text()='"
-            mypathval = mypathval + str(summon_monster_integer) + "']/.."
-            for m in t.xpath(mypathval):
-                mid = m.get("id")
-                result.append(mid)
-        elif int(searchterm) == 0:  # search everything on 0
-            for i in expected_digits:
-                summon_monster_integer = i
-                mypathval = "./monster/summon_monster_integer_list[text()='"
-                mypathval = mypathval + str(summon_monster_integer) + "']/.."
-                for m in t.xpath(mypathval):
-                    mid = m.get("id")
-                    result.append(mid)
-        else:
-            pass
-        return result
 
 
-    def id_attributes_into_element_values(self, mylistofID=['100']):
-        """turn id_attributes_into_element_values
 
-        Expects ['100', '101']
-        Searches XML file for all elements in list
-        """
-        result = []
-        mdict = {}
-        elements = ["name", "prd", "alignment", "size"]
-        smxl = Smxml()
-        t = smxl.setup_xml()
-        for mid in mylistofID:
-            mysubpath = "./monster[@id='" + str(mid) + "']"
-            for mvalue in t.xpath(mysubpath):
-                internal_list = []
-                for e in elements:
-                    mdict[e] = mvalue.find(e).text
-                    internal_list.append({e: mdict[e]})
-                result.append(internal_list)
-        return result
-
-    def id_into_dict(self, my_id='100', keys=['name', 'prd']):
-        """turn id into a dictionary of values
-
-        Expects an id like '101'
-        and a list of keys for the dictionary
-
-        Returns a dictionary
-
-        subelement_list is a list of elements
-          that have text in their subelements, not of themselves.
-        """
-        result = {}
-        subelement_list = ['special_qualities']
-        smxl = Smxml()  # set up xml object
-        t = smxl.setup_xml()  # attach it to our xml file
-        mysubpath = "./monster[@id='" + str(my_id) + "']"
-        for mvalue in t.xpath(mysubpath):
-            internal_list = []
-            for k in keys:
-                if k in subelement_list:
-                    mylist = []
-                    for subele in mvalue.find(k).getchildren():
-                        mylist.append(subele.text)
-                    result[k] = mylist
-                else:
-                    if mvalue.find(k) is not None:
-                        result[k] = mvalue.find(k).text
-                    else:
-                        pass # we've been passed a key that does not exist
-        return result
 
 

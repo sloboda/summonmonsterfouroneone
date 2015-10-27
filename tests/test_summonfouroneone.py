@@ -82,7 +82,7 @@ class summonmonsterfouroneone(unittest.TestCase):
     def test_find_hd_of_eagle(self):
         """given an eagle, return the number of hit dice the eagle has"""
         expect = 1 
-        mx = smxml.smxml()
+        mx = smxml.Smxml()
         raw_hitdice = sorted(mx.id_into_dict('101', ['hit_dice']).values())[0]
         # raw_hitdice would contain something like (1d8+2) and we want only the 1
         result = RpgDataMangling.parse_dice(raw_hitdice)[0]
@@ -91,7 +91,7 @@ class summonmonsterfouroneone(unittest.TestCase):
     def test_find_hp_of_eagle(self):
         """given an eagle, return the value for average hit points """
         expect = 5 
-        mx = smxml.smxml()
+        mx = smxml.Smxml()
         raw_hitpoints = sorted(mx.id_into_dict('101',
                                                ['hit_points']).values())[0]
         result = int(raw_hitpoints)
@@ -100,7 +100,7 @@ class summonmonsterfouroneone(unittest.TestCase):
     def test_find_hp_of_eagle_w_augs_feat(self):
         """given an eagle, apply augment summoning feat, show hit points """
         expect = 7 
-        mx = smxml.smxml()
+        mx = smxml.Smxml()
         raw_hitpoints = sorted(mx.id_into_dict('101',
                                                ['hit_points']).values())[0]
         raw_hitdice = sorted(mx.id_into_dict('101', ['hit_dice']).values())[0]
