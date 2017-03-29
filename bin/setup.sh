@@ -14,7 +14,7 @@
 # That source (.) command loads the environment variables 
 #
 # LAST MODIFIED
-# Fri Jul  5 21:13:41 PDT 2013
+# Tue Mar 28 21:24:14 PDT 2017
 # 
 # 
 # copyright (c) 2013  by david sloboda
@@ -39,7 +39,7 @@
 
 # replace this with the full path 
 #    to summonmonsterfouroneone on your system
-PROJECTDIR="/opt/sm/summonmonsterfouroneone"
+PROJECTDIR="/home/david/Documents/summonmonsterfouroneone"
 
 PATH=$PATH:$PROJECTDIR/bin
 ### python files to be imported go in directory specified by next line

@@ -51,13 +51,16 @@ This application requires python 2.7 and two other libraries which are not stand
 
 web.py I installed from the web.py site.  sudo privileges to root were required to install it on my Linux system, but the installation was pretty simple.
 
+    sudo -H pip install web.py
+    
 lxml was available through the Linux Ubuntu package installer synaptic. 
 
+    sudo -H pip install lxml
 
 Once I stop adding features, I intend to redo the application in python3.
 
 
-I have access only to a UNIX (Ubuntu 12.04) host for development and testing.    If you are able to help improve this application for other operating systems, great, please do so.
+I have tested this on UNIX (Ubuntu 12.04 and Ubuntu 16.04) hosts. If you are able to help improve this application for other operating systems, great, please do so.
 
 
 Examples
